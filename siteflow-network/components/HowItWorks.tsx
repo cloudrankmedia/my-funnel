@@ -23,7 +23,7 @@ export default function HowItWorks() {
         <p className="text-sm font-medium tracking-widest uppercase text-brand-orange mb-3">
           How It Works
         </p>
-        <h2 className="font-display text-5xl text-gray-900 tracking-wide mb-4">
+        <h2 className="font-display text-5xl text-gray-900 mb-4">
           You Submit. We Match. They Fly.
         </h2>
         <p className="text-lg text-gray-500 max-w-xl leading-relaxed mb-14">

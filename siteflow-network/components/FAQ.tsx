@@ -44,7 +44,7 @@ export default function FAQ() {
         <p className="text-sm font-medium tracking-widest uppercase text-brand-orange mb-3">
           FAQ
         </p>
-        <h2 className="font-display text-5xl text-gray-900 tracking-wide mb-12">
+        <h2 className="font-display text-5xl text-gray-900 mb-12">
           Common Questions
         </h2>
 

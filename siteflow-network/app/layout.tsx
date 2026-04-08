@@ -3,15 +3,12 @@ import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
-// Inter for body/paragraph text — loaded via next/font for zero CLS
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500"],
   variable: "--font-inter",
   display: "swap",
 });
-
-// Helvetica is a system font — no import needed, defined in tailwind.config.ts
 
 export const metadata: Metadata = {
   title: "Drone Surveys for Construction Projects | SiteFlow Network",

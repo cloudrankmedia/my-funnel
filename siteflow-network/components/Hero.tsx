@@ -27,7 +27,7 @@ export default function Hero() {
           priority
           quality={85}
         />
-        {/* Dark gradient overlay — left side darker for text legibility, right side slightly lighter */}
+        {/* Dark gradient overlay */}
         <div
           className="absolute inset-0"
           style={{
@@ -42,17 +42,17 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left: copy */}
           <div>
-            <p className="text-xs font-medium tracking-widest uppercase text-brand-orange mb-4">
+            <p className="text-sm font-medium tracking-widest uppercase text-brand-orange mb-4">
               Construction Aerial Intelligence
             </p>
 
-            <h1 className="font-display text-6xl lg:text-7xl leading-none tracking-wide mb-5">
+            <h1 className="font-display text-5xl lg:text-6xl leading-tight mb-5">
               Stop Guessing.{" "}
               <span className="text-brand-orange">See Every Foot</span> of Your
               Site.
             </h1>
 
-            <p className="text-white/80 text-base leading-relaxed max-w-lg mb-8">
+            <p className="text-white/80 text-lg leading-relaxed max-w-lg mb-8">
               Survey-grade drone data for general contractors, civil engineers,
               and developers. Track progress, verify quantities, and document
               every phase — without the cost of traditional surveys.
@@ -65,7 +65,7 @@ export default function Hero() {
                   <div className="font-display text-4xl text-brand-orange leading-none">
                     {num}
                   </div>
-                  <div className="text-xs text-white/60 mt-1">{label}</div>
+                  <div className="text-sm text-white/60 mt-1">{label}</div>
                 </div>
               ))}
             </div>
@@ -75,7 +75,7 @@ export default function Hero() {
               {TRUST.map((item) => (
                 <div
                   key={item}
-                  className="flex items-center gap-2 text-xs text-white/60"
+                  className="flex items-center gap-2 text-sm text-white/60"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-brand-orange flex-shrink-0" />
                   {item}

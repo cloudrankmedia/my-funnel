@@ -21,9 +21,7 @@ const config: Config = {
         },
       },
       fontFamily: {
-        // Paragraph font — Inter from Google Fonts
         sans: ["Inter", "sans-serif"],
-        // Heading font — Helvetica system stack, zero load time
         display: [
           "Helvetica Neue",
           "Helvetica",

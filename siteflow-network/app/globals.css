@@ -18,7 +18,6 @@
     font-family: var(--font-inter);
   }
 
-  /* All headings use Helvetica */
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
     font-weight: 700;
@@ -31,7 +30,6 @@
 }
 
 @layer components {
-  /* Explicit display class for Helvetica — use on any heading element */
   .font-display {
     font-family: var(--font-display);
     font-weight: 700;

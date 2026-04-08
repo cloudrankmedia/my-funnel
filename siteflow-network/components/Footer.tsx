@@ -19,7 +19,7 @@ export default function Footer() {
           />
         </div>
 
-        {/* Links — always visible, wrap on mobile */}
+        {/* Links — always visible on all screen sizes */}
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
           <Link
             href="/privacy"
