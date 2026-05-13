@@ -69,39 +69,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }}
       />
 
-      {/* Google Ads — click-to-call conversion tracking */}
-      <Script
-        id="gtag-call-conversion"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-    'send_to': 'AW-17034161603/YnqkCJKRiKIcEMPbwro_',
-    'value': 1.0,
-    'currency': 'EUR',
-    'event_callback': callback
-  });
-  return false;
-}`,
-        }}
-      />
-
-      {/* Google Ads — phone conversion number */}
-      <Script
-        id="gtag-phone-conversion"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `gtag('config', 'AW-17034161603/6cKLCKzhw6ccEMPbwro_', {
-  'phone_conversion_number': '(346) 910-9374'
-});`,
-        }}
-      />
-
       {/* Google Tag Manager — noscript fallback */}
       <noscript>
         <iframe

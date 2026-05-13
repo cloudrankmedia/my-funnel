@@ -13,11 +13,6 @@ export default function WaterDamageRestorationHouston() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const fireCallConversion = () => {
-    const w = window as Window & { gtag_report_conversion?: (url: string) => void };
-    w.gtag_report_conversion?.(phoneHref);
-  };
-
   // ── REPLACE WITH ELOCAL TRACKING NUMBER ──────────────────────────────────
   const phoneNumber = "(346) 910-9374";
   const phoneHref = "tel:+13469109374";
@@ -706,7 +701,7 @@ export default function WaterDamageRestorationHouston() {
               <strong>Water Damage Houston?</strong><span style={{display:'block'}}>Crews available now — 45–90 min response</span>
             </p>
           </div>
-          <a href={phoneHref} onClick={fireCallConversion} className="sticky-bar__cta">
+          <a href={phoneHref} className="sticky-bar__cta">
             <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
@@ -723,7 +718,7 @@ export default function WaterDamageRestorationHouston() {
         <div className="topbar__divider" aria-hidden="true" />
         <span className="topbar__cta">Matching Houston Homeowners With Local Restoration Specialists</span>
         <div className="topbar__divider" aria-hidden="true" />
-        <a href={phoneHref} onClick={fireCallConversion} className="topbar__phone">
+        <a href={phoneHref} className="topbar__phone">
           <span className="dot" aria-hidden="true" />
           {phoneNumber}
         </a>
@@ -750,7 +745,7 @@ export default function WaterDamageRestorationHouston() {
               </p>
 
               <div className="hero__cta-row">
-                <a href={phoneHref} onClick={fireCallConversion} className="btn-primary">
+                <a href={phoneHref} className="btn-primary">
                   <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
@@ -955,7 +950,7 @@ export default function WaterDamageRestorationHouston() {
           </ul>
         </div>
         <div style={{ textAlign: "center", flexShrink: 0 }}>
-          <a href={phoneHref} onClick={fireCallConversion} className="btn-primary" style={{ whiteSpace: "nowrap" }}>
+          <a href={phoneHref} className="btn-primary" style={{ whiteSpace: "nowrap" }}>
             <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
@@ -999,7 +994,7 @@ export default function WaterDamageRestorationHouston() {
         <div className="bottom-cta__inner">
           <h2 className="bottom-cta__title">Water Damage Doesn&apos;t Wait.<br />Neither Should You.</h2>
           <p className="bottom-cta__sub">Every hour without mitigation increases damage, mold risk, and claim complexity. Get matched with a local specialist right now.</p>
-          <a href={phoneHref} onClick={fireCallConversion} className="btn-cta-navy">
+          <a href={phoneHref} className="btn-cta-navy">
             <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
