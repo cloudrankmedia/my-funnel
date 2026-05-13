@@ -53,7 +53,7 @@ export default function HoustonLayout({
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link
         rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap"
       />
 
       {/* Google Tag Manager — head script */}
@@ -99,24 +99,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           __html: `gtag('config', 'AW-17034161603/6cKLCKzhw6ccEMPbwro_', {
   'phone_conversion_number': '(346) 910-9374'
 });`,
-        }}
-      />
-
-      {/* Google Analytics 4 + GT tag — consolidated dataLayer init */}
-      <Script
-        id="gtag-loader"
-        strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-74463JFJ30"
-      />
-      <Script
-        id="gtag-config"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-74463JFJ30');
-gtag('config', 'GT-NFP5FH4D');`,
         }}
       />
 
