@@ -363,15 +363,15 @@ export default function WaterDamageRestorationHouston() {
         .hero__sub strong { color: var(--white); font-weight: 600; }
         .hero__cta-row { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
         .hero__trust-strip {
-          display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: nowrap;
+          display: flex; align-items: flex-start; justify-content: center; gap: 20px; flex-wrap: nowrap;
           margin-top: 48px; padding-top: 32px; width: 100%;
           border-top: 1px solid rgba(255,255,255,0.12);
         }
         @media (max-width: 700px) {
-          .hero__trust-strip { flex-wrap: wrap; flex-direction: column; align-items: flex-start; width: fit-content; margin-left: auto; margin-right: auto; }
+          .hero__trust-strip { flex-wrap: wrap; flex-direction: column; align-items: flex-start; width: 100%; padding: 0 8px; }
         }
         .hero__trust-item {
-          display: flex; align-items: center; gap: 8px;
+          display: flex; align-items: flex-start; gap: 8px;
           color: rgba(255,255,255,0.65); font-size: 13px; font-weight: 500;
         }
         .hero__trust-item svg { color: var(--orange); flex-shrink: 0; }
@@ -678,7 +678,7 @@ export default function WaterDamageRestorationHouston() {
           .topbar__cta { display: none; }
           .topbar__divider { display: none; }
           .hero { padding: 40px 0 80px; }
-          .hero__inner { padding: 0 32px; }
+          .hero__inner { padding: 0 40px; }
           .container { padding: 0 20px; }
           .hero__hl-1, .hero__hl-2, .hero__hl-3 { font-size: clamp(36px, 10vw, 54px); white-space: normal; }
           .hero__hl-2 { font-size: clamp(40px, 11vw, 60px); color: var(--orange) !important; }
