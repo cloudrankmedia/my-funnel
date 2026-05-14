@@ -368,7 +368,7 @@ export default function WaterDamageRestorationHouston() {
           border-top: 1px solid rgba(255,255,255,0.12);
         }
         @media (max-width: 700px) {
-          .hero__trust-strip { flex-direction: column; align-items: flex-start; width: 100%; padding: 0; margin: 0; }
+          .hero__trust-strip { flex-direction: column; align-items: flex-start; width: 100%; padding: 0; margin: 0; margin-top: 16px; }
         }
         .hero__trust-item {
           display: flex; align-items: center; gap: 8px;
@@ -377,7 +377,7 @@ export default function WaterDamageRestorationHouston() {
         .hero__trust-item svg { color: var(--orange); flex-shrink: 0; }
         .hero__risk-reversal {
           font-size: 13px; color: rgba(255,255,255,0.5);
-          margin-top: 12px; text-align: center; font-weight: 300; letter-spacing: 0.01em;
+          margin-top: 12px; margin-bottom: 24px; text-align: center; font-weight: 300; letter-spacing: 0.01em;
         }
 
 
