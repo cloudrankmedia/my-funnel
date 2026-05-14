@@ -678,7 +678,7 @@ export default function WaterDamageRestorationHouston() {
           .topbar__cta { display: none; }
           .topbar__divider { display: none; }
           .hero { padding: 40px 0 80px; }
-          .hero__inner { padding: 0 28px; }
+          .hero__inner { padding: 0 16px; }
           .container { padding: 0 20px; }
           .hero__hl-1, .hero__hl-2, .hero__hl-3 { font-size: clamp(36px, 10vw, 54px); white-space: normal; }
           .hero__hl-2 { font-size: clamp(40px, 11vw, 60px); color: var(--orange) !important; }
