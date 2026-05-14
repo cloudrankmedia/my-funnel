@@ -689,6 +689,8 @@ export default function WaterDamageRestorationHouston() {
           .sticky-bar__text { font-size: 11px; white-space: normal; overflow: visible; text-overflow: unset; line-height: 1.3; text-align: center; }
           .sticky-bar__cta { padding: 0 16px; font-size: 13px; }
           .sticky-bar__left { padding: 8px 12px; justify-content: center; }
+          .hero__eyebrow-text { padding: 0 24px; }
+          .hero__risk-reversal { padding: 0 24px; }
         }
       `}</style>
 
