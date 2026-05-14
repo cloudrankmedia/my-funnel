@@ -13,7 +13,7 @@ export default function WaterDamageRestorationHouston() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // ── REPLACE WITH ELOCAL TRACKING NUMBER ──────────────────────────────────
+  // ── SERVICE DIRECT TRACKING NUMBER ──────────────────────────────────────
   const phoneNumber = "(346) 910-9374";
   const phoneHref = "tel:+13469109374";
   // ─────────────────────────────────────────────────────────────────────────
@@ -338,7 +338,7 @@ export default function WaterDamageRestorationHouston() {
           max-width: 900px; margin: 0 auto; padding: 0 32px;
         }
         .hero__eyebrow { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 20px; flex-wrap: nowrap; }
-        .hero__eyebrow-text { white-space: nowrap; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.55); }
+        .hero__eyebrow-text { white-space: normal; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.55); }
         .hero__eyebrow-text {
           font-size: 12px; font-weight: 600; letter-spacing: 0.12em;
           text-transform: uppercase; color: rgba(255,255,255,0.55);
@@ -677,11 +677,12 @@ export default function WaterDamageRestorationHouston() {
           .topbar { gap: 0; flex-wrap: nowrap; padding: 8px 16px; justify-content: space-between; }
           .topbar__cta { display: none; }
           .topbar__divider { display: none; }
-          .hero { padding: 40px 0 80px; padding-left: 20px; padding-right: 20px; }
-          .hero__inner { padding: 0 40px; }
+          .hero { padding: 40px 0 80px; }
+          .hero__inner { padding: 0 28px; }
           .container { padding: 0 20px; }
           .hero__hl-1, .hero__hl-2, .hero__hl-3 { font-size: clamp(36px, 10vw, 54px); white-space: normal; }
           .hero__hl-2 { font-size: clamp(40px, 11vw, 60px); color: var(--orange) !important; }
+          .hero__risk-reversal { padding: 0; margin-bottom: 24px; }
           .why__grid { grid-template-columns: 1fr; }
           .services__grid { grid-template-columns: 1fr; }
           .process__steps { grid-template-columns: 1fr; }
@@ -689,8 +690,10 @@ export default function WaterDamageRestorationHouston() {
           .sticky-bar__text { font-size: 11px; white-space: normal; overflow: visible; text-overflow: unset; line-height: 1.3; text-align: center; }
           .sticky-bar__cta { padding: 0 16px; font-size: 13px; }
           .sticky-bar__left { padding: 8px 12px; justify-content: center; }
-          .hero__eyebrow-text { padding: 0 24px; }
-          .hero__risk-reversal { padding: 0 24px; }
+          .facts__grid { grid-template-columns: 1fr; }
+          .insurance-callout__label { text-align: center; }
+          .insurance-callout__title { text-align: center; }
+          .insurance-callout__body { text-align: center; }
         }
       `}</style>
 
