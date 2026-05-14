@@ -368,7 +368,7 @@ export default function WaterDamageRestorationHouston() {
           border-top: 1px solid rgba(255,255,255,0.12);
         }
         @media (max-width: 700px) {
-          .hero__trust-strip { flex-direction: column; align-items: flex-start; width: 100%; padding: 0; margin: 0; margin-top: 16px; }
+          .hero__trust-strip { flex-direction: column; align-items: flex-start; width: 100%; padding: 0; margin: 0; margin-top: 32px; padding-top: 28px; }
         }
         .hero__trust-item {
           display: flex; align-items: center; gap: 8px;
@@ -678,7 +678,7 @@ export default function WaterDamageRestorationHouston() {
           .topbar__cta { display: none; }
           .topbar__divider { display: none; }
           .hero { padding: 40px 0 80px; }
-          .hero__inner { padding: 0 16px; }
+          .hero__inner { padding: 0 10px; }
           .container { padding: 0 20px; }
           .hero__hl-1, .hero__hl-2, .hero__hl-3 { font-size: clamp(36px, 10vw, 54px); white-space: normal; }
           .hero__hl-2 { font-size: clamp(40px, 11vw, 60px); color: var(--orange) !important; }
