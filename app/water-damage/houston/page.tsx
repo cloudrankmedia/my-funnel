@@ -758,7 +758,7 @@ export default function WaterDamageRestorationHouston() {
                 {[
                   "Local Restoration Network",
                   "Insurance Claims Supported",
-                  "Serving Katy, Sugar Land, The Woodlands & All Surrounding Areas",
+                  "Greater Houston Area Coverage",
                   "Available 24/7",
                 ].map((item) => (
                   <div key={item} className="hero__trust-item">
