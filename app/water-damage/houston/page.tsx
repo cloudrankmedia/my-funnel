@@ -25,7 +25,7 @@ export default function WaterDamageRestorationHouston() {
     },
     {
       q: "How fast can a crew actually arrive?",
-      a: "Contractors in our network typically arrive within 45–90 minutes across the Houston metro. We match with specialists available 24/7 across all major Houston neighborhoods and all 508 zip codes in the DMA.",
+      a: "Contractors in our network typically arrive within 45–90 minutes across the Houston metro. We match with specialists available 24/7 across all major neighborhoods and communities in the Greater Houston area, covering all 508 zip codes in the DMA.",
     },
     {
       q: "What credentials do your contractors hold?",
@@ -49,7 +49,7 @@ export default function WaterDamageRestorationHouston() {
     },
     {
       q: "Do you serve the entire Houston metro area?",
-      a: "Yes. We have verified 24/7 contractor coverage across all key Houston neighborhoods and the full Houston-The Woodlands-Sugar Land DMA — all 508 zip codes, around the clock.",
+      a: "Yes. We have verified 24/7 contractor coverage across the full Greater Houston area — all communities in the Houston-The Woodlands-Sugar Land DMA — all 508 zip codes, around the clock.",
     },
   ];
 
@@ -674,11 +674,11 @@ export default function WaterDamageRestorationHouston() {
           .section-header { text-align: center; }
           .section-header__tag { justify-content: center; }
           .section-header__body { margin-left: auto; margin-right: auto; }
-          .topbar { gap: 12px; flex-wrap: wrap; padding: 8px 16px; }
+          .topbar { gap: 0; flex-wrap: nowrap; padding: 8px 16px; justify-content: space-between; }
           .topbar__cta { display: none; }
           .topbar__divider { display: none; }
           .hero { padding: 40px 0 80px; }
-          .hero__inner { padding: 0 24px; }
+          .hero__inner { padding: 0 32px; }
           .container { padding: 0 20px; }
           .hero__hl-1, .hero__hl-2, .hero__hl-3 { font-size: clamp(36px, 10vw, 54px); white-space: normal; }
           .hero__hl-2 { font-size: clamp(40px, 11vw, 60px); color: var(--orange) !important; }
@@ -716,7 +716,7 @@ export default function WaterDamageRestorationHouston() {
           <img src="/siteflow-logo.png" alt="SiteFlow Network" className="topbar__logo-img-el" />
         </a>
         <div className="topbar__divider" aria-hidden="true" />
-        <span className="topbar__cta">Matching Houston Homeowners With Local Restoration Specialists</span>
+        <span className="topbar__cta">Matching Greater Houston Area Homeowners With Local Restoration Specialists</span>
         <div className="topbar__divider" aria-hidden="true" />
         <a href={phoneHref} className="topbar__phone">
           <span className="dot" aria-hidden="true" />
@@ -741,7 +741,7 @@ export default function WaterDamageRestorationHouston() {
               </h1>
 
               <p className="hero__sub">
-                Get matched with a <strong>local water damage specialist</strong> in Houston — right now. Contractors in our network typically respond within <strong>45–90 minutes</strong> and bring full documentation for your insurance claim.
+                Get matched with a <strong>local water damage specialist</strong> in the Greater Houston Area — right now. Contractors in our network typically respond within <strong>45–90 minutes</strong> and bring full documentation for your insurance claim.
               </p>
 
               <div className="hero__cta-row">
@@ -758,7 +758,7 @@ export default function WaterDamageRestorationHouston() {
                 {[
                   "Local Restoration Network",
                   "Insurance Claims Supported",
-                  "Serving All 508 Houston Zip Codes",
+                  "Serving Katy, Sugar Land, The Woodlands & All Surrounding Areas",
                   "Available 24/7",
                 ].map((item) => (
                   <div key={item} className="hero__trust-item">
@@ -809,7 +809,7 @@ export default function WaterDamageRestorationHouston() {
           <div className="credentials__grid">
             {[
               {
-                title: "Houston-Area Coverage", sub: "Serving all 508 Houston zip codes",
+                title: "Houston-Area Coverage", sub: "Serving all 508 zip codes across the Greater Houston DMA",
                 icon: <svg width="26" height="26" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>,
               },
               {
