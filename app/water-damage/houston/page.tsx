@@ -718,7 +718,10 @@ export default function WaterDamageRestorationHouston() {
       {/* TOPBAR */}
       <nav className="topbar">
         <a href="#" className="topbar__logo-img">
-          <img src="/siteflow-logo.png" alt="SiteFlow Network" className="topbar__logo-img-el" />
+          <picture>
+            <source srcSet="/siteflow-logo.webp" type="image/webp" />
+            <img src="/siteflow-logo.png" alt="SiteFlow Network" className="topbar__logo-img-el" width={207} height={49} />
+          </picture>
         </a>
         <div className="topbar__divider" aria-hidden="true" />
         <span className="topbar__cta">Matching Greater Houston Area Homeowners With Local Restoration Specialists</span>
@@ -1036,7 +1039,10 @@ export default function WaterDamageRestorationHouston() {
         <div className="container">
           <div className="footer__inner">
             <a href="#" className="footer__logo-img">
-              <img src="/siteflow-logo.png" alt="SiteFlow Network" className="footer__logo-img-el" />
+              <picture>
+                <source srcSet="/siteflow-logo.webp" type="image/webp" />
+                <img src="/siteflow-logo.png" alt="SiteFlow Network" className="footer__logo-img-el" width={165} height={39} />
+              </picture>
             </a>
             <div className="footer__links">
               <a href="https://go.siteflownetwork.com/privacy-policy">Privacy Policy</a>

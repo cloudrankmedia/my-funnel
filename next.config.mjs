@@ -1,9 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    // Add any external image domains here if needed in future
     domains: [],
   },
+  experimental: {
+    browsersListForSwc: true,
+  },
+  transpilePackages: [],
 };
 
 export default nextConfig;

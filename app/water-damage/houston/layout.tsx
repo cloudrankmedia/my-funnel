@@ -48,13 +48,23 @@ export default function HoustonLayout({
         type="font/woff2"
         crossOrigin="anonymous"
       />
-      {/* Google Fonts — preconnect for faster loading */}
+      {/* GHL preconnect */}
+      <link rel="preconnect" href="https://services.leadconnectorhq.com" />
+      {/* Google Fonts — non-render-blocking */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap"
+        media="print"
+        onLoad="this.media='all'"
       />
+      <noscript>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap"
+        />
+      </noscript>
 
       {/* Google Tag Manager — head script */}
       <Script
