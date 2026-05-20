@@ -57,14 +57,15 @@ export default function HoustonLayout({
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap"
         media="print"
-        onLoad={(e) => { (e.target as HTMLLinkElement).media = 'all'; }}
+        id="google-fonts-css"
       />
-      <noscript>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap"
-        />
-      </noscript>
+      <Script
+        id="google-fonts-swap"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `document.getElementById('google-fonts-css').media='all';`,
+        }}
+      />
 
       {/* Google Tag Manager — head script */}
       <Script
