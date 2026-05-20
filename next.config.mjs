@@ -3,9 +3,6 @@ const nextConfig = {
   images: {
     domains: [],
   },
-  experimental: {
-    browsersListForSwc: true,
-  },
   transpilePackages: [],
 };
 

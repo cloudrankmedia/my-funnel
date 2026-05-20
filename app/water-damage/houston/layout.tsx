@@ -57,7 +57,7 @@ export default function HoustonLayout({
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap"
         media="print"
-        onLoad="this.media='all'"
+        onLoad={(e) => { (e.target as HTMLLinkElement).media = 'all'; }}
       />
       <noscript>
         <link
