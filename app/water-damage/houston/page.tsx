@@ -218,7 +218,7 @@ export default function WaterDamageRestorationHouston() {
         html { scroll-behavior: smooth; }
 
         body {
-          font-family: 'DM Sans', sans-serif;
+          font-family: var(--font-dm-sans), sans-serif;
           background: var(--cream);
           color: var(--text);
           overflow-x: hidden;
@@ -232,7 +232,7 @@ export default function WaterDamageRestorationHouston() {
         .btn-primary {
           display: inline-flex; align-items: center; gap: 10px;
           background: var(--orange); color: var(--white);
-          font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 17px;
+          font-family: var(--font-dm-sans), sans-serif; font-weight: 600; font-size: 17px;
           letter-spacing: 0.02em; padding: 18px 36px; border-radius: var(--radius);
           border: none; cursor: pointer; text-decoration: none;
           transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
@@ -271,7 +271,7 @@ export default function WaterDamageRestorationHouston() {
           flex-shrink: 0; animation: livepulse 1.8s infinite;
         }
         .sticky-bar__text {
-          font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500;
+          font-family: var(--font-dm-sans), sans-serif; font-size: 13px; font-weight: 500;
           color: rgba(255,255,255,0.75); white-space: nowrap;
           overflow: hidden; text-overflow: ellipsis;
         }
@@ -279,7 +279,7 @@ export default function WaterDamageRestorationHouston() {
         .sticky-bar__cta {
           display: flex; align-items: center; gap: 8px;
           background: var(--orange); color: white;
-          padding: 0 28px; font-family: 'DM Sans', sans-serif;
+          padding: 0 28px; font-family: var(--font-dm-sans), sans-serif;
           font-weight: 700; font-size: 15px; text-decoration: none;
           white-space: nowrap; transition: background 0.2s;
           border-left: 1px solid rgba(255,255,255,0.1);
@@ -295,7 +295,7 @@ export default function WaterDamageRestorationHouston() {
           display: flex; align-items: center; justify-content: center; gap: 32px;
         }
         .topbar__logo {
-          font-family: 'Bebas Neue', sans-serif; font-size: 22px;
+          font-family: var(--font-bebas), sans-serif; font-size: 22px;
           color: var(--white); letter-spacing: 0.06em; text-decoration: none;
         }
         .topbar__logo span { color: var(--orange); }
@@ -345,7 +345,7 @@ export default function WaterDamageRestorationHouston() {
         }
         .hero__headline { margin-bottom: 8px; }
         .hero__hl-1, .hero__hl-2, .hero__hl-3 {
-          font-family: 'Bebas Neue', sans-serif;
+          font-family: var(--font-bebas), sans-serif;
           font-size: clamp(48px, 6vw, 84px);
           line-height: 1.05;
           letter-spacing: 0.02em;
@@ -412,11 +412,11 @@ export default function WaterDamageRestorationHouston() {
         .section-header { margin-bottom: 52px; text-align: left; }
         .section-header__tag { margin-bottom: 14px; display: flex; justify-content: flex-start; }
         .section-header__title {
-          font-family: 'Bebas Neue', sans-serif;
+          font-family: var(--font-bebas), sans-serif;
           font-size: clamp(36px, 5vw, 54px); line-height: 1;
           color: var(--navy); letter-spacing: 0.02em;
         }
-        .section-header__title em { font-family: 'DM Serif Display', serif; font-style: italic; color: var(--orange); }
+        .section-header__title em { font-family: var(--font-dm-serif), serif; font-style: italic; color: var(--orange); }
         .section-header__body { margin-top: 14px; font-size: 17px; color: var(--gray-700); max-width: 560px; font-weight: 300; line-height: 1.7; }
 
         /* ── WHY SECTION ──────────────────────── */
@@ -439,7 +439,7 @@ export default function WaterDamageRestorationHouston() {
         }
         .why-card:hover { box-shadow: var(--shadow); transform: translateY(-4px); }
         .why-card:hover::before { transform: scaleX(1); }
-        .why-card__num { font-family: 'Bebas Neue', sans-serif; font-size: 13px; letter-spacing: 0.1em; color: var(--orange); margin-bottom: 16px; }
+        .why-card__num { font-family: var(--font-bebas), sans-serif; font-size: 13px; letter-spacing: 0.1em; color: var(--orange); margin-bottom: 16px; }
         .why-card__icon { width: 48px; height: 48px; background: var(--cream); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
         .why-card__icon svg { color: var(--navy); }
         .why-card__title { font-weight: 700; font-size: 17px; color: var(--navy); margin-bottom: 10px; line-height: 1.3; }
@@ -463,7 +463,7 @@ export default function WaterDamageRestorationHouston() {
           padding: 10px 22px; border-radius: 5px;
           font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.55);
           cursor: pointer; border: none; background: transparent;
-          font-family: 'DM Sans', sans-serif; transition: all 0.2s; letter-spacing: 0.02em;
+          font-family: var(--font-dm-sans), sans-serif; transition: all 0.2s; letter-spacing: 0.02em;
         }
         .services__tab.active { background: var(--orange); color: var(--white); box-shadow: 0 2px 12px rgba(232,80,10,0.4); }
         .services__tab:hover:not(.active) { color: var(--white); }
@@ -493,7 +493,7 @@ export default function WaterDamageRestorationHouston() {
         .process-step { text-align: center; padding: 0 12px; }
         .process-step__num {
           width: 56px; height: 56px; background: var(--orange); color: var(--white);
-          font-family: 'Bebas Neue', sans-serif; font-size: 22px; border-radius: 50%;
+          font-family: var(--font-bebas), sans-serif; font-size: 22px; border-radius: 50%;
           display: flex; align-items: center; justify-content: center;
           margin: 0 auto 20px; position: relative; z-index: 1;
           box-shadow: 0 4px 16px rgba(232,80,10,0.35);
@@ -520,7 +520,7 @@ export default function WaterDamageRestorationHouston() {
           .insurance-callout__title { text-align: center; }
           .insurance-callout__body { text-align: center; }
         }
-        .insurance-callout__title { font-family: 'Bebas Neue', sans-serif; font-size: 38px; color: var(--white); line-height: 1.05; letter-spacing: 0.02em; margin-bottom: 16px; }
+        .insurance-callout__title { font-family: var(--font-bebas), sans-serif; font-size: 38px; color: var(--white); line-height: 1.05; letter-spacing: 0.02em; margin-bottom: 16px; }
         .insurance-callout__body { font-size: 15px; color: rgba(255,255,255,0.65); max-width: 480px; line-height: 1.7; font-weight: 300; }
         .insurance-callout__checks { list-style: none; margin-top: 20px; display: flex; flex-direction: column; gap: 10px; }
         .insurance-callout__checks li { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.8); font-size: 14px; font-weight: 500; }
@@ -535,14 +535,14 @@ export default function WaterDamageRestorationHouston() {
         .testimonials { padding: 80px 0; background: var(--cream); }
         .testimonials__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
         .testimonial-card { background: var(--white); border-radius: 10px; padding: 28px; border: 1px solid var(--gray-100); }
-        .testimonial-card__quote { font-family: 'DM Serif Display', serif; font-size: 48px; color: var(--orange); line-height: 1; margin-bottom: 8px; opacity: 0.6; }
+        .testimonial-card__quote { font-family: var(--font-dm-serif), serif; font-size: 48px; color: var(--orange); line-height: 1; margin-bottom: 8px; opacity: 0.6; }
         .testimonial-card__stars { color: #F59E0B; font-size: 15px; letter-spacing: 2px; margin-bottom: 14px; }
         .testimonial-card__body { font-size: 14px; color: var(--gray-700); line-height: 1.7; font-weight: 300; font-style: italic; margin-bottom: 20px; }
         .testimonial-card__author { display: flex; align-items: center; gap: 12px; }
         .testimonial-card__avatar {
           width: 42px; height: 42px; border-radius: 50%; background: var(--navy);
           display: flex; align-items: center; justify-content: center;
-          font-family: 'Bebas Neue', sans-serif; font-size: 14px; color: var(--white); flex-shrink: 0;
+          font-family: var(--font-bebas), sans-serif; font-size: 14px; color: var(--white); flex-shrink: 0;
         }
         .testimonial-card__name { font-weight: 700; font-size: 14px; color: var(--navy); }
         .testimonial-card__loc { font-size: 12px; color: var(--gray-500); margin-top: 2px; }
@@ -569,13 +569,13 @@ export default function WaterDamageRestorationHouston() {
           pointer-events: none;
         }
         .bottom-cta__inner { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; text-align: center; width: 100%; max-width: 900px; padding: 0 24px; }
-        .bottom-cta__title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(40px, 6vw, 68px); color: var(--white); letter-spacing: 0.02em; line-height: 1; margin-bottom: 16px; }
+        .bottom-cta__title { font-family: var(--font-bebas), sans-serif; font-size: clamp(40px, 6vw, 68px); color: var(--white); letter-spacing: 0.02em; line-height: 1; margin-bottom: 16px; }
         .bottom-cta__sub { font-size: 18px; color: rgba(255,255,255,0.8); max-width: 540px; margin: 0 auto 36px; font-weight: 300; line-height: 1.6; }
         .bottom-cta .btn-cta-navy {
           white-space: nowrap;
           display: inline-flex; align-items: center; gap: 10px;
           background: var(--navy); color: var(--white);
-          font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 18px;
+          font-family: var(--font-dm-sans), sans-serif; font-weight: 600; font-size: 18px;
           letter-spacing: 0.02em; padding: 20px 44px; border-radius: var(--radius);
           border: none; cursor: pointer; text-decoration: none;
           transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
@@ -616,7 +616,7 @@ export default function WaterDamageRestorationHouston() {
         }
         .fact-card:hover { box-shadow: var(--shadow); transform: translateY(-4px); }
         .fact-card__number {
-          font-family: 'Bebas Neue', sans-serif; font-size: 64px;
+          font-family: var(--font-bebas), sans-serif; font-size: 64px;
           color: var(--orange); line-height: 1; margin-bottom: 16px; letter-spacing: 0.02em;
         }
         .fact-card__divider {

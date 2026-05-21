@@ -40,32 +40,8 @@ export default function HoustonLayout({
 }) {
   return (
     <>
-      {/* Preload Bebas Neue — used for LCP hero headline */}
-      <link
-        rel="preload"
-        href="https://fonts.gstatic.com/s/bebasneuepro/v3/Block/BebasNeue-Regular.woff2"
-        as="font"
-        type="font/woff2"
-        crossOrigin="anonymous"
-      />
       {/* GHL preconnect */}
       <link rel="preconnect" href="https://services.leadconnectorhq.com" />
-      {/* Google Fonts — non-render-blocking */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap"
-        media="print"
-        id="google-fonts-css"
-      />
-      <Script
-        id="google-fonts-swap"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `document.getElementById('google-fonts-css').media='all';`,
-        }}
-      />
 
       {/* Google Tag Manager — head script */}
       <Script
