@@ -46,7 +46,7 @@ a: "No. SiteFlow Network is a connection service that assists homeowners in find
 return (
 <main>
 <style suppressHydrationWarning>{`
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap&display=optional');
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
