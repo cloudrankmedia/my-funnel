@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, Bebas_Neue } from "next/font/google";
+import { DM_Sans, Bebas_Neue, Barlow, Barlow_Condensed } from "next/font/google";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -13,6 +13,20 @@ const bebasNeue = Bebas_Neue({
   subsets: ["latin"],
   weight: ["400"],
   variable: "--font-bebas",
+  display: "swap",
+});
+
+const barlow = Barlow({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-barlow",
+  display: "swap",
+});
+
+const barlowCondensed = Barlow_Condensed({
+  subsets: ["latin"],
+  weight: ["400", "600", "700", "800", "900"],
+  variable: "--font-barlow-condensed",
   display: "swap",
 });
 
@@ -46,7 +60,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${dmSans.variable} ${bebasNeue.variable} font-sans antialiased`}
+        className={`${dmSans.variable} ${bebasNeue.variable} ${barlow.variable} ${barlowCondensed.variable} font-sans antialiased`}
       >
         {children}
       </body>
