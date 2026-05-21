@@ -66,7 +66,7 @@ return (
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Barlow', sans-serif;
+      font-family: var(--font-barlow), sans-serif;
       background: var(--charcoal);
       color: var(--text);
       line-height: 1.6;
@@ -88,11 +88,11 @@ return (
       transition: transform 0.3s ease;
     }
     .sticky-bar.visible { transform: translateY(0); }
-    .sticky-bar p { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 700; color: #fff; }
+    .sticky-bar p { font-family: var(--font-barlow-condensed), sans-serif; font-size: 18px; font-weight: 700; color: #fff; }
     .sticky-bar a {
       background: white; color: var(--red);
       padding: 8px 20px; border-radius: 4px;
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: var(--font-barlow-condensed), sans-serif;
       font-weight: 800; font-size: 16px;
       text-decoration: none; white-space: nowrap; flex-shrink: 0;
     }
@@ -114,7 +114,7 @@ return (
     .nav-phone { display: flex; align-items: center; gap: 10px; text-decoration: none; }
     .nav-phone-label { font-size: 12px; color: var(--accessible-muted); text-transform: uppercase; letter-spacing: 1px; white-space: nowrap; }
     .nav-phone-number {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: var(--font-barlow-condensed), sans-serif;
       font-size: 24px; font-weight: 800;
       color: var(--red-light); letter-spacing: 1px;
     }
@@ -160,13 +160,13 @@ return (
       50% { opacity: 0.5; transform: scale(1.3); }
     }
     .emergency-badge span {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: var(--font-barlow-condensed), sans-serif;
       font-size: 13px; font-weight: 700;
       letter-spacing: 2px; text-transform: uppercase;
       color: var(--red-light);
     }
     .hero h1 {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: var(--font-barlow-condensed), sans-serif;
       font-size: clamp(52px, 8vw, 96px);
       font-weight: 900; line-height: 0.9;
       text-transform: uppercase; letter-spacing: -1px;
@@ -194,7 +194,7 @@ return (
       background: var(--red); color: white;
       padding: 22px 36px; border-radius: 4px;
       text-decoration: none;
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: var(--font-barlow-condensed), sans-serif;
       font-size: 28px; font-weight: 800;
       letter-spacing: 1px; text-transform: uppercase;
       transition: background 0.2s; border: none; cursor: pointer;
@@ -237,7 +237,7 @@ return (
     }
     .proof-stat { text-align: center; }
     .proof-num {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: var(--font-barlow-condensed), sans-serif;
       font-size: 36px; font-weight: 900;
       color: var(--red-light); display: block;
     }
@@ -293,7 +293,7 @@ return (
       gap: 40px; flex-wrap: wrap;
     }
     .urgency-strip p {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: var(--font-barlow-condensed), sans-serif;
       font-size: 16px; font-weight: 700;
       letter-spacing: 1px; text-transform: uppercase;
       display: flex; align-items: flex-start; gap: 8px; color: #fff;
@@ -307,13 +307,13 @@ return (
     /* SECTIONS */
     .section { max-width: 1100px; margin: 0 auto; padding: 80px 40px; }
     .section-label {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: var(--font-barlow-condensed), sans-serif;
       font-size: 15px; font-weight: 700;
       letter-spacing: 2px; text-transform: uppercase;
       color: var(--label-color); margin-bottom: 16px;
     }
     .section-title {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: var(--font-barlow-condensed), sans-serif;
       font-size: clamp(36px, 5vw, 56px);
       font-weight: 900; text-transform: uppercase;
       line-height: 0.95; color: var(--white); margin-bottom: 48px;
@@ -333,13 +333,13 @@ return (
       border-top: 3px solid var(--red);
     }
     .stat-number {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: var(--font-barlow-condensed), sans-serif;
       font-size: 56px; font-weight: 900;
       color: var(--red-light); line-height: 1;
       margin-bottom: 8px; display: block;
     }
     .stat-headline {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: var(--font-barlow-condensed), sans-serif;
       font-size: 20px; font-weight: 800;
       text-transform: uppercase; color: var(--white);
       margin-bottom: 10px; letter-spacing: 0.5px;
@@ -356,12 +356,12 @@ return (
     }
     .timeline-step:hover { border-color: var(--red); }
     .step-num {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: var(--font-barlow-condensed), sans-serif;
       font-size: 72px; font-weight: 900;
       color: #888888; line-height: 1; margin-bottom: 12px;
     }
     .step-title {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: var(--font-barlow-condensed), sans-serif;
       font-size: 20px; font-weight: 800;
       text-transform: uppercase; color: var(--white);
       margin-bottom: 8px; letter-spacing: 0.5px;
@@ -376,7 +376,7 @@ return (
     }
     .damage-card:hover { border-color: var(--red); }
     .damage-card h3 {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: var(--font-barlow-condensed), sans-serif;
       font-size: 20px; font-weight: 800;
       text-transform: uppercase; letter-spacing: 0.5px;
       color: var(--white); margin-bottom: 10px;
@@ -394,7 +394,7 @@ return (
     .cost-table tr:last-child { border-bottom: none; }
     .cost-table td { padding: 14px 0; font-size: 15px; }
     .cost-table td:first-child { color: var(--accessible-muted); }
-    .cost-table td:last-child { text-align: right; color: var(--white); font-weight: 600; font-family: 'Barlow Condensed', sans-serif; font-size: 18px; }
+    .cost-table td:last-child { text-align: right; color: var(--white); font-weight: 600; font-family: var(--font-barlow-condensed), sans-serif; font-size: 18px; }
 
     /* MOLD WARNING */
     .mold-warning {
@@ -403,7 +403,7 @@ return (
       border-radius: 4px; padding: 24px; margin-top: 28px;
     }
     .mold-warning-title {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: var(--font-barlow-condensed), sans-serif;
       font-size: 18px; font-weight: 800;
       text-transform: uppercase; color: #FF6B6B;
       margin-bottom: 8px; letter-spacing: 0.5px;
@@ -430,7 +430,7 @@ return (
       padding: 22px 28px;
       display: flex; align-items: center; justify-content: space-between; gap: 16px;
       cursor: pointer; text-align: left;
-      font-family: 'Barlow', sans-serif;
+      font-family: var(--font-barlow), sans-serif;
       font-size: 16px; font-weight: 600; color: var(--white);
       transition: background 0.2s;
     }
@@ -462,7 +462,7 @@ return (
     }
     .big-cta-content { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
     .big-cta h2 {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: var(--font-barlow-condensed), sans-serif;
       font-size: clamp(44px, 7vw, 80px); font-weight: 900;
       text-transform: uppercase; line-height: 0.9;
       color: var(--white); margin-bottom: 20px;
