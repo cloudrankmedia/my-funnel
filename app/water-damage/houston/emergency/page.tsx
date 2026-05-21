@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function WaterDamageLanding() {
 const [showStickyBar, setShowStickyBar] = useState(false);
@@ -12,8 +13,8 @@ window.addEventListener("scroll", handleScroll);
 return () => window.removeEventListener("scroll", handleScroll);
 }, []);
 
-const phoneNumber = "(346) 910-9374";
-const phoneHref = "tel:13469109374";
+const phoneNumber = "(281) 603-1476";
+const phoneHref = "tel:+12816031476";
 
 const faqs = [
 {
@@ -43,7 +44,7 @@ a: "No. SiteFlow Network is a connection service that assists homeowners in find
 ];
 
 return (
-<>
+<main>
 <style suppressHydrationWarning>{`
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap');
 
@@ -95,7 +96,12 @@ return (
       padding: 8px 20px; border-radius: 4px;
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 800; font-size: 16px;
-      text-decoration: none; white-space: nowrap;
+      text-decoration: none; white-space: nowrap; flex-shrink: 0;
+    }
+    @media (max-width: 640px) {
+      .sticky-bar { padding: 10px 16px; gap: 12px; }
+      .sticky-bar p { font-size: 14px; }
+      .sticky-bar a { font-size: 14px; padding: 7px 14px; }
     }
 
     /* NAV */
@@ -105,15 +111,10 @@ return (
       border-bottom: 1px solid var(--border);
       background: var(--charcoal);
     }
-    .logo {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 22px; font-weight: 800;
-      letter-spacing: 2px; text-transform: uppercase;
-      color: var(--white);
-    }
-    .logo span { color: var(--red-light); }
+    .logo { display: flex; align-items: center; }
+    @media (max-width: 640px) { .logo img { height: 32px !important; } }
     .nav-phone { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-    .nav-phone-label { font-size: 12px; color: var(--accessible-muted); text-transform: uppercase; letter-spacing: 1px; }
+    .nav-phone-label { font-size: 12px; color: var(--accessible-muted); text-transform: uppercase; letter-spacing: 1px; white-space: nowrap; }
     .nav-phone-number {
       font-family: 'Barlow Condensed', sans-serif;
       font-size: 24px; font-weight: 800;
@@ -126,18 +127,19 @@ return (
       display: flex; align-items: center;
       overflow: hidden; background: var(--charcoal);
     }
-    .hero-bg {
+    .hero-img {
       position: absolute; inset: 0;
-      background:
-        radial-gradient(ellipse at 80% 50%, rgba(217,43,43,0.12) 0%, transparent 60%),
-        radial-gradient(ellipse at 20% 80%, rgba(217,43,43,0.06) 0%, transparent 50%);
+      z-index: 0;
     }
-    .hero-grid {
-      position: absolute; inset: 0;
-      background-image:
-        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
-      background-size: 60px 60px;
+    .hero-img img {
+      object-fit: cover; object-position: center;
+      width: 100% !important; height: 100% !important;
+    }
+    .hero-bg {
+      position: absolute; inset: 0; z-index: 1;
+      background:
+        linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.55) 50%, rgba(0,0,0,0.75) 100%),
+        radial-gradient(ellipse at 80% 50%, rgba(217,43,43,0.15) 0%, transparent 60%);
     }
     .hero-content {
       position: relative; z-index: 2;
@@ -195,35 +197,36 @@ return (
       padding: 22px 36px; border-radius: 4px;
       text-decoration: none;
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: 26px; font-weight: 800;
+      font-size: 28px; font-weight: 800;
       letter-spacing: 1px; text-transform: uppercase;
       transition: background 0.2s; border: none; cursor: pointer;
+      white-space: nowrap;
     }
     .cta-main:hover { background: var(--red-light); }
     .cta-main svg { flex-shrink: 0; }
     .cta-subtext { text-align: center; font-size: 13px; color: var(--accessible-muted); letter-spacing: 0.5px; }
     .cta-subtext strong { color: var(--yellow); }
-    .cta-note {
-      text-align: center; font-size: 12px;
-      color: var(--accessible-muted);
-      padding: 8px 0;
-      border-top: 1px solid var(--border);
-      margin-top: 4px;
+    @media (max-width: 640px) {
+      .cta-main { font-size: 20px; padding: 16px 20px; gap: 10px; white-space: nowrap; }
+      .cta-main svg { width: 20px; height: 20px; flex-shrink: 0; }
     }
 
     /* TRUST ROW */
-    .trust-row { display: flex; gap: 32px; margin-top: 52px; flex-wrap: wrap; }
-    .trust-item { display: flex; align-items: center; gap: 10px; }
+    .trust-row { display: flex; flex-direction: column; gap: 8px; margin-top: 32px; }
+    .trust-item {
+      display: flex; align-items: center; gap: 16px;
+      padding: 12px 0;
+    }
     .trust-icon {
-      width: 36px; height: 36px;
+      width: 44px; height: 44px;
       background: rgba(217,43,43,0.12);
       border: 1px solid rgba(217,43,43,0.3);
       border-radius: 4px;
       display: flex; align-items: center; justify-content: center; flex-shrink: 0;
     }
     .trust-icon svg { color: var(--red-light); }
-    .trust-label { font-size: 14px; font-weight: 600; color: var(--text); }
-    .trust-sublabel { font-size: 12px; color: var(--accessible-muted); }
+    .trust-label { font-size: 18px; font-weight: 700; color: var(--white); }
+    .trust-sublabel { font-size: 14px; color: var(--accessible-muted); margin-top: 2px; }
 
     /* SOCIAL PROOF BAR */
     .social-proof-bar {
@@ -242,37 +245,12 @@ return (
     }
     .proof-label { font-size: 12px; color: var(--accessible-muted); text-transform: uppercase; letter-spacing: 1px; }
     .proof-divider { width: 1px; height: 40px; background: var(--border); }
-
-    /* INDUSTRY STATS */
-    .stats-section {
-      background: var(--charcoal);
-      padding: 64px 40px;
+    @media (max-width: 640px) {
+      .social-proof-bar { display: grid; grid-template-columns: 1fr 1fr; gap: 0; padding: 0; }
+      .proof-stat { padding: 20px 16px; border-bottom: 1px solid var(--border); }
+      .proof-stat:nth-child(odd) { border-right: 1px solid var(--border); }
+      .proof-divider { display: none; }
     }
-    .stats-inner { max-width: 1100px; margin: 0 auto; }
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2px; margin-top: 40px;
-    }
-    .stat-card {
-      background: var(--panel);
-      padding: 36px 32px;
-      border-top: 3px solid var(--red);
-    }
-    .stat-number {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 56px; font-weight: 900;
-      color: var(--red-light); line-height: 1;
-      margin-bottom: 8px; display: block;
-    }
-    .stat-headline {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 20px; font-weight: 800;
-      text-transform: uppercase; color: var(--white);
-      margin-bottom: 10px; letter-spacing: 0.5px;
-    }
-    .stat-detail { font-size: 14px; color: var(--accessible-muted); line-height: 1.6; }
-    .stat-source { font-size: 11px; color: #666; margin-top: 12px; font-style: italic; }
 
     /* CREDIBILITY MARKS */
     .credibility-bar {
@@ -280,24 +258,35 @@ return (
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
       padding: 20px 40px;
-      display: flex; align-items: center; justify-content: center;
-      gap: 12px; flex-wrap: wrap;
+      display: flex; flex-direction: column; align-items: center;
+      gap: 12px;
     }
     .credibility-label {
       font-size: 11px; color: var(--accessible-muted);
       text-transform: uppercase; letter-spacing: 2px;
-      white-space: nowrap;
+      white-space: nowrap; text-align: center;
+    }
+    .credibility-badges {
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      gap: 8px;
+      justify-content: center;
     }
     .credibility-badge {
-      display: inline-flex; align-items: center; gap: 6px;
+      display: inline-flex; align-items: center; justify-content: center; gap: 6px;
       background: rgba(255,255,255,0.04);
       border: 1px solid var(--border);
-      padding: 6px 14px; border-radius: 3px;
+      padding: 8px 14px; border-radius: 3px;
       font-size: 12px; font-weight: 600;
       color: var(--accessible-muted);
-      letter-spacing: 0.5px;
+      letter-spacing: 0.5px; white-space: nowrap;
     }
-    .credibility-badge svg { color: var(--red-light); }
+    .credibility-badge svg { color: var(--red-light); flex-shrink: 0; }
+    @media (max-width: 640px) {
+      .credibility-bar { padding: 20px 24px; }
+      .credibility-badges { grid-template-columns: 1fr 1fr; width: 100%; }
+      .credibility-badge { width: 100%; }
+    }
 
     /* URGENCY STRIP */
     .urgency-strip {
@@ -309,7 +298,12 @@ return (
       font-family: 'Barlow Condensed', sans-serif;
       font-size: 16px; font-weight: 700;
       letter-spacing: 1px; text-transform: uppercase;
-      display: flex; align-items: center; gap: 8px; color: #fff;
+      display: flex; align-items: flex-start; gap: 8px; color: #fff;
+    }
+    .urgency-strip p svg { flex-shrink: 0; margin-top: 2px; }
+    @media (max-width: 640px) {
+      .urgency-strip { flex-direction: column; align-items: flex-start; padding: 20px 24px; gap: 14px; }
+      .urgency-strip p { font-size: 14px; }
     }
 
     /* SECTIONS */
@@ -327,6 +321,34 @@ return (
       line-height: 0.95; color: var(--white); margin-bottom: 48px;
     }
 
+    /* INDUSTRY STATS */
+    .stats-section { background: var(--charcoal); padding: 64px 40px; }
+    .stats-inner { max-width: 1100px; margin: 0 auto; }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2px; margin-top: 40px;
+    }
+    .stat-card {
+      background: linear-gradient(160deg, rgba(217,43,43,0.08) 0%, var(--panel) 60%);
+      padding: 36px 32px;
+      border-top: 3px solid var(--red);
+    }
+    .stat-number {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 56px; font-weight: 900;
+      color: var(--red-light); line-height: 1;
+      margin-bottom: 8px; display: block;
+    }
+    .stat-headline {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 20px; font-weight: 800;
+      text-transform: uppercase; color: var(--white);
+      margin-bottom: 10px; letter-spacing: 0.5px;
+    }
+    .stat-detail { font-size: 14px; color: var(--accessible-muted); line-height: 1.6; }
+    .stat-source { font-size: 11px; color: #999; margin-top: 12px; font-style: italic; }
+
     /* TIMELINE */
     .timeline { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
     @media (max-width: 768px) { .timeline { grid-template-columns: 1fr; } }
@@ -338,7 +360,7 @@ return (
     .step-num {
       font-family: 'Barlow Condensed', sans-serif;
       font-size: 72px; font-weight: 900;
-      color: #4A4A4A; line-height: 1; margin-bottom: 12px;
+      color: #888888; line-height: 1; margin-bottom: 12px;
     }
     .step-title {
       font-family: 'Barlow Condensed', sans-serif;
@@ -448,15 +470,6 @@ return (
       color: var(--white); margin-bottom: 20px;
     }
     .big-cta p { font-size: 18px; color: rgba(255,255,255,0.9); margin-bottom: 40px; }
-    .big-cta-number {
-      display: block;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: clamp(40px, 7vw, 72px); font-weight: 900;
-      color: var(--white); letter-spacing: 2px;
-      text-decoration: none; margin-bottom: 16px;
-      transition: color 0.2s;
-    }
-    .big-cta-number:hover { color: var(--yellow); }
 
     /* FOOTER */
     footer {
@@ -465,13 +478,7 @@ return (
       display: flex; align-items: flex-start; justify-content: space-between;
       flex-wrap: wrap; gap: 20px;
     }
-    .footer-logo {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 16px; font-weight: 800;
-      letter-spacing: 2px; text-transform: uppercase;
-      color: var(--accessible-muted);
-    }
-    .footer-logo span { color: var(--red-light); }
+    .footer-logo { display: flex; align-items: center; }
     .tcpa { font-size: 11px; color: #A8A8A8; max-width: 640px; line-height: 1.6; }
     .tcpa a { color: #C8C8C8; text-decoration: underline; }
     .tcpa a:hover { color: var(--white); }
@@ -479,18 +486,31 @@ return (
     /* RESPONSIVE */
     @media (max-width: 640px) {
       nav { padding: 14px 20px; }
-      .hero-content { padding: 60px 20px; }
+      .nav-phone-label { font-size: 10px; letter-spacing: 0.5px; }
+      .nav-phone-number { font-size: 20px; }
+      .hero-content { padding: 28px 20px 60px; text-align: center; }
+      .hero h1 { text-align: center; }
+      .hero-sub { text-align: center; margin-left: auto; margin-right: auto; }
+      .hero-value-prop { text-align: center; margin-left: auto; margin-right: auto; }
+      .emergency-badge { display: flex; justify-content: center; width: 100%; }
+      .cta-block { margin: 0 auto; }
+      .cta-subtext { text-align: center; }
+      .trust-row { align-items: flex-start; }
       .section { padding: 60px 20px; }
-      .trust-row { gap: 20px; }
+      .section-label { text-align: center; display: block; }
+      .section-title { text-align: center; }
       .urgency-strip { padding: 14px 20px; gap: 16px; }
       .split-panel { padding: 40px 24px; }
+      .split-panel .section-label { text-align: center; display: block; }
+      .split-panel .section-title { text-align: center; }
       .big-cta { padding: 60px 20px; }
       footer { padding: 28px 20px; flex-direction: column; align-items: flex-start; }
-      .social-proof-bar { gap: 24px; padding: 24px 20px; }
-      .proof-divider { display: none; }
-      .credibility-bar { padding: 16px 20px; gap: 8px; }
       .stats-section { padding: 48px 20px; }
       .faq-section { padding: 60px 20px; }
+      .faq-inner .section-label { text-align: center; display: block; }
+      .faq-inner .section-title { text-align: center; }
+      .stats-inner .section-label { text-align: center; display: block; }
+      .stats-inner .section-title { text-align: center; }
     }
   `}</style>
 
@@ -502,7 +522,7 @@ return (
 
   {/* NAV */}
   <nav>
-    <div className="logo">Site<span>Flow</span> Network</div>
+    <div className="logo"><Image src="/logo-emergency-long.png" alt="SiteFlow Network" width={205} height={56} priority style={{ height: "40px", width: "auto" }} /></div>
     <a href={phoneHref} className="nav-phone">
       <div>
         <div className="nav-phone-label">Emergency Line — 24/7</div>
@@ -513,21 +533,30 @@ return (
 
   {/* HERO */}
   <section className="hero">
+    <div className="hero-img">
+      <Image
+        src="/hero-emergency.png"
+        alt="Restoration crew arriving at flooded Houston home"
+        fill
+        priority
+        sizes="100vw"
+        quality={80}
+      />
+    </div>
     <div className="hero-bg" />
-    <div className="hero-grid" />
     <div className="hero-content">
       <div className="emergency-badge">
         <div className="dot" />
-        <span>Available 24 Hours — 7 Days a Week</span>
+        <span>Serving Greater Houston — 24 Hours a Day</span>
       </div>
 
       <h1>
-        Water
-        <span className="accent">Emergency?</span>
+        Water Damage
+        <span className="accent">in Houston?</span>
       </h1>
 
       <p className="hero-sub">
-        Standing water, flood damage, or active leak —{" "}
+        Flooded basement, standing water, or active leak —{" "}
         <strong>one call connects you with a local restoration crew.</strong>
       </p>
 
@@ -545,15 +574,13 @@ return (
         <p className="cta-subtext">
           <strong>No cost to call.</strong> Local restoration professionals. Houston metro area.
         </p>
-        <p className="cta-note">
-          Contractors provide a quote before work begins — you decide whether to proceed.
-        </p>
       </div>
 
-      <div className="trust-row">
+      <p className="section-label" style={{ marginTop: "32px" }}>What You Can Expect</p>
+      <div className="trust-row" style={{ marginTop: "0" }}>
         <div className="trust-item">
           <div className="trust-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
               <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
             </svg>
           </div>
@@ -564,7 +591,7 @@ return (
         </div>
         <div className="trust-item">
           <div className="trust-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
             </svg>
           </div>
@@ -575,7 +602,7 @@ return (
         </div>
         <div className="trust-item">
           <div className="trust-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/>
             </svg>
           </div>
@@ -614,6 +641,7 @@ return (
   {/* CREDIBILITY MARKS */}
   <div className="credibility-bar" role="region" aria-label="Provider requirements">
     <span className="credibility-label">We ask providers to carry</span>
+    <div className="credibility-badges">
     {[
       { label: "State License" },
       { label: "Active Insurance" },
@@ -627,6 +655,7 @@ return (
         {b.label}
       </span>
     ))}
+    </div>
   </div>
 
   {/* URGENCY STRIP */}
@@ -646,7 +675,7 @@ return (
   </div>
 
   {/* INDUSTRY STATS */}
-  <section className="stats-section">
+  <section className="stats-section" id="cost-of-waiting">
     <div className="stats-inner">
       <p className="section-label">Why Fast Response Matters</p>
       <h2 className="section-title">The Cost of<br />Waiting</h2>
@@ -674,7 +703,7 @@ return (
   </section>
 
   {/* HOW IT WORKS */}
-  <section style={{ background: "var(--charcoal)" }}>
+  <section style={{ background: "var(--charcoal)" }} id="how-it-works">
     <div className="section">
       <p className="section-label">What To Expect</p>
       <h2 className="section-title">
@@ -702,7 +731,7 @@ return (
   </section>
 
   {/* DAMAGE TYPES */}
-  <section style={{ background: "var(--dark)", borderTop: "1px solid var(--border)" }}>
+  <section style={{ background: "var(--dark)", borderTop: "1px solid var(--border)" }} id="water-damage-types">
     <div className="section">
       <p className="section-label">We Handle</p>
       <h2 className="section-title">Every Type of Water Emergency</h2>
@@ -725,10 +754,10 @@ return (
   </section>
 
   {/* SPLIT: COST + WHAT TO DO */}
-  <div className="split">
+  <div className="split" id="damage-costs">
     <div className="split-panel">
       <p className="section-label">Understand the Cost</p>
-      <h2 className="section-title" style={{ fontSize: "clamp(28px, 4vw, 44px)" }}>
+      <h2 className="section-title">
         What Water<br />Damage Costs
       </h2>
       <p style={{ fontSize: 14, color: "var(--accessible-muted)", marginBottom: 8 }}>
@@ -754,7 +783,7 @@ return (
 
     <div className="split-panel">
       <p className="section-label">Right Now</p>
-      <h2 className="section-title" style={{ fontSize: "clamp(28px, 4vw, 44px)" }}>
+      <h2 className="section-title">
         What To Do<br />While You Wait
       </h2>
       <ul className="checklist">
@@ -780,7 +809,7 @@ return (
   </div>
 
   {/* FAQ */}
-  <section className="faq-section">
+  <section className="faq-section" id="faq">
     <div className="faq-inner">
       <p className="section-label">Common Questions</p>
       <h2 className="section-title">Got Questions?<br />We Have Answers.</h2>
@@ -805,7 +834,7 @@ return (
   </section>
 
   {/* BIG CTA */}
-  <section className="big-cta">
+  <section className="big-cta" id="call-now">
     <div className="big-cta-content">
       <h2>Don&apos;t Wait.<br />Call Now.</h2>
       <p>The longer water sits, the worse the damage and the higher the bill. One call connects you with a local restoration professional right now.</p>
@@ -820,7 +849,7 @@ return (
 
   {/* FOOTER */}
   <footer>
-    <div className="footer-logo">Site<span>Flow</span> Network</div>
+    <div className="footer-logo"><Image src="/logo-emergency-long.png" alt="SiteFlow Network" width={205} height={56} style={{ height: "28px", width: "auto", opacity: 0.7 }} /></div>
     <p className="tcpa">
       SiteFlow Network (the &ldquo;Website&rdquo;) offers a no-cost service to assist homeowners in connecting with local water damage restoration service providers. All contractors/providers are independent and the Website does not warrant or guarantee any work performed. It is the responsibility of the homeowner to verify that the hired contractor furnishes the necessary license and insurance required for the work to be performed. All persons depicted in photos or videos are actors or models and not contractors listed on the Website.{" "}
       By calling the number above, you consent to be contacted by a local restoration contractor in your area. This is an advertising service. We do not perform restoration work directly. Calls may be recorded for quality assurance. Standard call rates may apply. *Response times vary by provider and location.{" "}
@@ -829,6 +858,6 @@ return (
       <a href="https://siteflownetwork.com/terms-of-service">Terms of Service</a>
     </p>
   </footer>
-</>
+</main>
   );
 }

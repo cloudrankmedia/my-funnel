@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Emergency Water Damage Houston | 24/7 Dispatch",
@@ -13,6 +14,10 @@ export const metadata: Metadata = {
     "water damage emergency Houston TX",
     "immediate water damage response Houston",
   ],
+  icons: {
+    icon: "/logo-emergency.png",
+    apple: "/logo-emergency.png",
+  },
   openGraph: {
     title: "Emergency Water Damage Houston | 24/7 Dispatch",
     description: "Flooded basement or burst pipe in Houston? Certified crews respond fast, 24/7. No cost to call — get connected with a local restoration professional now.",
@@ -40,5 +45,18 @@ export default function EmergencyWaterDamageHoustonLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return (
+    <>
+      {/* GHL Scripts — afterInteractive keeps them off critical path */}
+      <Script
+        src="https://backend.leadconnectorhq.com/appengine/loc/8yVaGIElOnPyCAjDk5Mr/pool/SOstcMyNurcSu575YyKH/number_pool.js"
+        strategy="afterInteractive"
+      />
+      <Script
+        src="https://backend.leadconnectorhq.com/appengine/js/user_session.js"
+        strategy="afterInteractive"
+      />
+      {children}
+    </>
+  );
 }
