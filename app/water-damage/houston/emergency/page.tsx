@@ -554,12 +554,12 @@ return (
       </h1>
 
       <p className="hero-sub">
-        Flooded basement, standing water, or active leak —{" "}
+        Flooded basement, standing water inside your home, or active leak —{" "}
         <strong>one call connects you with a local restoration crew.</strong>
       </p>
 
       <p className="hero-value-prop">
-        We connect Houston homeowners with local water damage restoration professionals. Industrial pumps and air movers on-site. Many Houston crews aim to arrive within 45–90 minutes — response times vary by provider and location.
+        We connect Houston homeowners with local interior water damage restoration professionals. Industrial pumps and air movers on-site. Many Houston crews aim to arrive within 45–90 minutes — response times vary by provider and location.
       </p>
 
       <div className="cta-block">
@@ -715,7 +715,7 @@ return (
           { n: "02", title: "Fast Dispatch", desc: "A local crew is dispatched. Many Houston area crews aim to arrive within 45–90 minutes. Response times vary by provider and location." },
           { n: "03", title: "Assessment", desc: "The team evaluates the source, scope, and category of damage and walks you through the remediation plan before any work begins." },
           { n: "04", title: "Water Removal", desc: "Industrial extractors and air movers begin removing standing water and moisture from walls, floors, and cavities." },
-          { n: "05", title: "Drying & Monitoring", desc: "Dehumidifiers run continuously. Moisture readings are tracked daily until all affected areas are certified dry." },
+          { n: "05", title: "Drying & Monitoring", desc: "Dehumidifiers run continuously. Moisture readings are tracked daily until all affected areas are verified dry." },
           { n: "06", title: "Restoration", desc: "Damaged materials are repaired or replaced. Your home is returned to pre-loss condition. Ask your contractor about insurance paperwork." },
         ].map((s) => (
           <div key={s.n} className="timeline-step">
