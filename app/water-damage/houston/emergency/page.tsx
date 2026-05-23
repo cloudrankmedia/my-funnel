@@ -533,8 +533,8 @@ return (
   <section className="hero">
     <div className="hero-img">
       <Image
-        src="/hero-emergency.png"
-        alt="Restoration crew arriving at flooded Houston home"
+        src="/emergency-water-damage-lp-hero-image.png"
+        alt="Water damage restoration crew working inside flooded Houston home"
         fill
         priority
         sizes="100vw"
