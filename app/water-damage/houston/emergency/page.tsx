@@ -549,12 +549,12 @@ return (
       </div>
 
       <h1>
-        Water Damage
+        Emergency Water Damage
         <span className="accent">in Houston?</span>
       </h1>
 
       <p className="hero-sub">
-        Flooded basement, standing water inside your home, or active leak —{" "}
+        Flooded basement, standing water extraction, or active leak inside your home —{" "}
         <strong>one call connects you with a local restoration crew.</strong>
       </p>
 
