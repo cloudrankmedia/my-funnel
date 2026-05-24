@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Emergency Water Damage Houston | 24/7 Dispatch",
+  title: "Emergency Water Damage Restoration Houston | 24/7 Dispatch",
   description: "Flooded basement or burst pipe in Houston? Certified crews respond fast, 24/7. No cost to call — get connected with a local restoration professional now.",
   keywords: [
     "emergency water damage Houston",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     apple: "/logo-emergency.png",
   },
   openGraph: {
-    title: "Emergency Water Damage Houston | 24/7 Dispatch",
+    title: "Emergency Water Damage Restoration Houston | 24/7 Dispatch",
     description: "Flooded basement or burst pipe in Houston? Certified crews respond fast, 24/7. No cost to call — get connected with a local restoration professional now.",
     url: "https://go.siteflownetwork.com/water-damage/houston/emergency",
     siteName: "SiteFlow Network",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Emergency Water Damage Houston | 24/7 Dispatch",
+    title: "Emergency Water Damage Restoration Houston | 24/7 Dispatch",
     description: "Flooded basement or burst pipe in Houston? Certified crews respond fast, 24/7. No cost to call — get connected with a local restoration professional now.",
   },
   alternates: {
