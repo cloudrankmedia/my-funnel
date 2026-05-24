@@ -554,8 +554,8 @@ return (
       </h1>
 
       <p className="hero-sub">
-        Flooded basement, standing water extraction, or active leak inside your home —{" "}
-        <strong>one call connects you with a local restoration crew.</strong>
+        Flooding, standing water, or burst pipe inside your home?{" "}
+        <strong>One call connects you with a local water extraction &amp; restoration crew.</strong>
       </p>
 
       <p className="hero-value-prop">
