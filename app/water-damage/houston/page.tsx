@@ -77,7 +77,7 @@ export default function WaterDamageRestorationHouston() {
     {
       icon: "🟦",
       title: "Standing Water Removal",
-      body: "Industrial pump trucks and wet vacuums remove standing water from basements, slabs, and living areas. Fast, thorough water extraction.",
+      body: "Industrial pump trucks and wet vacuums remove standing water from slabs, garages, and living areas. Fast, thorough water extraction.",
     },
     {
       icon: "🔧",
