@@ -739,7 +739,7 @@ return (
           { title: "Flooding", desc: "Storm water, overflowing rivers, or heavy rain intrusion — category 3 water requires immediate professional response." },
           { title: "Sewage Backup", desc: "Black water contamination is a health emergency. Full containment, extraction, and sanitization required." },
           { title: "Appliance Leaks", desc: "Water heaters, washing machines, and dishwashers can silently saturate walls and subfloors for days." },
-          { title: "Roof Leaks", desc: "Storm damage, failed flashing, or ice dams allow water to penetrate attic insulation and ceiling cavities." },
+          { title: "Roof Leaks", desc: "Storm damage, failed flashing, or hurricane-force winds allow water to penetrate attic insulation and ceiling cavities." },
           { title: "Slab Leaks", desc: "Under-slab plumbing failures cause moisture to wick upward through flooring — often missed until mold appears." },
         ].map((d) => (
           <div key={d.title} className="damage-card">
