@@ -66,13 +66,13 @@ export default function WaterDamageRestorationHouston() {
     },
     {
       icon: "🏠",
-      title: "Sewage Backup Response",
-      body: "Category 3 contaminated water events handled with proper PPE, containment, and sanitation protocols. Full remediation of affected areas.",
+      title: "Sewage Backup & Cleanup",
+      body: "Sewage cleanup and Category 3 contaminated water events handled with proper PPE, containment, and sanitation protocols. Full remediation of affected areas.",
     },
     {
       icon: "⛈️",
       title: "Storm Damage Response",
-      body: "Roof intrusion, window breach, and catastrophic storm flooding handled 24/7. Full Houston metro coverage for major weather events.",
+      body: "Roof intrusion, window breach, catastrophic storm flooding, and fire and water damage restoration handled 24/7. Full Houston metro coverage for major weather events.",
     },
     {
       icon: "🟦",
@@ -749,7 +749,7 @@ export default function WaterDamageRestorationHouston() {
               </h1>
 
               <p className="hero__sub">
-                Get matched with a <strong>local water damage specialist</strong> in the Greater Houston Area — right now. Contractors in our network typically respond within <strong>45–90 minutes</strong> and bring full documentation for your insurance claim.
+                Get matched with a <strong>local water damage restoration specialist</strong> in the Greater Houston Area — right now. Contractors in our network typically respond within <strong>45–90 minutes</strong> and bring full documentation for your insurance claim.
               </p>
 
               <div className="hero__cta-row">
@@ -764,7 +764,7 @@ export default function WaterDamageRestorationHouston() {
 
               <div className="hero__trust-strip">
                 {[
-                  "Local Restoration Network",
+                  "Water Damage Restoration Company",
                   "Insurance Claims Supported",
                   "Greater Houston Area Coverage",
                   "Available 24/7",
@@ -813,7 +813,7 @@ export default function WaterDamageRestorationHouston() {
       {/* CREDENTIALS */}
       <section className="credentials" aria-label="Crew verification standards">
         <div className="container">
-          <p className="credentials__label">What sets our restoration network apart</p>
+          <p className="credentials__label">What sets our water damage restoration network apart</p>
           <div className="credentials__grid">
             {[
               {
