@@ -760,6 +760,7 @@ export default function WaterDamageRestorationHouston() {
                   Call Now — Get Matched
                 </a>
               </div>
+              <p className="hero__risk-reversal">Have your zip code ready when you call.</p>
               <p className="hero__risk-reversal">Talking to us is always obligation-free. You decide if you want to move forward.</p>
 
               <div className="hero__trust-strip">
@@ -1002,6 +1003,7 @@ export default function WaterDamageRestorationHouston() {
         <div className="bottom-cta__inner">
           <h2 className="bottom-cta__title">Water Damage Doesn&apos;t Wait.<br />Neither Should You.</h2>
           <p className="bottom-cta__sub">Every hour without mitigation increases damage, mold risk, and claim complexity. Get matched with a local specialist right now.</p>
+          <p style={{ fontSize: 13, color: "rgba(255,255,255,0.65)", marginBottom: 20, marginTop: -20 }}>Have your zip code ready when you call.</p>
           <a href={phoneHref} className="btn-cta-navy">
             <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
