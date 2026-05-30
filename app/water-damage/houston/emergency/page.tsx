@@ -514,7 +514,7 @@ return (
 
   {/* STICKY BAR */}
   <div className={`sticky-bar ${showStickyBar ? "visible" : ""}`}>
-    <p>Water damage gets worse every hour — call now<span style={{ display: "block", fontSize: "11px", color: "rgba(255,255,255,0.7)", fontWeight: 400 }}>You'll be asked to enter your zip code on your keypad after dialing.</span></p>
+    <p>Water damage gets worse every hour — call now — have your zip code ready to enter after dialing.</p>
     <a href={phoneHref}>{phoneNumber}</a>
   </div>
 
