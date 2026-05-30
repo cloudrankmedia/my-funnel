@@ -514,7 +514,7 @@ return (
 
   {/* STICKY BAR */}
   <div className={`sticky-bar ${showStickyBar ? "visible" : ""}`}>
-    <p>Water damage gets worse every hour — call now<span style={{ display: "block", fontSize: "15px", color: "rgba(255,255,255,0.7)", fontWeight: 400 }}>Have your zip code ready</span></p>
+    <p>Water damage gets worse every hour — call now<span style={{ display: "block", fontSize: "11px", color: "rgba(255,255,255,0.7)", fontWeight: 400 }}>You'll be asked to enter your zip code on your keypad after dialing.</span></p>
     <a href={phoneHref}>{phoneNumber}</a>
   </div>
 
@@ -570,7 +570,7 @@ return (
           Call Now — Get Connected Fast
         </a>
         <p className="cta-subtext">
-          <strong>No cost to call</strong> — you'll be connected to a local water damage specialist. Have your zip code ready.
+          No cost to call. When prompted, type your zip code on your keypad — you'll then be connected to a local restoration specialist.
         </p>
       </div>
 
