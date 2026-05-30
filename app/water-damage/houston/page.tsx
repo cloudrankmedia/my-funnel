@@ -703,7 +703,7 @@ export default function WaterDamageRestorationHouston() {
           <div className="sticky-bar__left">
             <span className="sticky-bar__pulse" aria-hidden="true" />
             <p className="sticky-bar__text">
-              <strong>Water Damage Houston?</strong><span style={{display:'block'}}>Crews available now — 45–90 min response</span>
+              <strong>Water Damage in Houston?</strong><span style={{display:'block'}}>Crews ready now — 45–90 min response</span>
             </p>
           </div>
           <a href={phoneHref} className="sticky-bar__cta">
@@ -760,7 +760,7 @@ export default function WaterDamageRestorationHouston() {
                   Call Now — Get Matched
                 </a>
               </div>
-              <p className="hero__risk-reversal">Have your zip code ready when you call.</p>
+              <p className="hero__risk-reversal" style={{color:'rgba(255,255,255,0.85)', fontWeight:600, fontSize:15, marginBottom:6}}>📍 You'll be asked to enter your zip code on your keypad after dialing.</p>
               <p className="hero__risk-reversal">Talking to us is always obligation-free. You decide if you want to move forward.</p>
 
               <div className="hero__trust-strip">
