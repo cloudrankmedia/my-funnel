@@ -660,7 +660,7 @@ return (
   <div className="urgency-strip" role="region" aria-label="Urgency indicators">
     <p>
       <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M1 21L12 2l11 19H1zm11-3v-4h-2v4h2zm0-6V9h-2v3h2z"/></svg>
-      Emergency flood cleanup within hours prevents mold growth.
+      Emergency flood cleanup prevents mold growth
     </p>
     <p>
       <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M1 21L12 2l11 19H1zm11-3v-4h-2v4h2zm0-6V9h-2v3h2z"/></svg>
