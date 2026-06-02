@@ -202,7 +202,7 @@ return (
     }
     .cta-main:hover { background: var(--red-light); }
     .cta-main svg { flex-shrink: 0; }
-    .cta-subtext { text-align: center; font-size: 13px; color: var(--accessible-muted); letter-spacing: 0.5px; }
+    .cta-subtext { text-align: center; font-size: 13px; color: #FFFFFF; letter-spacing: 0.5px; background: rgba(0,0,0,0.4); padding: 8px 12px; border-radius: 4px; }
     .cta-subtext strong { color: var(--yellow); }
     @media (max-width: 640px) {
       .cta-main { font-size: 20px; padding: 16px 20px; gap: 10px; white-space: nowrap; }
@@ -836,6 +836,7 @@ return (
     <div className="big-cta-content">
       <h2>Don&apos;t Wait.<br />Call Now.</h2>
       <p>The longer water sits, the worse the damage and the higher the bill. One call connects you with a local restoration professional right now.</p>
+      <p style={{ fontSize: "15px", color: "rgba(255,255,255,0.85)", marginBottom: "24px" }}>No cost to call. When prompted, type your zip code on your keypad — you&apos;ll then be connected to a local restoration specialist.</p>
       <a href={phoneHref} className="cta-main" style={{ display: "inline-flex", margin: "0 auto" }}>
         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
