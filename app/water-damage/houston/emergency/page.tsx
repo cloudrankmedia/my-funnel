@@ -555,7 +555,7 @@ return (
 
       <p className="hero-sub">
         Flooding, standing water, or burst pipe inside your home?{" "}
-        <strong>One call connects you with a local water extraction &amp; restoration crew.</strong>
+        <strong>One call connects you with a local emergency water restoration crew.</strong>
       </p>
 
       <p className="hero-value-prop">
