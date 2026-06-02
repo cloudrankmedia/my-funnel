@@ -660,7 +660,7 @@ return (
   <div className="urgency-strip" role="region" aria-label="Urgency indicators">
     <p>
       <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M1 21L12 2l11 19H1zm11-3v-4h-2v4h2zm0-6V9h-2v3h2z"/></svg>
-      Mold can begin forming within 24–48 hours
+      Emergency flood cleanup within hours prevents mold growth.
     </p>
     <p>
       <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M1 21L12 2l11 19H1zm11-3v-4h-2v4h2zm0-6V9h-2v3h2z"/></svg>
@@ -712,7 +712,7 @@ return (
       <div className="timeline">
         {[
           { n: "01", title: "You Call", desc: "One call connects you with a local restoration professional available in your zip code — no hold times, no runaround." },
-          { n: "02", title: "Fast Dispatch", desc: "A local crew is dispatched. Many Houston area crews aim to arrive within 45–90 minutes. Response times vary by provider and location." },
+          { n: "02", title: "Fast Dispatch", desc: "A local water extraction company is dispatched from our Houston network. Many crews aim to arrive within 45–90 minutes. Response times vary by provider and location." },
           { n: "03", title: "Assessment", desc: "The team evaluates the source, scope, and category of damage and walks you through the remediation plan before any work begins." },
           { n: "04", title: "Water Removal", desc: "Industrial extractors and air movers begin removing standing water and moisture from walls, floors, and cavities." },
           { n: "05", title: "Drying & Monitoring", desc: "Dehumidifiers run continuously. Moisture readings are tracked daily until all affected areas are verified dry." },
@@ -736,7 +736,7 @@ return (
       <div className="damage-grid">
         {[
           { title: "Burst Pipes", desc: "Frozen or failed pipes can dump hundreds of gallons per hour. Fast extraction stops the spread." },
-          { title: "Flooding", desc: "Storm water, overflowing rivers, or heavy rain intrusion — category 3 water requires immediate professional response." },
+          { title: "Flooding", desc: "Storm water, overflowing rivers, or heavy rain intrusion — category 3 flood cleanup requires immediate professional response." },
           { title: "Sewage Backup", desc: "Black water contamination is a health emergency. Full containment, extraction, and sanitization required." },
           { title: "Appliance Leaks", desc: "Water heaters, washing machines, and dishwashers can silently saturate walls and subfloors for days." },
           { title: "Roof Leaks", desc: "Storm damage, failed flashing, or hurricane-force winds allow water to penetrate attic insulation and ceiling cavities." },
