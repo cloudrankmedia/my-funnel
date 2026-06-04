@@ -123,6 +123,7 @@ return (
       object-fit: cover; object-position: center;
       width: 100% !important; height: 100% !important;
     }
+    @media (max-width: 640px) { .hero-img { display: none; } }
     .hero-bg {
       position: absolute; inset: 0; z-index: 1;
       background:
