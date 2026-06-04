@@ -1,18 +1,8 @@
-"use client";
-
-import { useState, useEffect } from "react";
 import Image from "next/image";
+import FaqAccordion from "./FaqAccordion";
+import StickyCallBar from "./StickyCallBar";
 
 export default function WaterDamageLanding() {
-const [showStickyBar, setShowStickyBar] = useState(false);
-const [openFaq, setOpenFaq] = useState<number | null>(null);
-
-useEffect(() => {
-const handleScroll = () => setShowStickyBar(window.scrollY > 300);
-window.addEventListener("scroll", handleScroll);
-return () => window.removeEventListener("scroll", handleScroll);
-}, []);
-
 const phoneNumber = "(281) 603-1476";
 const phoneHref = "tel:+12816031476";
 
@@ -513,10 +503,7 @@ return (
   `}</style>
 
   {/* STICKY BAR */}
-  <div className={`sticky-bar ${showStickyBar ? "visible" : ""}`}>
-    <p>Water damage gets worse every hour — call now — have your zip code ready to enter after dialing.</p>
-    <a href={phoneHref}>{phoneNumber}</a>
-  </div>
+  <StickyCallBar phoneNumber={phoneNumber} phoneHref={phoneHref} />
 
   {/* NAV */}
   <nav>
@@ -812,23 +799,7 @@ return (
     <div className="faq-inner">
       <p className="section-label">Common Questions</p>
       <h2 className="section-title">Got Questions?<br />We Have Answers.</h2>
-      <div className="faq-list" role="list">
-        {faqs.map((faq, i) => (
-          <div key={i} className="faq-item" role="listitem">
-            <button
-              className="faq-question"
-              onClick={() => setOpenFaq(openFaq === i ? null : i)}
-              aria-expanded={openFaq === i}
-            >
-              {faq.q}
-              <span className={`faq-icon ${openFaq === i ? "open" : ""}`} aria-hidden="true">+</span>
-            </button>
-            {openFaq === i && (
-              <div className="faq-answer">{faq.a}</div>
-            )}
-          </div>
-        ))}
-      </div>
+      <FaqAccordion faqs={faqs} />
     </div>
   </section>
 
