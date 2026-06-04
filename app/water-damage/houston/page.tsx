@@ -2,6 +2,7 @@
 
 import "../../globals.css";
 import { useState, useEffect } from "react";
+import Script from "next/script";
 
 export default function WaterDamageRestorationHouston() {
   const [activeTab, setActiveTab] = useState<"restoration" | "mitigation">("restoration");
@@ -1059,6 +1060,18 @@ export default function WaterDamageRestorationHouston() {
           </p>
         </div>
       </footer>
+
+      {/* GHL Number Pool — scoped to this page only */}
+      <Script
+        id="ghl-number-pool"
+        strategy="afterInteractive"
+        src="https://backend.leadconnectorhq.com/appengine/loc/8yVaGIElOnPyCAjDk5Mr/pool/1DEMAG86O8UkcanY9FST/number_pool.js"
+      />
+      <Script
+        id="ghl-user-session"
+        strategy="afterInteractive"
+        src="https://backend.leadconnectorhq.com/appengine/js/user_session.js"
+      />
     </>
   );
 }

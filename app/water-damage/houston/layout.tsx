@@ -68,18 +68,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </noscript>
 
       {children}
-
-      {/* GHL Number Pool — attribution tracking */}
-      <Script
-        id="ghl-number-pool"
-        strategy="afterInteractive"
-        src="https://backend.leadconnectorhq.com/appengine/loc/8yVaGIElOnPyCAjDk5Mr/pool/1DEMAG86O8UkcanY9FST/number_pool.js"
-      />
-      <Script
-        id="ghl-user-session"
-        strategy="afterInteractive"
-        src="https://backend.leadconnectorhq.com/appengine/js/user_session.js"
-      />
     </>
   );
 }
