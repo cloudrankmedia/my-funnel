@@ -40,7 +40,8 @@ export default function HoustonLayout({
 }) {
   return (
     <>
-      {/* GHL preconnect */}
+      {/* GHL preconnects — backend serves the Script tags, services receives runtime calls */}
+      <link rel="preconnect" href="https://backend.leadconnectorhq.com" />
       <link rel="preconnect" href="https://services.leadconnectorhq.com" />
 
       {/* Google Tag Manager — head script */}
