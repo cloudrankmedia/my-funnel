@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Sans, Bebas_Neue, Barlow, Barlow_Condensed, DM_Serif_Display } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import "./globals.css";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],

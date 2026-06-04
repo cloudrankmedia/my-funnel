@@ -1,5 +1,6 @@
 "use client";
 
+import "../../globals.css";
 import { useState, useEffect } from "react";
 
 export default function WaterDamageRestorationHouston() {
