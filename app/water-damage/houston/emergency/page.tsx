@@ -520,7 +520,7 @@ return (
 
   {/* NAV */}
   <nav>
-    <div className="logo"><Image src="/logo-emergency-long.png" alt="SiteFlow Network" width={205} height={56} priority sizes="(max-width: 640px) 160px, 205px" style={{ height: "40px", width: "auto" }} /></div>
+    <div className="logo"><Image src="/logo-emergency-long.png" alt="SiteFlow Network" width={205} height={56} priority quality={65} sizes="(max-width: 640px) 160px, 205px" style={{ height: "40px", width: "auto" }} /></div>
     <a href={phoneHref} className="nav-phone">
       <div>
         <div className="nav-phone-label">Emergency Line — 24/7</div>
@@ -849,7 +849,7 @@ return (
 
   {/* FOOTER */}
   <footer>
-    <div className="footer-logo"><Image src="/logo-emergency-long.png" alt="SiteFlow Network" width={205} height={56} sizes="(max-width: 640px) 120px, 160px" style={{ height: "28px", width: "auto", opacity: 0.7 }} /></div>
+    <div className="footer-logo"><Image src="/logo-emergency-long.png" alt="SiteFlow Network" width={205} height={56} loading="lazy" quality={65} sizes="(max-width: 640px) 120px, 160px" style={{ height: "28px", width: "auto", opacity: 0.7 }} /></div>
     <p className="tcpa">
       SiteFlow Network (the &ldquo;Website&rdquo;) offers a no-cost service to assist homeowners in connecting with local water damage restoration service providers. All contractors/providers are independent and the Website does not warrant or guarantee any work performed. It is the responsibility of the homeowner to verify that the hired contractor furnishes the necessary license and insurance required for the work to be performed. All persons depicted in photos or videos are actors or models and not contractors listed on the Website.{" "}
       By calling the number above, you consent to be contacted by a local restoration contractor in your area. This is an advertising service. We do not perform restoration work directly. Calls may be recorded for quality assurance. Standard call rates may apply. *Response times vary by provider and location.{" "}
