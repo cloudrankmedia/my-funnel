@@ -537,6 +537,7 @@ return (
         alt="Water damage restoration crew working inside flooded Houston home"
         fill
         priority
+        fetchPriority="high"
         sizes="100vw"
         quality={65}
       />
