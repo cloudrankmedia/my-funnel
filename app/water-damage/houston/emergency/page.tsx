@@ -519,17 +519,20 @@ return (
 
   {/* HERO */}
   <section className="hero">
-    <div className="hero-img">
-      <Image
-        src="/emergency-water-damage-lp-hero-image.png"
-        alt="Water damage restoration crew working inside flooded Houston home"
-        fill
-        priority
-        fetchPriority="high"
+    {/* Hero image: desktop only — mobile gets a transparent fallback so no preload/download happens at ≤640px */}
+    <picture className="hero-img">
+      <source
+        media="(min-width: 641px)"
+        srcSet="/_next/image?url=%2Femergency-water-damage-lp-hero-image.png&w=1080&q=65 1080w, /_next/image?url=%2Femergency-water-damage-lp-hero-image.png&w=1920&q=65 1920w, /_next/image?url=%2Femergency-water-damage-lp-hero-image.png&w=2048&q=65 2048w"
         sizes="100vw"
-        quality={65}
       />
-    </div>
+      <img
+        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+        alt="Water damage restoration crew working inside flooded Houston home"
+        fetchPriority="high"
+        decoding="async"
+      />
+    </picture>
     <div className="hero-bg" />
     <div className="hero-content">
       <div className="emergency-badge">
