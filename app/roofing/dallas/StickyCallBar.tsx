@@ -18,7 +18,7 @@ export default function StickyCallBar({ phoneNumber, phoneHref }: Props) {
 
   return (
     <div className={`sticky-bar ${visible ? "visible" : ""}`}>
-      <p>Roof trouble? Get connected with a local roofer — have your zip code ready when you call.</p>
+      <p>Get connected with a local DFW roofer — have your zip code ready when you call.</p>
       <a href={phoneHref}>{phoneNumber}</a>
     </div>
   );
