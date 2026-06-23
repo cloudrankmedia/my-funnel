@@ -36,17 +36,17 @@ export default function RoofingDallasLanding() {
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --navy: #242E51;
-      --navy-dark: #1A2444;
-      --navy-light: #33406E;
-      --orange: #E8500A;
-      --orange-dark: #C8430A;
-      --orange-light: #F47A36;
-      --cream: #F7F1E8;
+      --navy: #212E50;
+      --navy-dark: #18223D;
+      --navy-light: #313F66;
+      --orange: #F5903C;
+      --orange-dark: #E07A28;
+      --orange-light: #F8A85E;
+      --cream: #F6E8E6;
       --bg: #FFFFFF;
-      --bg-alt: #F7F4EF;
-      --border: #E6E2DA;
-      --ink: #242E51;
+      --bg-alt: #FBF6F5;
+      --border: #ECE2E0;
+      --ink: #212E50;
       --muted: #5B6478;
       --muted-light: #AEB6CC;
     }
@@ -115,7 +115,7 @@ export default function RoofingDallasLanding() {
     /* HERO */
     .hero {
       background:
-        radial-gradient(ellipse at 78% 20%, rgba(232,80,10,0.18) 0%, transparent 55%),
+        radial-gradient(ellipse at 78% 20%, rgba(245,144,60,0.18) 0%, transparent 55%),
         linear-gradient(160deg, var(--navy) 0%, var(--navy-dark) 100%);
       color: var(--cream);
       padding: 96px 0 104px;
@@ -158,7 +158,7 @@ export default function RoofingDallasLanding() {
       font-size: 25px; font-weight: 700;
       letter-spacing: 0.5px;
       transition: background 0.2s, transform 0.1s;
-      box-shadow: 0 10px 30px rgba(232,80,10,0.28);
+      box-shadow: 0 10px 30px rgba(245,144,60,0.28);
       white-space: nowrap;
     }
     .cta-main:hover { background: var(--orange-dark); }
@@ -225,7 +225,7 @@ export default function RoofingDallasLanding() {
     .reason-card:hover { border-color: var(--orange); box-shadow: 0 8px 24px rgba(36,46,81,0.08); transform: translateY(-2px); }
     .reason-icon {
       width: 40px; height: 40px; flex-shrink: 0;
-      background: rgba(232,80,10,0.1); border-radius: 8px;
+      background: rgba(245,144,60,0.1); border-radius: 8px;
       display: flex; align-items: center; justify-content: center;
       color: var(--orange);
     }
@@ -261,7 +261,7 @@ export default function RoofingDallasLanding() {
     .checklist li:last-child { border-bottom: none; }
     .check-icon {
       width: 26px; height: 26px; flex-shrink: 0; margin-top: 1px;
-      background: rgba(232,80,10,0.12); border-radius: 50%;
+      background: rgba(245,144,60,0.12); border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
       color: var(--orange);
     }
@@ -282,7 +282,7 @@ export default function RoofingDallasLanding() {
     .faq-question:hover { background: var(--bg-alt); }
     .faq-icon {
       width: 28px; height: 28px; flex-shrink: 0;
-      background: rgba(232,80,10,0.12); border-radius: 50%;
+      background: rgba(245,144,60,0.12); border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
       color: var(--orange); font-size: 20px; font-weight: 400;
       transition: transform 0.2s;
@@ -294,7 +294,7 @@ export default function RoofingDallasLanding() {
     /* BIG CTA */
     .big-cta {
       background:
-        radial-gradient(ellipse at 50% 0%, rgba(232,80,10,0.22) 0%, transparent 60%),
+        radial-gradient(ellipse at 50% 0%, rgba(245,144,60,0.22) 0%, transparent 60%),
         linear-gradient(160deg, var(--navy) 0%, var(--navy-dark) 100%);
       padding: 96px 0; text-align: center;
     }
