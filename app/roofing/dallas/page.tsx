@@ -489,7 +489,7 @@ export default function RoofingDallasLanding() {
               "Connects you with independent roofers across the DFW metro",
               "One call — no forms to fill out",
               "Covers Dallas, Fort Worth, Arlington, Plano, Irving, Frisco, McKinney, Garland & surrounding areas (~50 mi)",
-              "Available [HOURS_PLACEHOLDER]",
+              "Available 24/7",
             ].map((item) => (
               <li key={item}>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" aria-hidden="true">
