@@ -310,7 +310,7 @@ export default function RoofingDallasLanding() {
 
     /* FOOTER */
     footer {
-      background: var(--navy-dark);
+      background: var(--navy);
       padding: 48px 0 40px;
     }
     footer .wrap { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 24px; }
