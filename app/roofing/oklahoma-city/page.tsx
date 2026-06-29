@@ -7,7 +7,7 @@ import StickyCallBar from "./StickyCallBar";
 // Service Direct issues the roofing DID. Every call button/link references it.
 const ROOFING_DID = "{{ROOFING_DID}}";
 
-export default function RoofingDallasLanding() {
+export default function RoofingOklahomaCityLanding() {
   const phoneNumber = ROOFING_DID;
   const phoneHref = `tel:${ROOFING_DID}`;
 
@@ -18,7 +18,7 @@ export default function RoofingDallasLanding() {
     },
     {
       q: "What areas do you cover?",
-      a: "The Dallas–Fort Worth metro and surrounding communities, roughly a 50-mile radius.",
+      a: "The Oklahoma City metro and surrounding communities, roughly a 50-mile radius.",
     },
     {
       q: "What should I have ready when I call?",
@@ -38,7 +38,7 @@ export default function RoofingDallasLanding() {
     },
     {
       q: "How fast can someone come out?",
-      a: "Many DFW roofers respond the same day, though response times vary by provider and area.",
+      a: "Many Oklahoma City roofers respond the same day, though response times vary by provider and area.",
     },
   ];
 
@@ -443,7 +443,7 @@ export default function RoofingDallasLanding() {
         <div className="wrap">
           <div className="logo"><Image src="/siteflow-logo.png" alt="SiteFlow Network" width={235} height={50} priority quality={85} sizes="(max-width: 640px) 180px, 235px" style={{ height: "44px", width: "auto" }} /></div>
           <a href={phoneHref} className="nav-phone">
-            <span className="nav-phone-label">DFW Roofing Line</span>
+            <span className="nav-phone-label">OKC Roofing Line</span>
             <span className="nav-phone-number">{phoneNumber}</span>
           </a>
         </div>
@@ -452,14 +452,14 @@ export default function RoofingDallasLanding() {
       {/* HERO */}
       <section className="hero">
         <div className="wrap">
-          <span className="eyebrow">Dallas–Fort Worth Metro</span>
+          <span className="eyebrow">Oklahoma City Metro</span>
           <h1>
-            Roof Damage in Dallas–Fort Worth?{" "}
+            Roof Damage in Oklahoma City?{" "}
             <span className="accent">Get Connected With a Local Roofer.</span>
           </h1>
           <p className="hero-sub">
             Storm or hail damage, a roof leak, missing shingles, or need a full replacement?{" "}
-            <strong>Call to get connected with an independent roofing contractor serving the DFW metro.</strong>
+            <strong>Call to get connected with an independent roofing contractor serving the OKC metro.</strong>
           </p>
           <p className="hero-clarity">
             SiteFlow Network connects homeowners with independent local roofing contractors. We don&apos;t perform roofing work ourselves.
@@ -497,7 +497,7 @@ export default function RoofingDallasLanding() {
       {/* COVERAGE STRIP */}
       <div className="coverage" role="region" aria-label="Service coverage">
         <div className="wrap">
-          <div className="cov-item"><span className="cov-num">DFW</span><span className="cov-label">Metro Coverage</span></div>
+          <div className="cov-item"><span className="cov-num">OKC</span><span className="cov-label">Metro Coverage</span></div>
           <div className="cov-item"><span className="cov-num">~50 mi</span><span className="cov-label">Service Radius</span></div>
           <div className="cov-item"><span className="cov-num">Local</span><span className="cov-label">Independent Roofers</span></div>
           <div className="cov-item"><span className="cov-num">1 Call</span><span className="cov-label">No Forms</span></div>
@@ -514,7 +514,7 @@ export default function RoofingDallasLanding() {
       <section className="partner-strip" id="trust">
         <div className="wrap">
           <p className="partner-lead">
-            We match you with <span className="accent">licensed, insured, and vetted</span> local DFW roofers.
+            We match you with <span className="accent">licensed, insured, and vetted</span> local Oklahoma City roofers.
           </p>
           <p className="partner-sub">
             Every contractor in our network is an independent, local professional — many are GAF-certified and BBB-accredited. We help you connect with the right one for your roof.
@@ -525,7 +525,7 @@ export default function RoofingDallasLanding() {
               "Vetted local contractors",
               "Many GAF-certified",
               "Many BBB-accredited",
-              "DFW-based",
+              "OKC-based",
             ].map((b) => (
               <span key={b} className="partner-badge">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
@@ -591,7 +591,7 @@ export default function RoofingDallasLanding() {
               },
               {
                 title: "Fast, same-day response",
-                desc: "Call and get connected quickly — many DFW roofers respond the same day. Response times vary by provider and area.",
+                desc: "Call and get connected quickly — many Oklahoma City roofers respond the same day. Response times vary by provider and area.",
                 icon: (
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><circle cx="12" cy="12" r="9" /><polyline points="12 7 12 12 15.5 14" /></svg>
                 ),
@@ -612,7 +612,7 @@ export default function RoofingDallasLanding() {
               },
               {
                 title: "Matched with a top local pro",
-                desc: "We match you with a vetted, local DFW roofing contractor who knows Texas storms — not an out-of-town call center.",
+                desc: "We match you with a vetted, local Oklahoma City roofing contractor who knows Oklahoma storms — not an out-of-town call center.",
                 icon: (
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10z" /><circle cx="12" cy="11" r="2.5" /></svg>
                 ),
@@ -680,7 +680,7 @@ export default function RoofingDallasLanding() {
               <p className="section-label">Storm & Hail Claims</p>
               <h2 className="section-title" style={{ marginBottom: "24px" }}>We connect you with a roofer who handles insurance</h2>
               <p>
-                North Texas gets hit hard by hail and windstorms, and roof damage is one of the most common homeowner insurance claims in the DFW metro. The catch: knowing what&apos;s covered and getting it documented right.
+                Central Oklahoma gets hit hard by hail, wind, and tornado-season storms, and roof damage is one of the most common homeowner insurance claims in the OKC metro. The catch: knowing what&apos;s covered and getting it documented right.
               </p>
               <p>
                 The independent roofers in our network work with storm and hail claims every day. When you call, we connect you with a local pro who can:
@@ -723,7 +723,7 @@ export default function RoofingDallasLanding() {
           TESTIMONIALS — PLACEHOLDER SECTION. DO NOT SHIP AS-IS.
           SiteFlow Network has NO reviews of its own. Every card below is a
           dummy placeholder. Replace each with a REAL, attributed testimonial
-          collected (with permission) from the actual DFW roofing contractor
+          collected (with permission) from the actual OKC roofing contractor
           who buys these leads. Do NOT invent reviews, names, locations,
           star ratings, or review counts. If no real testimonials are
           available yet, delete this whole <section> rather than ship dummies.
@@ -731,25 +731,25 @@ export default function RoofingDallasLanding() {
       <section className="section alt" id="reviews">
         <div className="wrap">
           <p className="section-label">What Homeowners Say</p>
-          <h2 className="section-title">Reviews from DFW homeowners</h2>
+          <h2 className="section-title">Reviews from Oklahoma City homeowners</h2>
           <div className="reviews-note" role="note">
             ⚠ Placeholder section — these are not real reviews. Replace the cards below with real,
-            attributed testimonials from your DFW roofing partner (or delete the section) before publishing.
+            attributed testimonials from your OKC roofing partner (or delete the section) before publishing.
           </div>
           <div className="review-grid">
             {[1, 2, 3].map((n) => (
-              // REPLACE: real DFW partner testimonial + name + city + source
+              // REPLACE: real OKC partner testimonial + name + city + source
               <div key={n} className="review-card placeholder">
                 <span className="review-tag">Placeholder · Replace</span>
                 <p className="review-quote">
-                  &ldquo;[REPLACE: real customer quote from your DFW roofing partner — e.g. a couple
+                  &ldquo;[REPLACE: real customer quote from your OKC roofing partner — e.g. a couple
                   sentences about the storm/hail repair or full replacement experience.]&rdquo;
                 </p>
                 <div className="review-attrib">
                   <span className="review-avatar" aria-hidden="true">?</span>
                   <span>
                     <span className="review-name">[Customer name]</span>
-                    <span className="review-loc">[City, TX] · [source — e.g. Google review]</span>
+                    <span className="review-loc">[City, OK] · [source — e.g. Google review]</span>
                   </span>
                 </div>
               </div>
@@ -765,9 +765,9 @@ export default function RoofingDallasLanding() {
           <h2 className="section-title">Why call</h2>
           <ul className="checklist">
             {[
-              "Connects you with independent roofers across the DFW metro",
+              "Connects you with independent roofers across the OKC metro",
               "One call — no forms to fill out",
-              "Covers Dallas, Fort Worth, Arlington, Plano, Irving, Frisco, McKinney, Garland & surrounding areas (~50 mi)",
+              "Covers Oklahoma City, Edmond, Norman, Moore, Midwest City, Yukon, Mustang & surrounding areas (~50 mi)",
               "Available 24/7",
             ].map((item) => (
               <li key={item}>
@@ -796,7 +796,7 @@ export default function RoofingDallasLanding() {
       <section className="big-cta" id="call-now">
         <div className="wrap">
           <h2>Get connected with a local roofer</h2>
-          <p>One call connects you with an independent roofing contractor serving the DFW metro.</p>
+          <p>One call connects you with an independent roofing contractor serving the OKC metro.</p>
           <a href={phoneHref} className="cta-main">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
