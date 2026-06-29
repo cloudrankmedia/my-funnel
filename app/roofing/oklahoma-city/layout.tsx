@@ -2,36 +2,36 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Roof Damage Dallas–Fort Worth | Get Connected With a Local Roofer",
+  title: "Roof Damage Oklahoma City | Get Connected With a Local Roofer",
   description:
-    "Storm or hail damage, a roof leak, missing shingles, or full replacement in the DFW metro? Call to get connected with an independent local roofing contractor.",
+    "Storm or hail damage, a roof leak, missing shingles, or full replacement in the Oklahoma City metro? Call to get connected with an independent local roofing contractor.",
   keywords: [
-    "roof damage Dallas",
-    "roofing contractor Fort Worth",
-    "storm damage roof Dallas",
-    "hail damage roof DFW",
-    "roof leak repair Dallas",
-    "roof replacement Dallas Fort Worth",
-    "emergency roof tarping Dallas",
-    "local roofer DFW metro",
+    "roof damage Oklahoma City",
+    "roofing contractor Oklahoma City",
+    "storm damage roof Oklahoma City",
+    "hail damage roof OKC",
+    "roof leak repair Oklahoma City",
+    "roof replacement Oklahoma City",
+    "emergency roof tarping Oklahoma City",
+    "local roofer OKC metro",
   ],
   openGraph: {
-    title: "Roof Damage Dallas–Fort Worth | Get Connected With a Local Roofer",
+    title: "Roof Damage Oklahoma City | Get Connected With a Local Roofer",
     description:
-      "Storm or hail damage, a roof leak, missing shingles, or full replacement in the DFW metro? Call to get connected with an independent local roofing contractor.",
-    url: "https://go.siteflownetwork.com/roofing/dallas",
+      "Storm or hail damage, a roof leak, missing shingles, or full replacement in the Oklahoma City metro? Call to get connected with an independent local roofing contractor.",
+    url: "https://go.siteflownetwork.com/roofing/oklahoma-city",
     siteName: "SiteFlow Network",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Roof Damage Dallas–Fort Worth | Get Connected With a Local Roofer",
+    title: "Roof Damage Oklahoma City | Get Connected With a Local Roofer",
     description:
-      "Storm or hail damage, a roof leak, missing shingles, or full replacement in the DFW metro? Call to get connected with an independent local roofing contractor.",
+      "Storm or hail damage, a roof leak, missing shingles, or full replacement in the Oklahoma City metro? Call to get connected with an independent local roofing contractor.",
   },
   alternates: {
-    canonical: "https://go.siteflownetwork.com/roofing/dallas",
+    canonical: "https://go.siteflownetwork.com/roofing/oklahoma-city",
   },
   robots: {
     index: true,
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RoofingDallasLayout({
+export default function RoofingOklahomaCityLayout({
   children,
 }: {
   children: React.ReactNode;
