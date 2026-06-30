@@ -76,9 +76,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </noscript>
 
       {/* Meta Pixel — base code (Pixel ID 1165749681766347). */}
+      {/* lazyOnload: defer to browser idle for fastest page load; still fires PageView. */}
       <Script
         id="meta-pixel"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html: `!function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
