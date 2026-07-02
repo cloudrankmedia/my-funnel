@@ -478,10 +478,10 @@ export default function RoofingOklahomaCityLanding() {
               these exclusive calls route to. No invented rating or review count. */}
           <div className="hero-trust">
             {[
-              "Free roof inspection",
-              "Serving OKC since 1992",
+              "GAF Master Elite certified",
+              "BBB A+ rated",
+              "5-star Google rated",
               "Answering phones 24/7",
-              "Help with insurance claims",
             ].map((t) => (
               <span key={t} className="hero-trust-item">
                 <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
@@ -505,26 +505,28 @@ export default function RoofingOklahomaCityLanding() {
       </div>
 
       {/* PARTNER / CREDENTIAL STRIP — describes the established local roofing
-          team these exclusive OKC calls route to. Claims here are the real,
-          verifiable credentials of that provider (licensed, fully insured,
-          serving OKC since 1992). Do NOT add named third-party certifications
-          (e.g. "GAF Master Elite", "BBB A+") unless they are confirmed for
-          this provider — keep to what is verified. */}
+          team these exclusive OKC calls route to. Every badge below is a real,
+          named credential the client verified on the provider's own website
+          (GAF Master Elite, BBB A+, 5-star Google, NRCA, ORCA, OK Construction
+          Industries Board, works with the OK Insurance Department). Only add or
+          change a named credential here if it is confirmed for this provider. */}
       <section className="partner-strip" id="trust">
         <div className="wrap">
           <p className="partner-lead">
-            We connect you with <span className="accent">licensed, insured</span> local Oklahoma City area roofers — serving the metro since 1992.
+            We connect you with <span className="accent">GAF Master Elite certified, BBB A+ rated</span> local Oklahoma City area roofers — serving the metro since 1992.
           </p>
           <p className="partner-sub">
-            Experienced local roofers who answer 24/7. They lead with truth-first inspections and premium materials, and won&apos;t cut corners to shave an estimate — you get honest work and a straight answer on repair vs. replacement.
+            Experienced, credentialed local roofers who answer 24/7 — 5-star rated on Google, and members of the national and Oklahoma roofing contractor associations. They lead with truth-first inspections and premium materials, and won&apos;t cut corners to shave an estimate.
           </p>
           <div className="partner-badges">
             {[
-              "Licensed & fully insured",
-              "Serving OKC since 1992",
-              "Premium materials — no corners cut",
-              "Answering 24/7",
-              "OKC-based",
+              "GAF Master Elite Certified",
+              "BBB A+ Rated",
+              "5-Star Google Rated",
+              "National Roofing Contractors Association",
+              "Oklahoma Roofing Contractors Association",
+              "OK Construction Industries Board",
+              "Works With the Oklahoma Insurance Dept.",
             ].map((b) => (
               <span key={b} className="partner-badge">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
@@ -682,7 +684,7 @@ export default function RoofingOklahomaCityLanding() {
                 Central Oklahoma gets hit hard by hail, wind, and tornado-season storms, and roof damage is one of the most common homeowner insurance claims in the OKC metro. The catch: knowing what&apos;s covered and getting it documented right.
               </p>
               <p>
-                This crew works storm and hail claims every day. When you call, you reach a local team that will:
+                This crew works storm and hail claims every day — and works with the Oklahoma Insurance Department. When you call, you reach a local team that will:
               </p>
               <ul className="checklist">
                 {[
