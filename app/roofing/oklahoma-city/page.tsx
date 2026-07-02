@@ -636,32 +636,9 @@ export default function RoofingOklahomaCityLanding() {
           <h2 className="section-title">How it works</h2>
           <div className="steps">
             {[
-              { n: "1", title: "Call the number above", desc: "One call gets you started — someone answers 24/7, with no hold times and no runaround." },
-              { n: "2", title: "Tell us about your roof", desc: "Tell the roofer what's going on with your roof and where you're located." },
-              { n: "3", title: "Get connected", desc: "Get connected with an experienced local Oklahoma City area roofer, serving the metro since 1992." },
-            ].map((s) => (
-              <div key={s.n} className="step">
-                <div className="step-num" aria-hidden="true">{s.n}</div>
-                <h3>{s.title}</h3>
-                <p>{s.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* WHAT TO EXPECT — modeled on the reference "when we show up" block, but
-          honestly reframed: SiteFlow does NOT show up. The independent matched
-          roofer does the inspection and work. Reuses the .steps/.step styles. */}
-      <section className="section alt" id="what-to-expect">
-        <div className="wrap">
-          <p className="section-label">After You Call</p>
-          <h2 className="section-title">What to expect when your roofer shows up</h2>
-          <div className="steps">
-            {[
-              { n: "1", title: "Your roofer arrives", desc: "The local team comes out to look at your roof — often the same day, and within about 2 hours for emergency hail storm damage." },
-              { n: "2", title: "Free inspection & honest options", desc: "They inspect the damage, walk you through exactly what they find, and give you a truth-first call on repair vs. replacement. No obligation to move forward." },
-              { n: "3", title: "The work — and the paperwork", desc: "If you decide to proceed, the team handles the job with premium materials and a spotless cleanup — and documents the damage for your insurance claim." },
+              { n: "1", title: "Call — answered 24/7", desc: "One call gets you started, day or night. Someone answers 24/7 — no forms, no hold times, no runaround." },
+              { n: "2", title: "Get connected & inspected", desc: "You're connected with an experienced local OKC roofer — serving the metro since 1992 — who comes out for a free, no-obligation inspection, often same day and within about 2 hours for emergency hail damage." },
+              { n: "3", title: "Honest options, then the work", desc: "They walk you through exactly what they find with a truth-first call on repair vs. replacement. If you move forward, they handle the job with premium materials, a spotless cleanup, and full insurance documentation." },
             ].map((s) => (
               <div key={s.n} className="step">
                 <div className="step-num" aria-hidden="true">{s.n}</div>
@@ -674,7 +651,7 @@ export default function RoofingOklahomaCityLanding() {
       </section>
 
       {/* INSURANCE COORDINATION */}
-      <section className="section" id="insurance">
+      <section className="section alt" id="insurance">
         <div className="wrap">
           <div className="insurance-grid">
             <div className="insurance-copy">
@@ -729,7 +706,7 @@ export default function RoofingOklahomaCityLanding() {
           star ratings, or review counts. If no real testimonials are
           available yet, delete this whole <section> rather than ship dummies.
           ============================================================ */}
-      <section className="section alt" id="reviews">
+      <section className="section" id="reviews">
         <div className="wrap">
           <p className="section-label">What Homeowners Say</p>
           <h2 className="section-title">Reviews from Oklahoma City homeowners</h2>
@@ -756,33 +733,6 @@ export default function RoofingOklahomaCityLanding() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* WHY CALL */}
-      <section className="section" id="why-call">
-        <div className="wrap">
-          <p className="section-label">Why Call</p>
-          <h2 className="section-title">Why call</h2>
-          <ul className="checklist">
-            {[
-              "Connects you with experienced local roofers serving the entire OKC metro since 1992",
-              "One call — no forms to fill out",
-              "Covers Oklahoma City, Edmond, Norman, Moore, Midwest City, Yukon, Mustang & surrounding areas (~50 mi)",
-              "Licensed, fully insured, and local — premium materials, no corners cut",
-              "Free, no-obligation roof inspection with honest repair-vs-replace answers",
-              "Phones answered 24/7 — even nights, weekends, and after storms",
-            ].map((item) => (
-              <li key={item}>
-                <span className="check-icon">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" aria-hidden="true">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                </span>
-                {item}
-              </li>
-            ))}
-          </ul>
         </div>
       </section>
 
