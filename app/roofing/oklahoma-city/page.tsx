@@ -2,14 +2,13 @@ import Image from "next/image";
 import FaqAccordion from "./FaqAccordion";
 import StickyCallBar from "./StickyCallBar";
 
-// PENDING SD-ISSUED ROOFING DID — do not ship live
-// Single source of truth for the roofing call number. Swap this one value once
-// Service Direct issues the roofing DID. Every call button/link references it.
-const ROOFING_DID = "{{ROOFING_DID}}";
+// Single source of truth for the roofing call number. Swap these two values to
+// re-point the page. Every call button/link references them.
+// phoneHref must stay in tel:+1XXXXXXXXXX format (with the +1 country code).
+const phoneNumber = "(405) 832-0080";
+const phoneHref = "tel:+14058320080";
 
 export default function RoofingOklahomaCityLanding() {
-  const phoneNumber = ROOFING_DID;
-  const phoneHref = `tel:${ROOFING_DID}`;
 
   const faqs = [
     {
@@ -459,10 +458,10 @@ export default function RoofingOklahomaCityLanding() {
           </h1>
           <p className="hero-sub">
             Storm or hail damage, a roof leak, missing shingles, or need a full replacement?{" "}
-            <strong>One call reaches an established local roofing team that&apos;s served the OKC metro since 1992 — and answers 24/7.</strong>
+            <strong>One call connects you with experienced local Oklahoma City area roofers who&apos;ve served the metro since 1992 — and answer 24/7.</strong>
           </p>
           <p className="hero-clarity">
-            Licensed, fully insured, and local. Truth-first inspections and premium materials — you get a straight answer on whether a repair or a full replacement is the right call.
+            SiteFlow Network connects you with experienced local Oklahoma City area roofers — licensed, insured, and serving the metro since 1992. Truth-first inspections and premium materials, with a straight answer on repair vs. replacement.
           </p>
           <div className="cta-block">
             <a href={phoneHref} className="cta-main">
@@ -514,10 +513,10 @@ export default function RoofingOklahomaCityLanding() {
       <section className="partner-strip" id="trust">
         <div className="wrap">
           <p className="partner-lead">
-            Your call reaches a <span className="accent">licensed, fully insured</span> local Oklahoma City roofing team — serving the metro since 1992.
+            We connect you with <span className="accent">licensed, insured</span> local Oklahoma City area roofers — serving the metro since 1992.
           </p>
           <p className="partner-sub">
-            An established, local crew that answers 24/7. They lead with truth-first inspections and premium materials, and won&apos;t cut corners to shave an estimate — you get honest work and a straight answer on repair vs. replacement.
+            Experienced local roofers who answer 24/7. They lead with truth-first inspections and premium materials, and won&apos;t cut corners to shave an estimate — you get honest work and a straight answer on repair vs. replacement.
           </p>
           <div className="partner-badges">
             {[
@@ -637,7 +636,7 @@ export default function RoofingOklahomaCityLanding() {
             {[
               { n: "1", title: "Call the number above", desc: "One call gets you started — someone answers 24/7, with no hold times and no runaround." },
               { n: "2", title: "Tell us about your roof", desc: "Tell the roofer what's going on with your roof and where you're located." },
-              { n: "3", title: "Get connected", desc: "Get connected with your established local Oklahoma City roofing team, serving the metro since 1992." },
+              { n: "3", title: "Get connected", desc: "Get connected with an experienced local Oklahoma City area roofer, serving the metro since 1992." },
             ].map((s) => (
               <div key={s.n} className="step">
                 <div className="step-num" aria-hidden="true">{s.n}</div>
@@ -765,7 +764,7 @@ export default function RoofingOklahomaCityLanding() {
           <h2 className="section-title">Why call</h2>
           <ul className="checklist">
             {[
-              "One established local roofing team serving the entire OKC metro since 1992",
+              "Connects you with experienced local roofers serving the entire OKC metro since 1992",
               "One call — no forms to fill out",
               "Covers Oklahoma City, Edmond, Norman, Moore, Midwest City, Yukon, Mustang & surrounding areas (~50 mi)",
               "Licensed, fully insured, and local — premium materials, no corners cut",
@@ -798,7 +797,7 @@ export default function RoofingOklahomaCityLanding() {
       <section className="big-cta" id="call-now">
         <div className="wrap">
           <h2>Get connected with a local roofer</h2>
-          <p>One call reaches an established Oklahoma City roofing team serving the metro since 1992 — and they answer 24/7.</p>
+          <p>One call connects you with experienced local Oklahoma City area roofers serving the metro since 1992 — and they answer 24/7.</p>
           <a href={phoneHref} className="cta-main">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
