@@ -13,7 +13,7 @@ export default function RoofingOklahomaCityLanding() {
   const faqs = [
     {
       q: "Who will I be connected with?",
-      a: "An established local Oklahoma City roofing team that has served the metro since 1992. They're licensed and fully insured, answer the phone 24/7, and handle every job directly — from inspection to the finished roof.",
+      a: "An established local Oklahoma City roofing team with 30+ years serving the metro. They're licensed and fully insured, answer the phone 24/7, and handle every job directly — from inspection to the finished roof.",
     },
     {
       q: "What areas do you cover?",
@@ -458,10 +458,10 @@ export default function RoofingOklahomaCityLanding() {
           </h1>
           <p className="hero-sub">
             Storm or hail damage, a roof leak, missing shingles, or need a full replacement?{" "}
-            <strong>One call connects you with experienced local Oklahoma City area roofers who&apos;ve served the metro since 1992 — and answer 24/7.</strong>
+            <strong>One call connects you with experienced local Oklahoma City area roofers — and they answer 24/7.</strong>
           </p>
           <p className="hero-clarity">
-            SiteFlow Network connects you with experienced local Oklahoma City area roofers — licensed, insured, and handling both residential and commercial roofs across the metro since 1992. Truth-first inspections and premium materials, with a straight answer on repair vs. replacement.
+            SiteFlow Network connects you with experienced local Oklahoma City area roofers — established for 30+ years, licensed, insured, and handling both residential and commercial roofs across the metro. Truth-first inspections and premium materials, with a straight answer on repair vs. replacement.
           </p>
           <div className="cta-block">
             <a href={phoneHref} className="cta-main">
@@ -497,7 +497,7 @@ export default function RoofingOklahomaCityLanding() {
       {/* COVERAGE STRIP */}
       <div className="coverage" role="region" aria-label="Service coverage">
         <div className="wrap">
-          <div className="cov-item"><span className="cov-num">Since 1992</span><span className="cov-label">Serving The OKC Metro</span></div>
+          <div className="cov-item"><span className="cov-num">30+ Yrs</span><span className="cov-label">Serving The OKC Metro</span></div>
           <div className="cov-item"><span className="cov-num">24/7</span><span className="cov-label">Phones Answered</span></div>
           <div className="cov-item"><span className="cov-num">$0</span><span className="cov-label">Roof Inspection</span></div>
           <div className="cov-item"><span className="cov-num">1 Call</span><span className="cov-label">No Forms</span></div>
@@ -513,7 +513,7 @@ export default function RoofingOklahomaCityLanding() {
       <section className="partner-strip" id="trust">
         <div className="wrap">
           <p className="partner-lead">
-            We connect you with <span className="accent">GAF Master Elite certified, BBB A+ rated</span> local Oklahoma City area roofers — serving the metro since 1992.
+            We connect you with <span className="accent">GAF Master Elite certified, BBB A+ rated</span> local Oklahoma City area roofers.
           </p>
           <p className="partner-sub">
             Experienced, credentialed local roofers who answer 24/7 — 5-star rated on Google, and members of the national and Oklahoma roofing contractor associations. They lead with truth-first inspections and premium materials, and won&apos;t cut corners to shave an estimate.
@@ -612,8 +612,8 @@ export default function RoofingOklahomaCityLanding() {
                 ),
               },
               {
-                title: "An established local team since 1992",
-                desc: "A licensed, fully insured Oklahoma City roofing crew that has served the metro since 1992 and knows Oklahoma storms — not an out-of-town call center.",
+                title: "Established local team — 30+ years in OKC",
+                desc: "A licensed, fully insured Oklahoma City roofing crew with 30+ years on local roofs that knows Oklahoma storms — not an out-of-town call center.",
                 icon: (
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10z" /><circle cx="12" cy="11" r="2.5" /></svg>
                 ),
@@ -637,7 +637,7 @@ export default function RoofingOklahomaCityLanding() {
           <div className="steps">
             {[
               { n: "1", title: "Call — answered 24/7", desc: "One call gets you started, day or night. Someone answers 24/7 — no forms, no hold times, no runaround." },
-              { n: "2", title: "Get connected & inspected", desc: "You're connected with an experienced local OKC roofer — serving the metro since 1992 — who comes out for a free, no-obligation inspection, often same day and within about 2 hours for emergency hail damage." },
+              { n: "2", title: "Get connected & inspected", desc: "You're connected with an experienced local OKC roofer who comes out for a free, no-obligation inspection — often same day, and within about 2 hours for emergency hail damage." },
               { n: "3", title: "Honest options, then the work", desc: "They walk you through exactly what they find with a truth-first call on repair vs. replacement. If you move forward, they handle the job with premium materials, a spotless cleanup, and full insurance documentation." },
             ].map((s) => (
               <div key={s.n} className="step">
@@ -749,7 +749,7 @@ export default function RoofingOklahomaCityLanding() {
       <section className="big-cta" id="call-now">
         <div className="wrap">
           <h2>Get connected with a local roofer</h2>
-          <p>One call connects you with experienced local Oklahoma City area roofers serving the metro since 1992 — and they answer 24/7.</p>
+          <p>One call connects you with experienced local Oklahoma City area roofers — and they answer 24/7.</p>
           <a href={phoneHref} className="cta-main">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>

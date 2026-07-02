@@ -4,7 +4,7 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "Roof Damage Oklahoma City | Get Connected With a Local Roofer",
   description:
-    "Storm or hail damage, a roof leak, missing shingles, or full replacement in the Oklahoma City metro? Call to reach an established local roofing team serving OKC since 1992 — licensed, fully insured, and answering 24/7.",
+    "Storm or hail damage, a roof leak, missing shingles, or full replacement in the Oklahoma City metro? Call to reach an established local roofing team with 30+ years serving OKC — licensed, fully insured, and answering 24/7.",
   keywords: [
     "roof damage Oklahoma City",
     "roofing contractor Oklahoma City",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Roof Damage Oklahoma City | Get Connected With a Local Roofer",
     description:
-      "Storm or hail damage, a roof leak, missing shingles, or full replacement in the Oklahoma City metro? Call to reach an established local roofing team serving OKC since 1992 — licensed, fully insured, and answering 24/7.",
+      "Storm or hail damage, a roof leak, missing shingles, or full replacement in the Oklahoma City metro? Call to reach an established local roofing team with 30+ years serving OKC — licensed, fully insured, and answering 24/7.",
     url: "https://go.siteflownetwork.com/roofing/oklahoma-city",
     siteName: "SiteFlow Network",
     locale: "en_US",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Roof Damage Oklahoma City | Get Connected With a Local Roofer",
     description:
-      "Storm or hail damage, a roof leak, missing shingles, or full replacement in the Oklahoma City metro? Call to reach an established local roofing team serving OKC since 1992 — licensed, fully insured, and answering 24/7.",
+      "Storm or hail damage, a roof leak, missing shingles, or full replacement in the Oklahoma City metro? Call to reach an established local roofing team with 30+ years serving OKC — licensed, fully insured, and answering 24/7.",
   },
   alternates: {
     canonical: "https://go.siteflownetwork.com/roofing/oklahoma-city",
