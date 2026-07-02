@@ -551,7 +551,7 @@ export default function RoofingOklahomaCityLanding() {
               "Roof leaks",
               "Missing, cracked, or curling shingles",
               "Complete roof replacement",
-              "Residential & commercial roofs",
+              "Aging or worn-out roof",
               "Precision inspection — repair or replace",
             ].map((reason) => (
               <div key={reason} className="reason-card">
