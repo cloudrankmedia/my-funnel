@@ -178,10 +178,16 @@ export default function RoofingOklahomaCityLanding() {
     .cta-helper { font-size: 14px; color: var(--muted-light); font-weight: 500; }
     .cta-helper.dark { color: var(--muted); }
     @media (max-width: 640px) {
-      .hero { padding: 64px 0 72px; }
+      .hero { padding: 64px 0 72px; text-align: center; }
+      .hero h1, .hero-sub { margin-left: auto; margin-right: auto; }
+      .hero-clarity {
+        margin-left: auto; margin-right: auto;
+        padding-left: 0; border-left: none;
+      }
       .cta-main { font-size: 20px; padding: 17px 26px; width: 100%; }
       .cta-block { max-width: none; align-items: stretch; }
       .cta-helper { text-align: center; }
+      .hero-trust { justify-content: center; }
     }
 
     /* COVERAGE STRIP */
