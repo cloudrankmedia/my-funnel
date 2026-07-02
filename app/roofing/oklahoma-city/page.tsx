@@ -13,32 +13,32 @@ export default function RoofingOklahomaCityLanding() {
 
   const faqs = [
     {
-      q: "Does SiteFlow Network do the roofing work?",
-      a: "No. We connect you with independent local roofing contractors who handle the work directly.",
+      q: "Who will I be connected with?",
+      a: "An established local Oklahoma City roofing team that has served the metro since 1992. They're licensed and fully insured, answer the phone 24/7, and handle every job directly — from inspection to the finished roof.",
     },
     {
       q: "What areas do you cover?",
-      a: "The Oklahoma City metro and surrounding communities, roughly a 50-mile radius.",
+      a: "The Oklahoma City metro and surrounding communities — including Edmond, Norman, Moore, Midwest City, Yukon, and Mustang — roughly a 50-mile radius.",
     },
     {
       q: "What should I have ready when I call?",
-      a: "Your zip code and a quick description of your roof issue.",
+      a: "Just a quick description of what's going on with your roof and your address. Someone answers 24/7 and can get your inspection scheduled.",
     },
     {
       q: "Will someone look at my roof damage?",
-      a: "The roofer you're connected with handles inspection of storm or other damage to repair or replace your roof.",
+      a: "Yes. The roofer handles a precision, on-site inspection of storm, hail, or other damage and gives you a straight answer on whether a repair or a full replacement is the right call.",
     },
     {
       q: "Does it cost anything to call or get an inspection?",
-      a: "No. Calling to get connected is free, and the local roofer you're matched with offers a free, no-obligation roof inspection. You decide whether to move forward.",
+      a: "No. Calling is free, and the on-site roof inspection is free and no-obligation. You get an honest assessment of what they find, and you decide whether to move forward.",
     },
     {
       q: "Can a roofer help with my insurance claim?",
-      a: "Yes. Many roofers in our network work with storm and hail insurance claims and can help document the damage for your carrier.",
+      a: "Yes. The team works storm and hail claims every day — documenting the damage with detailed reports and photos, meeting your adjuster on site, and working directly with your carrier so nothing gets missed.",
     },
     {
       q: "How fast can someone come out?",
-      a: "Many Oklahoma City roofers respond the same day, though response times vary by provider and area.",
+      a: "The phone is answered 24/7, and for emergency hail storm damage the team aims to be on site for an inspection within about 2 hours. Response times can vary by weather and demand after a major storm.",
     },
   ];
 
@@ -452,17 +452,17 @@ export default function RoofingOklahomaCityLanding() {
       {/* HERO */}
       <section className="hero">
         <div className="wrap">
-          <span className="eyebrow">Oklahoma City Metro</span>
+          <span className="eyebrow">Oklahoma City Metro · Answering 24/7</span>
           <h1>
             Roof Damage in Oklahoma City?{" "}
             <span className="accent">Get Connected With a Local Roofer.</span>
           </h1>
           <p className="hero-sub">
             Storm or hail damage, a roof leak, missing shingles, or need a full replacement?{" "}
-            <strong>Call to get connected with an independent roofing contractor serving the OKC metro.</strong>
+            <strong>One call reaches an established local roofing team that&apos;s served the OKC metro since 1992 — and answers 24/7.</strong>
           </p>
           <p className="hero-clarity">
-            SiteFlow Network connects homeowners with independent local roofing contractors. We don&apos;t perform roofing work ourselves.
+            Licensed, fully insured, and local. Truth-first inspections and premium materials — you get a straight answer on whether a repair or a full replacement is the right call.
           </p>
           <div className="cta-block">
             <a href={phoneHref} className="cta-main">
@@ -471,16 +471,17 @@ export default function RoofingOklahomaCityLanding() {
               </svg>
               Tap to Call · {phoneNumber}
             </a>
-            <span className="cta-helper">Have your zip code ready when you call.</span>
+            <span className="cta-helper">A local Oklahoma City roofer answers 24/7 — even nights, weekends, and after storms.</span>
           </div>
 
           {/* HERO TRUST BAR — qualitative, honest service signals only.
-              No invented numeric rating or review count for SiteFlow. */}
+              Every claim reflects the real, established local roofing team
+              these exclusive calls route to. No invented rating or review count. */}
           <div className="hero-trust">
             {[
               "Free roof inspection",
-              "No obligation",
-              "Same-day response available",
+              "Serving OKC since 1992",
+              "Answering phones 24/7",
               "Help with insurance claims",
             ].map((t) => (
               <span key={t} className="hero-trust-item">
@@ -497,34 +498,33 @@ export default function RoofingOklahomaCityLanding() {
       {/* COVERAGE STRIP */}
       <div className="coverage" role="region" aria-label="Service coverage">
         <div className="wrap">
-          <div className="cov-item"><span className="cov-num">OKC</span><span className="cov-label">Metro Coverage</span></div>
-          <div className="cov-item"><span className="cov-num">~50 mi</span><span className="cov-label">Service Radius</span></div>
-          <div className="cov-item"><span className="cov-num">Local</span><span className="cov-label">Independent Roofers</span></div>
+          <div className="cov-item"><span className="cov-num">Since 1992</span><span className="cov-label">Serving The OKC Metro</span></div>
+          <div className="cov-item"><span className="cov-num">24/7</span><span className="cov-label">Phones Answered</span></div>
+          <div className="cov-item"><span className="cov-num">$0</span><span className="cov-label">Roof Inspection</span></div>
           <div className="cov-item"><span className="cov-num">1 Call</span><span className="cov-label">No Forms</span></div>
         </div>
       </div>
 
-      {/* PARTNER / CREDENTIAL STRIP — honest partner-network framing.
-          IMPORTANT: every claim here describes the INDEPENDENT roofers in the
-          network, NOT SiteFlow itself. SiteFlow is a connection service and
-          holds none of these badges. Qualifiers ("vetted", "many", "local")
-          are intentional — do not change them to assert specific badges this
-          page owns, and do not add named certifications (e.g. "GAF Master
-          Elite", "BBB A+") that belong to a specific third-party company. */}
+      {/* PARTNER / CREDENTIAL STRIP — describes the established local roofing
+          team these exclusive OKC calls route to. Claims here are the real,
+          verifiable credentials of that provider (licensed, fully insured,
+          serving OKC since 1992). Do NOT add named third-party certifications
+          (e.g. "GAF Master Elite", "BBB A+") unless they are confirmed for
+          this provider — keep to what is verified. */}
       <section className="partner-strip" id="trust">
         <div className="wrap">
           <p className="partner-lead">
-            We match you with <span className="accent">licensed, insured, and vetted</span> local Oklahoma City roofers.
+            Your call reaches a <span className="accent">licensed, fully insured</span> local Oklahoma City roofing team — serving the metro since 1992.
           </p>
           <p className="partner-sub">
-            Every contractor in our network is an independent, local professional — many are GAF-certified and BBB-accredited. We help you connect with the right one for your roof.
+            An established, local crew that answers 24/7. They lead with truth-first inspections and premium materials, and won&apos;t cut corners to shave an estimate — you get honest work and a straight answer on repair vs. replacement.
           </p>
           <div className="partner-badges">
             {[
-              "Licensed & insured pros",
-              "Vetted local contractors",
-              "Many GAF-certified",
-              "Many BBB-accredited",
+              "Licensed & fully insured",
+              "Serving OKC since 1992",
+              "Premium materials — no corners cut",
+              "Answering 24/7",
               "OKC-based",
             ].map((b) => (
               <span key={b} className="partner-badge">
@@ -545,13 +545,13 @@ export default function RoofingOklahomaCityLanding() {
           <h2 className="section-title">Common reasons homeowners call</h2>
           <div className="reason-grid">
             {[
-              "Storm & hail damage",
+              "Storm, hail & wind damage",
               "Emergency roof tarping",
               "Roof leaks",
               "Missing, cracked, or curling shingles",
-              "Full roof replacement",
-              "Flat, metal, tile & slate roofs",
-              "Storm-damage inspection — to repair or replace",
+              "Complete roof replacement",
+              "Residential & commercial roofs",
+              "Precision inspection — repair or replace",
             ].map((reason) => (
               <div key={reason} className="reason-card">
                 <span className="reason-icon">
@@ -576,43 +576,43 @@ export default function RoofingOklahomaCityLanding() {
           <div className="benefit-grid">
             {[
               {
-                title: "100% free roof inspection",
-                desc: "The independent local pro we connect you with offers a free, no-obligation roof inspection — you pay nothing to have your roof looked at.",
+                title: "Free, no-obligation roof inspection",
+                desc: "A free, straightforward on-site assessment — you pay nothing to have your roof looked at, and there's no pressure to commit either way.",
                 icon: (
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><circle cx="11" cy="11" r="7" /><line x1="21" y1="21" x2="16.5" y2="16.5" /></svg>
                 ),
               },
               {
-                title: "No obligation",
-                desc: "Get your roof looked at and your options explained with zero pressure to commit. You decide if and when to move forward.",
+                title: "Truth-first, honest answers",
+                desc: "You get a straight recommendation on whether a precise repair or a full replacement is the smarter financial move — honest answers about exactly what they find.",
                 icon: (
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
                 ),
               },
               {
-                title: "Fast, same-day response",
-                desc: "Call and get connected quickly — many Oklahoma City roofers respond the same day. Response times vary by provider and area.",
+                title: "24/7 answering · 2-hour storm response",
+                desc: "The phone is answered around the clock, and for emergency hail storm damage the team aims to be on site for an inspection within about 2 hours.",
                 icon: (
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><circle cx="12" cy="12" r="9" /><polyline points="12 7 12 12 15.5 14" /></svg>
                 ),
               },
               {
-                title: "Help with insurance claims",
-                desc: "Storm or hail damage? The roofers we match you with can help you document the damage and work through your insurance claim.",
+                title: "Insurance documentation to your driveway",
+                desc: "Storm or hail damage? They document every wind and hail impact with detailed reports and photos, stand on site with your adjuster, and work directly with your carrier.",
                 icon: (
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z" /></svg>
                 ),
               },
               {
-                title: "No high-pressure sales",
-                desc: "We connect you with a local roofer and step out of the way — no pushy SiteFlow sales calls, ever.",
+                title: "Premium materials, precision craftsmanship",
+                desc: "Top-tier materials paired with precise workmanship — they won't cut corners to shave an estimate — plus constant communication and a spotless cleanup when the job's done.",
                 icon: (
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M5 8h14l-1.2 9.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 8z" /><path d="M9 8V6a3 3 0 0 1 6 0v2" /></svg>
                 ),
               },
               {
-                title: "Matched with a top local pro",
-                desc: "We match you with a vetted, local Oklahoma City roofing contractor who knows Oklahoma storms — not an out-of-town call center.",
+                title: "An established local team since 1992",
+                desc: "A licensed, fully insured Oklahoma City roofing crew that has served the metro since 1992 and knows Oklahoma storms — not an out-of-town call center.",
                 icon: (
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10z" /><circle cx="12" cy="11" r="2.5" /></svg>
                 ),
@@ -635,9 +635,9 @@ export default function RoofingOklahomaCityLanding() {
           <h2 className="section-title">How it works</h2>
           <div className="steps">
             {[
-              { n: "1", title: "Call the number above", desc: "One call gets you started — no hold times, no runaround." },
-              { n: "2", title: "Tell us about your roof", desc: "Tell us your zip code and what's going on with your roof." },
-              { n: "3", title: "Get connected", desc: "Get connected with an independent local roofer serving your area." },
+              { n: "1", title: "Call the number above", desc: "One call gets you started — someone answers 24/7, with no hold times and no runaround." },
+              { n: "2", title: "Tell us about your roof", desc: "Tell the roofer what's going on with your roof and where you're located." },
+              { n: "3", title: "Get connected", desc: "Get connected with your established local Oklahoma City roofing team, serving the metro since 1992." },
             ].map((s) => (
               <div key={s.n} className="step">
                 <div className="step-num" aria-hidden="true">{s.n}</div>
@@ -658,9 +658,9 @@ export default function RoofingOklahomaCityLanding() {
           <h2 className="section-title">What to expect when your roofer shows up</h2>
           <div className="steps">
             {[
-              { n: "1", title: "Your roofer arrives", desc: "The independent local pro we connect you with comes out to look at your roof — often the same day." },
-              { n: "2", title: "Free inspection & honest options", desc: "They inspect the damage, walk you through what they find, and lay out repair or replacement options. No obligation to move forward." },
-              { n: "3", title: "The work — and the paperwork", desc: "If you decide to proceed, your roofer handles the job and can help document the damage for your insurance claim." },
+              { n: "1", title: "Your roofer arrives", desc: "The local team comes out to look at your roof — often the same day, and within about 2 hours for emergency hail storm damage." },
+              { n: "2", title: "Free inspection & honest options", desc: "They inspect the damage, walk you through exactly what they find, and give you a truth-first call on repair vs. replacement. No obligation to move forward." },
+              { n: "3", title: "The work — and the paperwork", desc: "If you decide to proceed, the team handles the job with premium materials and a spotless cleanup — and documents the damage for your insurance claim." },
             ].map((s) => (
               <div key={s.n} className="step">
                 <div className="step-num" aria-hidden="true">{s.n}</div>
@@ -678,19 +678,19 @@ export default function RoofingOklahomaCityLanding() {
           <div className="insurance-grid">
             <div className="insurance-copy">
               <p className="section-label">Storm & Hail Claims</p>
-              <h2 className="section-title" style={{ marginBottom: "24px" }}>We connect you with a roofer who handles insurance</h2>
+              <h2 className="section-title" style={{ marginBottom: "24px" }}>A local roofing team that handles the insurance side</h2>
               <p>
                 Central Oklahoma gets hit hard by hail, wind, and tornado-season storms, and roof damage is one of the most common homeowner insurance claims in the OKC metro. The catch: knowing what&apos;s covered and getting it documented right.
               </p>
               <p>
-                The independent roofers in our network work with storm and hail claims every day. When you call, we connect you with a local pro who can:
+                This crew works storm and hail claims every day. When you call, you reach a local team that will:
               </p>
               <ul className="checklist">
                 {[
-                  "Look over storm or hail damage and explain what they find",
-                  "Document the damage for your insurance claim",
-                  "Meet with your insurance adjuster on site",
-                  "Work directly with your carrier through the process",
+                  "Inspect storm and hail damage and give you honest answers on what they find",
+                  "Document every wind and hail impact with detailed reports and photos — before any work starts",
+                  "Stand on site with your insurance adjuster so nothing gets missed",
+                  "Work directly with your carrier and handle the paperwork through the whole process",
                 ].map((item) => (
                   <li key={item}>
                     <span className="check-icon">
@@ -765,10 +765,12 @@ export default function RoofingOklahomaCityLanding() {
           <h2 className="section-title">Why call</h2>
           <ul className="checklist">
             {[
-              "Connects you with independent roofers across the OKC metro",
+              "One established local roofing team serving the entire OKC metro since 1992",
               "One call — no forms to fill out",
               "Covers Oklahoma City, Edmond, Norman, Moore, Midwest City, Yukon, Mustang & surrounding areas (~50 mi)",
-              "Available 24/7",
+              "Licensed, fully insured, and local — premium materials, no corners cut",
+              "Free, no-obligation roof inspection with honest repair-vs-replace answers",
+              "Phones answered 24/7 — even nights, weekends, and after storms",
             ].map((item) => (
               <li key={item}>
                 <span className="check-icon">
@@ -796,14 +798,14 @@ export default function RoofingOklahomaCityLanding() {
       <section className="big-cta" id="call-now">
         <div className="wrap">
           <h2>Get connected with a local roofer</h2>
-          <p>One call connects you with an independent roofing contractor serving the OKC metro.</p>
+          <p>One call reaches an established Oklahoma City roofing team serving the metro since 1992 — and they answer 24/7.</p>
           <a href={phoneHref} className="cta-main">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
             </svg>
             Tap to Call · {phoneNumber}
           </a>
-          <div className="cta-helper">Have your zip code ready.</div>
+          <div className="cta-helper">A local Oklahoma City roofer answers 24/7.</div>
         </div>
       </section>
 
