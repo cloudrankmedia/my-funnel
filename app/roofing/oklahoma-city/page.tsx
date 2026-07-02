@@ -461,7 +461,7 @@ export default function RoofingOklahomaCityLanding() {
             <strong>One call connects you with experienced local Oklahoma City area roofers who&apos;ve served the metro since 1992 — and answer 24/7.</strong>
           </p>
           <p className="hero-clarity">
-            SiteFlow Network connects you with experienced local Oklahoma City area roofers — licensed, insured, and serving the metro since 1992. Truth-first inspections and premium materials, with a straight answer on repair vs. replacement.
+            SiteFlow Network connects you with experienced local Oklahoma City area roofers — licensed, insured, and handling both residential and commercial roofs across the metro since 1992. Truth-first inspections and premium materials, with a straight answer on repair vs. replacement.
           </p>
           <div className="cta-block">
             <a href={phoneHref} className="cta-main">
