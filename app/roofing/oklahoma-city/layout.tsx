@@ -105,9 +105,18 @@ fbq('track', 'PageView');`,
         />
       </noscript>
 
-      {/* PENDING SD-ISSUED ROOFING DID — GHL number pool scripts go here once the */}
-      {/* roofing pool is provisioned (mirrors the water-damage emergency layout). */}
-      {/* Do NOT reuse the water-damage pool — it routes to water-damage DIDs. */}
+      {/* GHL number pool scripts (roofing pool) — dynamic number insertion swaps */}
+      {/* the (405) 832-0080 number on the page for a tracked pool number. */}
+      {/* afterInteractive loads them after hydration so the rendered numbers */}
+      {/* are in the DOM to swap. Do NOT reuse the water-damage pool. */}
+      <Script
+        src="https://backend.leadconnectorhq.com/appengine/loc/TbsW9ufsJSZDP9o0u5wM/pool/Agm5fbDTuJxMY7oXiV5C/number_pool.js"
+        strategy="afterInteractive"
+      />
+      <Script
+        src="https://backend.leadconnectorhq.com/appengine/js/user_session.js"
+        strategy="afterInteractive"
+      />
 
       {children}
     </>
