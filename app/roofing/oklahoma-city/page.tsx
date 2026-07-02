@@ -661,7 +661,7 @@ export default function RoofingOklahomaCityLanding() {
                 Central Oklahoma gets hit hard by hail, wind, and tornado-season storms, and roof damage is one of the most common homeowner insurance claims in the OKC metro. The catch: knowing what&apos;s covered and getting it documented right.
               </p>
               <p>
-                This crew works storm and hail claims every day — and works with the Oklahoma Insurance Department. When you call, you reach a local team that will:
+                Our crews work storm and hail claims every day — and they work with the Oklahoma Insurance Department. When you call, you reach a local team that will:
               </p>
               <ul className="checklist">
                 {[
