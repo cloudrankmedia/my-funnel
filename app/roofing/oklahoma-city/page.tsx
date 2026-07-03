@@ -415,7 +415,6 @@ export default function RoofingOklahomaCityLanding() {
     .project-card {
       position: relative; border-radius: 12px; overflow: hidden;
       aspect-ratio: 4 / 3;
-      background-image: url('/roofing-project-placeholder.svg');
       background-size: cover; background-position: center;
       border: 1px solid rgba(174,182,204,0.18);
     }
@@ -425,6 +424,26 @@ export default function RoofingOklahomaCityLanding() {
       font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
       color: #fff; background: rgba(232,80,10,0.92); padding: 5px 10px; border-radius: 5px;
     }
+
+    /* BEFORE / AFTER (single pre-composed split image) */
+    .beforeafter { position: relative; margin: 0 0 44px; border-radius: 14px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 10px 30px rgba(36,46,81,0.10); }
+    .beforeafter img { display: block; width: 100%; height: auto; }
+    .ba-label {
+      position: absolute; top: 16px;
+      font-family: var(--font-barlow-condensed), sans-serif;
+      font-size: 14px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+      color: #fff; padding: 6px 14px; border-radius: 6px;
+    }
+    .ba-before { left: 16px; background: rgba(15,20,35,0.82); }
+    .ba-after { right: 16px; background: var(--orange); }
+    @media (max-width: 640px) { .ba-label { top: 10px; font-size: 12px; padding: 4px 10px; } .ba-before { left: 10px; } .ba-after { right: 10px; } }
+
+    /* LOCAL CREW BAND */
+    .crew-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    @media (max-width: 768px) { .crew-grid { grid-template-columns: 1fr; gap: 28px; } }
+    .crew-photo img { width: 100%; height: auto; border-radius: 14px; display: block; box-shadow: 0 12px 34px rgba(36,46,81,0.16); }
+    .crew-copy .section-title { margin-bottom: 16px; }
+    .crew-copy p { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 26px; }
 
     /* BENEFIT / GUARANTEE CALLOUTS */
     .benefit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 16px; }
@@ -728,25 +747,54 @@ export default function RoofingOklahomaCityLanding() {
         </div>
       </section>
 
-      {/* PROJECT GALLERY — PLACEHOLDER. Cards use /roofing-project-placeholder.svg
-          via CSS background. Replace each with a real OKC job photo (set the
-          card's background-image, or convert to next/image) before relying on
-          this for social proof. Tags label the job type. */}
+      {/* LOCAL CREW BAND — real crew photo + trust copy + mid-page CTA. */}
+      <section className="section alt" id="crew">
+        <div className="wrap">
+          <div className="crew-grid">
+            <div className="crew-photo">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/roofing-crew.jpg" alt="An established local Oklahoma City roofing crew arriving at a home with their truck and ladder" loading="lazy" />
+            </div>
+            <div className="crew-copy">
+              <p className="section-label">Local Crews, Not a Call Center</p>
+              <h2 className="section-title">An established Oklahoma City crew at your door</h2>
+              <p>
+                Every call routes to an experienced, licensed and insured local roofing team with 30+ years on OKC roofs — the same crews who show up, do the work, and clean up when it&apos;s done. No out-of-town subcontractors, no runaround.
+              </p>
+              <a href={phoneHref} className="cta-main">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
+                </svg>
+                Tap to Call · {phoneNumber}
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PROJECT GALLERY — each card is a real OKC job photo set as a CSS
+          background so it covers the 4:3 tile. Tags label the job type. */}
       <section className="projects" id="projects">
         <div className="wrap">
           <p className="section-label">Recent Work</p>
           <h2 className="section-title">Recent Oklahoma City roofing projects</h2>
           <p className="projects-sub">
-            A look at the kind of work the local roofers handle across the OKC metro — real project photos will replace these samples.
+            A look at the kind of work the local roofers handle across the OKC metro — full replacements, storm and hail repairs, and emergency tarping.
           </p>
           <div className="project-grid">
             {[
-              "Full roof replacement",
-              "Storm & hail repair",
-              "Emergency tarp & repair",
-            ].map((tag) => (
-              <div key={tag} className="project-card" role="img" aria-label={`Sample roofing project — ${tag}`}>
-                <span className="project-tag">{tag}</span>
+              { tag: "Full roof replacement", img: "/project-1.jpg" },
+              { tag: "Storm & hail repair", img: "/project-2.jpg" },
+              { tag: "Emergency tarp & repair", img: "/project-3.jpg" },
+            ].map((p) => (
+              <div
+                key={p.tag}
+                className="project-card"
+                style={{ backgroundImage: `url('${p.img}')` }}
+                role="img"
+                aria-label={`Oklahoma City roofing project — ${p.tag}`}
+              >
+                <span className="project-tag">{p.tag}</span>
               </div>
             ))}
           </div>
@@ -756,10 +804,19 @@ export default function RoofingOklahomaCityLanding() {
       {/* INSURANCE COORDINATION */}
       <section className="section alt" id="insurance">
         <div className="wrap">
+          <p className="section-label">Storm & Hail Claims</p>
+          <h2 className="section-title" style={{ marginBottom: "28px" }}>A local roofing team that handles the insurance side</h2>
+
+          {/* Before / after: storm-damaged roof restored (single pre-composed split). */}
+          <figure className="beforeafter">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/storm-before-after.jpg" alt="An Oklahoma City roof with hail and storm damage on the left, fully restored with a new roof on the right" loading="lazy" />
+            <span className="ba-label ba-before" aria-hidden="true">Before</span>
+            <span className="ba-label ba-after" aria-hidden="true">After</span>
+          </figure>
+
           <div className="insurance-grid">
             <div className="insurance-copy">
-              <p className="section-label">Storm & Hail Claims</p>
-              <h2 className="section-title" style={{ marginBottom: "24px" }}>A local roofing team that handles the insurance side</h2>
               <p>
                 Central Oklahoma gets hit hard by hail, wind, and tornado-season storms, and roof damage is one of the most common homeowner insurance claims in the OKC metro. The catch: knowing what&apos;s covered and getting it documented right.
               </p>
