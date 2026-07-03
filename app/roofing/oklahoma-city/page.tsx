@@ -113,7 +113,7 @@ export default function RoofingOklahomaCityLanding() {
     }
     nav .wrap { display: flex; align-items: center; justify-content: space-between; }
     .logo { display: flex; align-items: center; }
-    @media (max-width: 640px) { .logo img { height: 34px !important; } }
+    @media (max-width: 640px) { .logo img { height: 28px !important; } }
     .nav-phone { display: flex; flex-direction: column; align-items: flex-end; text-decoration: none; }
     .nav-phone-label { font-size: 11px; color: var(--muted-light); text-transform: uppercase; letter-spacing: 1.5px; white-space: nowrap; }
     .nav-phone-number {
@@ -185,12 +185,12 @@ export default function RoofingOklahomaCityLanding() {
     .cta-helper.dark { color: var(--muted); }
     @media (max-width: 640px) {
       .hero {
-        padding: 64px 0 72px; text-align: center;
+        padding: 28px 0 60px; text-align: center;
         background:
-          linear-gradient(180deg, rgba(18,25,45,0.82) 0%, rgba(18,25,45,0.72) 45%, rgba(18,25,45,0.88) 100%),
+          linear-gradient(180deg, rgba(18,25,45,0.80) 0%, rgba(18,25,45,0.68) 42%, rgba(18,25,45,0.88) 100%),
           url('/roofing-hero.jpg');
         background-size: cover, cover;
-        background-position: center, center;
+        background-position: center, right center;
         background-repeat: no-repeat;
       }
       .hero h1, .hero-sub { margin-left: auto; margin-right: auto; }
@@ -246,7 +246,9 @@ export default function RoofingOklahomaCityLanding() {
     }
 
     /* REASON CARDS */
-    .reason-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+    .reason-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    @media (max-width: 900px) { .reason-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .reason-grid { grid-template-columns: 1fr; } }
     .reason-card {
       background: var(--bg); border: 1px solid var(--border);
       border-radius: 10px; padding: 24px 26px;
@@ -388,9 +390,6 @@ export default function RoofingOklahomaCityLanding() {
     }
     .logo-chip img { height: 42px; width: auto; display: block; }
     .logo-chip.square img { height: 52px; }
-    .logo-chip.stars { flex-direction: column; gap: 3px; padding: 0 20px; }
-    .logo-chip .stars-row { color: #F5A623; font-size: 19px; letter-spacing: 2px; line-height: 1; }
-    .logo-chip .stars-label { color: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: 0.3px; }
     @media (max-width: 640px) {
       .logo-chip { height: 60px; padding: 0 16px; }
       .logo-chip img { height: 34px; }
@@ -444,6 +443,7 @@ export default function RoofingOklahomaCityLanding() {
     .crew-photo img { width: 100%; height: auto; border-radius: 14px; display: block; box-shadow: 0 12px 34px rgba(36,46,81,0.16); }
     .crew-copy .section-title { margin-bottom: 16px; }
     .crew-copy p { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 26px; }
+    .crew-copy .section-label { color: var(--orange); font-size: 14px; margin-bottom: 12px; }
 
     /* BENEFIT / GUARANTEE CALLOUTS */
     .benefit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 16px; }
@@ -464,7 +464,13 @@ export default function RoofingOklahomaCityLanding() {
 
     /* INSURANCE COORDINATION */
     .insurance-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 48px; align-items: center; }
-    @media (max-width: 768px) { .insurance-grid { grid-template-columns: 1fr; gap: 32px; } }
+    @media (max-width: 768px) {
+      .insurance-grid { grid-template-columns: 1fr; gap: 32px; }
+      /* Let the single column shrink to the viewport instead of being forced
+         wide by the card's nowrap CTA button. */
+      .insurance-copy, .insurance-card { min-width: 0; }
+    }
+    @media (max-width: 640px) { .insurance-card .cta-main { font-size: 18px; padding: 15px 16px; } }
     .insurance-copy p { font-size: 17px; color: var(--muted); margin-bottom: 18px; line-height: 1.65; }
     .insurance-copy .checklist { margin-top: 4px; }
     .insurance-card {
@@ -607,31 +613,22 @@ export default function RoofingOklahomaCityLanding() {
           <p className="partner-sub">
             Experienced, credentialed local roofers who answer 24/7 — 5-star rated on Google, and members of the national and Oklahoma roofing contractor associations. They lead with truth-first inspections and premium materials, and won&apos;t cut corners to shave an estimate.
           </p>
-          {/* Real accreditation logos on white chips. The "google" entry is a
-              star chip until the official Google badge file is added; swap it
-              for an <img src="/badge-google..."> then. */}
+          {/* Real accreditation logos on white chips. Add a Google badge file
+              and append an entry here when it's available. */}
           <div className="partner-logos">
             {[
               { src: "/badge-gaf.svg", alt: "GAF Master Elite certified roofer", square: true },
               { src: "/badge-bbb.avif", alt: "BBB A+ rated" },
-              { google: true },
               { src: "/badge-nrca.avif", alt: "National Roofing Contractors Association member", square: true },
               { src: "/badge-orca.avif", alt: "Oklahoma Roofing Contractors Association member" },
               { src: "/badge-cib.png", alt: "Oklahoma Construction Industries Board" },
               { src: "/OID-Logo.svg", alt: "Works with the Oklahoma Insurance Department" },
-            ].map((c) =>
-              c.google ? (
-                <div key="google" className="logo-chip stars" role="img" aria-label="5 out of 5 stars, rated on Google">
-                  <span className="stars-row" aria-hidden="true">★★★★★</span>
-                  <span className="stars-label">5.0 on Google</span>
-                </div>
-              ) : (
-                <div key={c.src} className={`logo-chip${c.square ? " square" : ""}`}>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={c.src} alt={c.alt} loading="lazy" />
-                </div>
-              )
-            )}
+            ].map((c) => (
+              <div key={c.src} className={`logo-chip${c.square ? " square" : ""}`}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={c.src} alt={c.alt} loading="lazy" />
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -649,7 +646,6 @@ export default function RoofingOklahomaCityLanding() {
               "Missing, cracked, or curling shingles",
               "Complete roof replacement",
               "Aging or worn-out roof",
-              "Precision inspection — repair or replace",
             ].map((reason) => (
               <div key={reason} className="reason-card">
                 <span className="reason-icon">
@@ -857,47 +853,8 @@ export default function RoofingOklahomaCityLanding() {
         </div>
       </section>
 
-      {/* ============================================================
-          TESTIMONIALS — PLACEHOLDER SECTION. DO NOT SHIP AS-IS.
-          SiteFlow Network has NO reviews of its own. Every card below is a
-          dummy placeholder. Replace each with a REAL, attributed testimonial
-          collected (with permission) from the actual OKC roofing contractor
-          who buys these leads. Do NOT invent reviews, names, locations,
-          star ratings, or review counts. If no real testimonials are
-          available yet, delete this whole <section> rather than ship dummies.
-          ============================================================ */}
-      <section className="section" id="reviews">
-        <div className="wrap">
-          <p className="section-label">What Homeowners Say</p>
-          <h2 className="section-title">Reviews from Oklahoma City homeowners</h2>
-          <div className="reviews-note" role="note">
-            ⚠ Placeholder section — these are not real reviews. Replace the cards below with real,
-            attributed testimonials from your OKC roofing partner (or delete the section) before publishing.
-          </div>
-          <div className="review-grid">
-            {[1, 2, 3].map((n) => (
-              // REPLACE: real OKC partner testimonial + name + city + source
-              <div key={n} className="review-card placeholder">
-                <span className="review-tag">Placeholder · Replace</span>
-                <p className="review-quote">
-                  &ldquo;[REPLACE: real customer quote from your OKC roofing partner — e.g. a couple
-                  sentences about the storm/hail repair or full replacement experience.]&rdquo;
-                </p>
-                <div className="review-attrib">
-                  <span className="review-avatar" aria-hidden="true">?</span>
-                  <span>
-                    <span className="review-name">[Customer name]</span>
-                    <span className="review-loc">[City, OK] · [source — e.g. Google review]</span>
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* FAQ */}
-      <section className="section alt" id="faq">
+      <section className="section" id="faq">
         <div className="wrap faq-inner">
           <p className="section-label" style={{ textAlign: "center" }}>Common Questions</p>
           <h2 className="section-title" style={{ textAlign: "center" }}>Questions &amp; answers</h2>
