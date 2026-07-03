@@ -244,6 +244,12 @@ export default function RoofingOklahomaCityLanding() {
       font-weight: 800; line-height: 1.05; letter-spacing: -0.5px;
       color: var(--navy); margin-bottom: 44px;
     }
+    /* Mobile: center every section header (eyebrow + title) for a consistent
+       rhythm down the page. Cards, checklists, and body copy stay left-aligned
+       for readability. */
+    @media (max-width: 640px) {
+      .section-label, .section-title { text-align: center; }
+    }
 
     /* REASON CARDS */
     .reason-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
