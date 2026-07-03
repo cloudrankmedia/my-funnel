@@ -183,16 +183,17 @@ export default function RoofingOklahomaCityLanding() {
     .cta-main svg { flex-shrink: 0; }
     .cta-helper { font-size: 14px; color: var(--muted-light); font-weight: 500; }
     .cta-helper.dark { color: var(--muted); }
+    .hero-photo-mobile { display: none; }
     @media (max-width: 640px) {
       .hero {
-        padding: 28px 0 60px; text-align: center;
+        padding: 28px 0 44px; text-align: center;
         background:
-          linear-gradient(180deg, rgba(18,25,45,0.80) 0%, rgba(18,25,45,0.68) 42%, rgba(18,25,45,0.88) 100%),
-          url('/roofing-hero.jpg');
-        background-size: cover, cover;
-        background-position: center, right center;
+          radial-gradient(ellipse at 72% 12%, rgba(232,80,10,0.18) 0%, transparent 58%),
+          linear-gradient(160deg, var(--navy) 0%, var(--navy-dark) 100%);
         background-repeat: no-repeat;
       }
+      .hero-photo-mobile { display: block; margin-top: 30px; border-radius: 14px; overflow: hidden; box-shadow: 0 14px 34px rgba(0,0,0,0.32); }
+      .hero-photo-mobile img { display: block; width: 100%; height: auto; }
       .hero h1, .hero-sub { margin-left: auto; margin-right: auto; }
       .hero-clarity {
         margin-left: auto; margin-right: auto;
@@ -591,6 +592,14 @@ export default function RoofingOklahomaCityLanding() {
                 {t}
               </span>
             ))}
+          </div>
+
+          {/* Mobile only: the hero photo shows in full below the text (desktop
+              uses it as a background). Avoids cropping the roofer into a tall
+              slice and keeps the text uncluttered. */}
+          <div className="hero-photo-mobile">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/roofing-hero.jpg" alt="A local roofer installing shingles on an Oklahoma City home at dusk" />
           </div>
         </div>
       </section>
