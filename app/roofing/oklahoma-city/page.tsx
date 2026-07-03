@@ -125,9 +125,16 @@ export default function RoofingOklahomaCityLanding() {
 
     /* HERO */
     .hero {
+      /* PLACEHOLDER hero art (/roofing-hero.svg) sits under a semi-transparent
+         navy overlay for text legibility. Swap the SVG for a real OKC roof/crew
+         photo when available — no other CSS change needed. */
       background:
-        radial-gradient(ellipse at 78% 20%, rgba(232,80,10,0.18) 0%, transparent 55%),
-        linear-gradient(160deg, var(--navy) 0%, var(--navy-dark) 100%);
+        radial-gradient(ellipse at 78% 20%, rgba(232,80,10,0.14) 0%, transparent 55%),
+        linear-gradient(160deg, rgba(33,46,80,0.86) 0%, rgba(24,34,61,0.92) 100%),
+        url('/roofing-hero.svg');
+      background-size: auto, auto, cover;
+      background-position: center, center, center;
+      background-repeat: no-repeat;
       color: var(--cream);
       padding: 96px 0 104px;
     }
@@ -361,6 +368,35 @@ export default function RoofingOklahomaCityLanding() {
       font-size: 14px; font-weight: 600; color: var(--cream);
     }
     .partner-badge svg { color: var(--orange-light); flex-shrink: 0; }
+
+    /* PROJECT GALLERY — PLACEHOLDER imagery. Each card's background-image points
+       at /roofing-project-placeholder.svg. Swap in real OKC job photos (jpg/webp)
+       per card; keep the 4:3 aspect so the grid stays even. */
+    .projects {
+      background: var(--navy-dark);
+      border-top: 1px solid rgba(174,182,204,0.12);
+      border-bottom: 1px solid rgba(174,182,204,0.12);
+      padding: 84px 0;
+    }
+    .projects .section-label { color: var(--orange-light); text-align: center; }
+    .projects .section-title { color: var(--cream); text-align: center; margin-bottom: 14px; }
+    .projects-sub { text-align: center; color: var(--muted-light); max-width: 640px; margin: 0 auto 40px; font-size: 15px; line-height: 1.6; }
+    .project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    @media (max-width: 860px) { .project-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .project-grid { grid-template-columns: 1fr; } }
+    .project-card {
+      position: relative; border-radius: 12px; overflow: hidden;
+      aspect-ratio: 4 / 3;
+      background-image: url('/roofing-project-placeholder.svg');
+      background-size: cover; background-position: center;
+      border: 1px solid rgba(174,182,204,0.18);
+    }
+    .project-tag {
+      position: absolute; left: 12px; top: 12px;
+      font-family: var(--font-barlow-condensed), sans-serif;
+      font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+      color: #fff; background: rgba(232,80,10,0.92); padding: 5px 10px; border-radius: 5px;
+    }
 
     /* BENEFIT / GUARANTEE CALLOUTS */
     .benefit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 16px; }
@@ -650,6 +686,31 @@ export default function RoofingOklahomaCityLanding() {
                 <div className="step-num" aria-hidden="true">{s.n}</div>
                 <h3>{s.title}</h3>
                 <p>{s.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PROJECT GALLERY — PLACEHOLDER. Cards use /roofing-project-placeholder.svg
+          via CSS background. Replace each with a real OKC job photo (set the
+          card's background-image, or convert to next/image) before relying on
+          this for social proof. Tags label the job type. */}
+      <section className="projects" id="projects">
+        <div className="wrap">
+          <p className="section-label">Recent Work</p>
+          <h2 className="section-title">Recent Oklahoma City roofing projects</h2>
+          <p className="projects-sub">
+            A look at the kind of work the local roofers handle across the OKC metro — real project photos will replace these samples.
+          </p>
+          <div className="project-grid">
+            {[
+              "Full roof replacement",
+              "Storm & hail repair",
+              "Emergency tarp & repair",
+            ].map((tag) => (
+              <div key={tag} className="project-card" role="img" aria-label={`Sample roofing project — ${tag}`}>
+                <span className="project-tag">{tag}</span>
               </div>
             ))}
           </div>
