@@ -125,15 +125,14 @@ export default function RoofingOklahomaCityLanding() {
 
     /* HERO */
     .hero {
-      /* PLACEHOLDER hero art (/roofing-hero.svg) sits under a semi-transparent
-         navy overlay for text legibility. Swap the SVG for a real OKC roof/crew
-         photo when available — no other CSS change needed. */
+      /* Real hero photo (/roofing-hero.jpg) under a left-weighted navy scrim:
+         dark on the left where the headline sits, lighter on the right so the
+         roofer shows through. Mobile uses a more even vertical scrim (below). */
       background:
-        radial-gradient(ellipse at 78% 20%, rgba(232,80,10,0.14) 0%, transparent 55%),
-        linear-gradient(160deg, rgba(33,46,80,0.86) 0%, rgba(24,34,61,0.92) 100%),
-        url('/roofing-hero.svg');
-      background-size: auto, auto, cover;
-      background-position: center, center, center;
+        linear-gradient(90deg, rgba(18,25,45,0.90) 0%, rgba(18,25,45,0.68) 42%, rgba(18,25,45,0.36) 74%, rgba(18,25,45,0.20) 100%),
+        url('/roofing-hero.jpg');
+      background-size: cover, cover;
+      background-position: center, center right;
       background-repeat: no-repeat;
       color: var(--cream);
       padding: 96px 0 104px;
@@ -185,7 +184,15 @@ export default function RoofingOklahomaCityLanding() {
     .cta-helper { font-size: 14px; color: var(--muted-light); font-weight: 500; }
     .cta-helper.dark { color: var(--muted); }
     @media (max-width: 640px) {
-      .hero { padding: 64px 0 72px; text-align: center; }
+      .hero {
+        padding: 64px 0 72px; text-align: center;
+        background:
+          linear-gradient(180deg, rgba(18,25,45,0.82) 0%, rgba(18,25,45,0.72) 45%, rgba(18,25,45,0.88) 100%),
+          url('/roofing-hero.jpg');
+        background-size: cover, cover;
+        background-position: center, center;
+        background-repeat: no-repeat;
+      }
       .hero h1, .hero-sub { margin-left: auto; margin-right: auto; }
       .hero-clarity {
         margin-left: auto; margin-right: auto;
@@ -368,6 +375,27 @@ export default function RoofingOklahomaCityLanding() {
       font-size: 14px; font-weight: 600; color: var(--cream);
     }
     .partner-badge svg { color: var(--orange-light); flex-shrink: 0; }
+
+    /* CREDENTIAL LOGO ROW — real accreditation logos on white chips so each
+       reads clearly on the dark strip. To add/replace: drop the file in /public
+       and update the credentials[] array. */
+    .partner-logos { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 14px; }
+    .logo-chip {
+      background: #fff; border-radius: 10px;
+      height: 74px; padding: 0 22px;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.20);
+    }
+    .logo-chip img { height: 42px; width: auto; display: block; }
+    .logo-chip.square img { height: 52px; }
+    .logo-chip.stars { flex-direction: column; gap: 3px; padding: 0 20px; }
+    .logo-chip .stars-row { color: #F5A623; font-size: 19px; letter-spacing: 2px; line-height: 1; }
+    .logo-chip .stars-label { color: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: 0.3px; }
+    @media (max-width: 640px) {
+      .logo-chip { height: 60px; padding: 0 16px; }
+      .logo-chip img { height: 34px; }
+      .logo-chip.square img { height: 42px; }
+    }
 
     /* PROJECT GALLERY — PLACEHOLDER imagery. Each card's background-image points
        at /roofing-project-placeholder.svg. Swap in real OKC job photos (jpg/webp)
@@ -560,23 +588,31 @@ export default function RoofingOklahomaCityLanding() {
           <p className="partner-sub">
             Experienced, credentialed local roofers who answer 24/7 — 5-star rated on Google, and members of the national and Oklahoma roofing contractor associations. They lead with truth-first inspections and premium materials, and won&apos;t cut corners to shave an estimate.
           </p>
-          <div className="partner-badges">
+          {/* Real accreditation logos on white chips. The "google" entry is a
+              star chip until the official Google badge file is added; swap it
+              for an <img src="/badge-google..."> then. */}
+          <div className="partner-logos">
             {[
-              "GAF Master Elite Certified",
-              "BBB A+ Rated",
-              "5-Star Google Rated",
-              "National Roofing Contractors Association",
-              "Oklahoma Roofing Contractors Association",
-              "OK Construction Industries Board",
-              "Works With the Oklahoma Insurance Dept.",
-            ].map((b) => (
-              <span key={b} className="partner-badge">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                {b}
-              </span>
-            ))}
+              { src: "/badge-gaf.svg", alt: "GAF Master Elite certified roofer", square: true },
+              { src: "/badge-bbb.avif", alt: "BBB A+ rated" },
+              { google: true },
+              { src: "/badge-nrca.avif", alt: "National Roofing Contractors Association member", square: true },
+              { src: "/badge-orca.avif", alt: "Oklahoma Roofing Contractors Association member" },
+              { src: "/badge-cib.png", alt: "Oklahoma Construction Industries Board" },
+              { src: "/OID-Logo.svg", alt: "Works with the Oklahoma Insurance Department" },
+            ].map((c) =>
+              c.google ? (
+                <div key="google" className="logo-chip stars" role="img" aria-label="5 out of 5 stars, rated on Google">
+                  <span className="stars-row" aria-hidden="true">★★★★★</span>
+                  <span className="stars-label">5.0 on Google</span>
+                </div>
+              ) : (
+                <div key={c.src} className={`logo-chip${c.square ? " square" : ""}`}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={c.src} alt={c.alt} loading="lazy" />
+                </div>
+              )
+            )}
           </div>
         </div>
       </section>
