@@ -652,15 +652,15 @@ export default function RoofingOklahomaCityLanding() {
       <section className="section" id="reasons">
         <div className="wrap">
           <p className="section-label">Why Homeowners Call</p>
-          <h2 className="section-title">Common reasons homeowners call</h2>
+          <h2 className="section-title">Common Reasons Homeowners Call</h2>
           <div className="reason-grid">
             {[
-              "Storm, hail & wind damage",
-              "Emergency roof tarping",
-              "Roof leaks",
-              "Missing, cracked, or curling shingles",
-              "Complete roof replacement",
-              "Aging or worn-out roof",
+              "Storm, Hail & Wind Damage",
+              "Emergency Roof Tarping",
+              "Roof Leaks",
+              "Missing, Cracked, or Curling Shingles",
+              "Complete Roof Replacement",
+              "Aging or Worn-Out Roof",
             ].map((reason) => (
               <div key={reason} className="reason-card">
                 <span className="reason-icon">
@@ -681,46 +681,46 @@ export default function RoofingOklahomaCityLanding() {
       <section className="section alt" id="what-you-get">
         <div className="wrap">
           <p className="section-label">No Cost To Call</p>
-          <h2 className="section-title">What you get when you call</h2>
+          <h2 className="section-title">What You Get When You Call</h2>
           <div className="benefit-grid">
             {[
               {
-                title: "Free, no-obligation roof inspection",
+                title: "Free, No-Obligation Roof Inspection",
                 desc: "A free, straightforward on-site assessment — you pay nothing to have your roof looked at, and there's no pressure to commit either way.",
                 icon: (
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><circle cx="11" cy="11" r="7" /><line x1="21" y1="21" x2="16.5" y2="16.5" /></svg>
                 ),
               },
               {
-                title: "Truth-first, honest answers",
+                title: "Truth-First, Honest Answers",
                 desc: "You get a straight recommendation on whether a precise repair or a full replacement is the smarter financial move — honest answers about exactly what they find.",
                 icon: (
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
                 ),
               },
               {
-                title: "24/7 answering · 2-hour storm response",
+                title: "24/7 Answering · 2-Hour Storm Response",
                 desc: "The phone is answered around the clock, and for emergency hail storm damage the team aims to be on site for an inspection within about 2 hours.",
                 icon: (
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><circle cx="12" cy="12" r="9" /><polyline points="12 7 12 12 15.5 14" /></svg>
                 ),
               },
               {
-                title: "Insurance documentation to your driveway",
+                title: "Insurance Documentation to Your Driveway",
                 desc: "Storm or hail damage? They document every wind and hail impact with detailed reports and photos, stand on site with your adjuster, and work directly with your carrier.",
                 icon: (
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z" /></svg>
                 ),
               },
               {
-                title: "Premium materials, precision craftsmanship",
+                title: "Premium Materials, Precision Craftsmanship",
                 desc: "Top-tier materials paired with precise workmanship — they won't cut corners to shave an estimate — plus constant communication and a spotless cleanup when the job's done.",
                 icon: (
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M5 8h14l-1.2 9.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 8z" /><path d="M9 8V6a3 3 0 0 1 6 0v2" /></svg>
                 ),
               },
               {
-                title: "Established local team — 30+ years in OKC",
+                title: "Established Local Team — 30+ Years in OKC",
                 desc: "A licensed, fully insured Oklahoma City roofing crew with 30+ years on local roofs that knows Oklahoma storms — not an out-of-town call center.",
                 icon: (
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10z" /><circle cx="12" cy="11" r="2.5" /></svg>
@@ -741,12 +741,12 @@ export default function RoofingOklahomaCityLanding() {
       <section className="section" id="how-it-works">
         <div className="wrap">
           <p className="section-label">Simple Process</p>
-          <h2 className="section-title">How it works</h2>
+          <h2 className="section-title">How It Works</h2>
           <div className="steps">
             {[
-              { n: "1", title: "Call — answered 24/7", desc: "One call gets you started, day or night. Someone answers 24/7 — no forms, no hold times, no runaround." },
-              { n: "2", title: "Get connected & inspected", desc: "You're connected with an experienced local OKC roofer who comes out for a free, no-obligation inspection — often same day, and within about 2 hours for emergency hail damage." },
-              { n: "3", title: "Honest options, then the work", desc: "They walk you through exactly what they find with a truth-first call on repair vs. replacement. If you move forward, they handle the job with premium materials, a spotless cleanup, and full insurance documentation." },
+              { n: "1", title: "Call — Answered 24/7", desc: "One call gets you started, day or night. Someone answers 24/7 — no forms, no hold times, no runaround." },
+              { n: "2", title: "Get Connected & Inspected", desc: "You're connected with an experienced local OKC roofer who comes out for a free, no-obligation inspection — often same day, and within about 2 hours for emergency hail damage." },
+              { n: "3", title: "Honest Options, Then the Work", desc: "They walk you through exactly what they find with a truth-first call on repair vs. replacement. If you move forward, they handle the job with premium materials, a spotless cleanup, and full insurance documentation." },
             ].map((s) => (
               <div key={s.n} className="step">
                 <div className="step-num" aria-hidden="true">{s.n}</div>
@@ -768,7 +768,7 @@ export default function RoofingOklahomaCityLanding() {
             </div>
             <div className="crew-copy">
               <p className="section-label">Local Crews, Not a Call Center</p>
-              <h2 className="section-title">An established Oklahoma City crew at your door</h2>
+              <h2 className="section-title">An Established Oklahoma City Crew at Your Door</h2>
               <p>
                 Every call routes to an experienced, licensed and insured local roofing team with 30+ years on OKC roofs — the same crews who show up, do the work, and clean up when it&apos;s done. No out-of-town subcontractors, no runaround.
               </p>
@@ -788,7 +788,7 @@ export default function RoofingOklahomaCityLanding() {
       <section className="projects" id="projects">
         <div className="wrap">
           <p className="section-label">Recent Work</p>
-          <h2 className="section-title">Recent Oklahoma City roofing projects</h2>
+          <h2 className="section-title">Recent Oklahoma City Roofing Projects</h2>
           <p className="projects-sub">
             A look at the kind of work the local roofers handle across the OKC metro — full replacements, storm and hail repairs, and emergency tarping.
           </p>
@@ -816,7 +816,7 @@ export default function RoofingOklahomaCityLanding() {
       <section className="section alt" id="insurance">
         <div className="wrap">
           <p className="section-label">Storm & Hail Claims</p>
-          <h2 className="section-title" style={{ marginBottom: "28px" }}>A local roofing team that handles the insurance side</h2>
+          <h2 className="section-title" style={{ marginBottom: "28px" }}>A Local Roofing Team That Handles the Insurance Side</h2>
 
           {/* Before / after: storm-damaged roof restored (single pre-composed split). */}
           <figure className="beforeafter">
@@ -853,7 +853,7 @@ export default function RoofingOklahomaCityLanding() {
               </ul>
             </div>
             <div className="insurance-card">
-              <h3>Not sure if it&apos;s worth a claim?</h3>
+              <h3>Not Sure if It&apos;s Worth a Claim?</h3>
               <p>
                 A free, no-obligation inspection from a local pro can tell you whether you have damage worth filing for — before you call your insurer. One call gets you connected.
               </p>
@@ -872,7 +872,7 @@ export default function RoofingOklahomaCityLanding() {
       <section className="section" id="faq">
         <div className="wrap faq-inner">
           <p className="section-label" style={{ textAlign: "center" }}>Common Questions</p>
-          <h2 className="section-title" style={{ textAlign: "center" }}>Questions &amp; answers</h2>
+          <h2 className="section-title" style={{ textAlign: "center" }}>Questions &amp; Answers</h2>
           <FaqAccordion faqs={faqs} />
         </div>
       </section>
@@ -880,7 +880,7 @@ export default function RoofingOklahomaCityLanding() {
       {/* BIG CTA */}
       <section className="big-cta" id="call-now">
         <div className="wrap">
-          <h2>Get connected with a local roofer</h2>
+          <h2>Get Connected With a Local Roofer</h2>
           <p>One call connects you with experienced local Oklahoma City area roofers — and they answer 24/7.</p>
           <a href={phoneHref} className="cta-main">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
