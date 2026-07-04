@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="San Diego tile rooftops under a sunny coastal sky">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2f4a7a"/>
+      <stop offset="52%" stop-color="#4a4a63"/>
+      <stop offset="100%" stop-color="#6b3a24"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="78%" cy="26%" r="48%">
+      <stop offset="0%" stop-color="#F9C784" stop-opacity="0.75"/>
+      <stop offset="50%" stop-color="#E8500A" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#E8500A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1440" height="900" fill="url(#sky)"/>
+  <rect width="1440" height="900" fill="url(#sun)"/>
+
+  <!-- distant terracotta tile rooftops -->
+  <g fill="#8a4a33" opacity="0.55">
+    <polygon points="-40,690 200,600 440,690 440,900 -40,900"/>
+    <polygon points="380,712 600,624 820,712 820,900 380,900"/>
+    <polygon points="760,684 1000,592 1240,684 1240,900 760,900"/>
+    <polygon points="1160,700 1380,612 1480,648 1480,900 1160,900"/>
+  </g>
+
+  <!-- nearer rooftops, cooler tone -->
+  <g fill="#3a2f3f">
+    <polygon points="-40,792 260,660 560,792 560,900 -40,900"/>
+    <polygon points="500,812 780,676 1060,812 1060,900 500,900"/>
+    <polygon points="1000,788 1260,660 1480,788 1480,900 1000,900"/>
+  </g>
+
+  <!-- subtle tile ridge lines on the nearest roof -->
+  <g stroke="#4a3a4a" stroke-width="2" opacity="0.5">
+    <line x1="40" y1="792" x2="520" y2="792"/>
+    <line x1="90" y1="820" x2="480" y2="820"/>
+    <line x1="140" y1="848" x2="440" y2="848"/>
+  </g>
+</svg>
