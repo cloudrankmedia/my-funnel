@@ -5,8 +5,8 @@ import StickyCallBar from "./StickyCallBar";
 // Single source of truth for the roofing call number. Swap these two values to
 // re-point the page. Every call button/link references them.
 // phoneHref must stay in tel:+1XXXXXXXXXX format (with the +1 country code).
-const phoneNumber = "(619) 555-0100";
-const phoneHref = "tel:+16195550100";
+const phoneNumber = "(760) 497-3888";
+const phoneHref = "tel:+17604973888";
 
 export default function RoofingSanDiegoLanding() {
 
