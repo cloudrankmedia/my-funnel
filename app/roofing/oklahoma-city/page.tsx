@@ -406,9 +406,15 @@ export default function RoofingOklahomaCityLanding() {
     .logo-chip img { height: 42px; width: auto; display: block; }
     .logo-chip.square img { height: 52px; }
     @media (max-width: 640px) {
-      .logo-chip { height: 60px; padding: 0 16px; }
-      .logo-chip img { height: 34px; }
-      .logo-chip.square img { height: 42px; }
+      /* Uniform 2-column grid so the six logos line up in even tiles instead
+         of wrapping into ragged 3/2/1 rows. */
+      .partner-logos {
+        display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+        max-width: 340px; margin-left: auto; margin-right: auto;
+      }
+      .logo-chip { width: 100%; height: 66px; padding: 0 12px; }
+      .logo-chip img { height: 34px; max-width: 100%; }
+      .logo-chip.square img { height: 42px; max-width: 100%; }
     }
 
     /* PROJECT GALLERY — PLACEHOLDER imagery. Each card's background-image points
