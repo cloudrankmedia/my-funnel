@@ -385,6 +385,11 @@ export default function RoofingSanDiegoLanding() {
     .partner-lead .accent { color: var(--orange-light); }
     .partner-sub { font-size: 15px; color: var(--muted-light); max-width: 660px; margin: 0 auto 30px; line-height: 1.6; }
     .partner-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+    /* Mobile: stack the credential pills into a centered column so they don't
+       wrap unevenly. Each pill sizes to its content and centers. */
+    @media (max-width: 640px) {
+      .partner-badges { flex-direction: column; align-items: center; gap: 10px; }
+    }
     .partner-badge {
       display: inline-flex; align-items: center; gap: 9px;
       background: rgba(255,255,255,0.06); border: 1px solid rgba(174,182,204,0.22);
