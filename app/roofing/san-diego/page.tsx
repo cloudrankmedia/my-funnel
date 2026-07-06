@@ -125,15 +125,14 @@ export default function RoofingSanDiegoLanding() {
 
     /* HERO */
     .hero {
-      /* PLACEHOLDER hero art (/sd-hero.svg) under a navy scrim for text
-         legibility. Swap the SVG for a real San Diego roof/crew photo when
-         available (and re-tune the overlay). */
+      /* Real hero photo (/sd-hero.jpg) under a left-weighted navy scrim: dark
+         on the left where the headline sits, lighter on the right so the roofer
+         shows through. Mobile shows the full photo below the text (see below). */
       background:
-        radial-gradient(ellipse at 76% 18%, rgba(232,80,10,0.16) 0%, transparent 55%),
-        linear-gradient(160deg, rgba(30,42,74,0.84) 0%, rgba(20,29,52,0.92) 100%),
-        url('/sd-hero.svg');
-      background-size: auto, auto, cover;
-      background-position: center;
+        linear-gradient(90deg, rgba(18,25,45,0.90) 0%, rgba(18,25,45,0.66) 42%, rgba(18,25,45,0.34) 74%, rgba(18,25,45,0.18) 100%),
+        url('/sd-hero.jpg');
+      background-size: cover, cover;
+      background-position: center, center;
       background-repeat: no-repeat;
       color: var(--cream);
       padding: 96px 0 104px;
@@ -184,17 +183,17 @@ export default function RoofingSanDiegoLanding() {
     .cta-main svg { flex-shrink: 0; }
     .cta-helper { font-size: 14px; color: var(--muted-light); font-weight: 500; }
     .cta-helper.dark { color: var(--muted); }
+    .hero-photo-mobile { display: none; }
     @media (max-width: 640px) {
       .hero {
-        padding: 28px 0 60px; text-align: center;
+        padding: 28px 0 44px; text-align: center;
         background:
           radial-gradient(ellipse at 72% 12%, rgba(232,80,10,0.16) 0%, transparent 58%),
-          linear-gradient(160deg, rgba(30,42,74,0.88) 0%, rgba(20,29,52,0.94) 100%),
-          url('/sd-hero.svg');
-        background-size: auto, auto, cover;
-        background-position: center;
+          linear-gradient(160deg, var(--navy) 0%, var(--navy-dark) 100%);
         background-repeat: no-repeat;
       }
+      .hero-photo-mobile { display: block; margin-top: 30px; border-radius: 14px; overflow: hidden; box-shadow: 0 14px 34px rgba(0,0,0,0.32); }
+      .hero-photo-mobile img { display: block; width: 100%; height: auto; }
       .hero h1, .hero-sub { margin-left: auto; margin-right: auto; }
       .hero-clarity {
         margin-left: auto; margin-right: auto;
@@ -593,6 +592,13 @@ export default function RoofingSanDiegoLanding() {
               </span>
             ))}
           </div>
+
+          {/* Mobile only: full hero photo below the text (desktop uses it as a
+              background) — keeps the copy uncluttered and the roofer uncropped. */}
+          <div className="hero-photo-mobile">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/sd-hero.jpg" alt="A local roofer installing clay tile on a San Diego home" />
+          </div>
         </div>
       </section>
 
@@ -747,9 +753,33 @@ export default function RoofingSanDiegoLanding() {
         </div>
       </section>
 
-      {/* PROJECT GALLERY — PLACEHOLDER. Cards use /sd-project.svg via CSS
-          background. Swap each for a real San Diego job photo (set the card's
-          backgroundImage) when photos are available. Tags label the job type. */}
+      {/* LOCAL CREW BAND — crew photo + trust copy + mid-page CTA. */}
+      <section className="section alt" id="crew">
+        <div className="wrap">
+          <div className="crew-grid">
+            <div className="crew-photo">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/sd-roofing-crew.jpg" alt="A local San Diego roofing crew arriving at a home with their truck and ladder" loading="lazy" />
+            </div>
+            <div className="crew-copy">
+              <p className="section-label">Local Roofers, Not a Call Center</p>
+              <h2 className="section-title">A Local San Diego Crew at Your Door</h2>
+              <p>
+                Every call connects you with an experienced, licensed and insured local roofer who knows San Diego homes — tile, flat, and shingle. The same people who show up, do the work, and clean up when it&apos;s done. No out-of-town subcontractors, no runaround.
+              </p>
+              <a href={phoneHref} className="cta-main">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
+                </svg>
+                Tap to Call · {phoneNumber}
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PROJECT GALLERY — each card is a real San Diego job photo set as a CSS
+          background so it covers the 4:3 tile. Tags label the job type. */}
       <section className="projects" id="projects">
         <div className="wrap">
           <p className="section-label">Recent Work</p>
@@ -759,18 +789,18 @@ export default function RoofingSanDiegoLanding() {
           </p>
           <div className="project-grid">
             {[
-              "Tile Roof Repair",
-              "Full Roof Replacement",
-              "Flat Roof Repair",
-            ].map((tag) => (
+              { tag: "Tile Roof Repair", img: "/sd-project-1.jpg" },
+              { tag: "Full Roof Replacement", img: "/sd-project-2.jpg" },
+              { tag: "Flat Roof Repair", img: "/sd-project-3.jpg" },
+            ].map((p) => (
               <div
-                key={tag}
+                key={p.tag}
                 className="project-card"
-                style={{ backgroundImage: "url('/sd-project.svg')" }}
+                style={{ backgroundImage: `url('${p.img}')` }}
                 role="img"
-                aria-label={`Sample San Diego roofing project — ${tag}`}
+                aria-label={`San Diego roofing project — ${p.tag}`}
               >
-                <span className="project-tag">{tag}</span>
+                <span className="project-tag">{p.tag}</span>
               </div>
             ))}
           </div>
@@ -782,6 +812,14 @@ export default function RoofingSanDiegoLanding() {
         <div className="wrap">
           <p className="section-label">Storm, Wind & Fire Damage</p>
           <h2 className="section-title" style={{ marginBottom: "28px" }}>Roofers Who Handle the Insurance Side</h2>
+
+          {/* Before / after: worn tile roof restored (single pre-composed split). */}
+          <figure className="beforeafter">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/sd-before-after.jpg" alt="A San Diego home with a worn, sun-faded tile roof on the left, restored with a new tile roof on the right" loading="lazy" />
+            <span className="ba-label ba-before" aria-hidden="true">Before</span>
+            <span className="ba-label ba-after" aria-hidden="true">After</span>
+          </figure>
 
           <div className="insurance-grid">
             <div className="insurance-copy">
