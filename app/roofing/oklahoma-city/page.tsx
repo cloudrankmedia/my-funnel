@@ -791,8 +791,8 @@ export default function RoofingOklahomaCityLanding() {
                 ),
               },
               {
-                title: "Established Local Team — 30+ Years in OKC",
-                desc: "A licensed, fully insured Oklahoma City roofing crew with 30+ years on local roofs that knows Oklahoma storms — not an out-of-town call center.",
+                title: "Established Local Teams — 30+ Years in OKC",
+                desc: "Licensed, fully insured Oklahoma City roofing crews with 30+ years on local roofs that know Oklahoma storms — not out-of-town storm chasers.",
                 icon: (
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10z" /><circle cx="12" cy="11" r="2.5" /></svg>
                 ),
