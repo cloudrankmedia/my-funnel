@@ -13,7 +13,7 @@ export default function RoofingSanDiegoLanding() {
   const faqs = [
     {
       q: "Who will I be connected with?",
-      a: "A licensed, insured local San Diego roofing contractor. They handle everything directly — from the on-site inspection to the finished roof — whether it's a repair, a tile or flat roof, or a full replacement.",
+      a: "A licensed, insured, BBB A+ accredited local San Diego roofing contractor with roots in the area going back to 1979. They handle everything directly — from the on-site inspection to the finished roof — whether it's a repair, a tile or flat roof, or a full replacement.",
     },
     {
       q: "What areas do you cover?",
@@ -618,8 +618,8 @@ export default function RoofingSanDiegoLanding() {
       {/* COVERAGE STRIP */}
       <div className="coverage" role="region" aria-label="Service coverage">
         <div className="wrap">
+          <div className="cov-item"><span className="cov-num">Since 1979</span><span className="cov-label">Roofing Experience</span></div>
           <div className="cov-item"><span className="cov-num">County-Wide</span><span className="cov-label">San Diego Coverage</span></div>
-          <div className="cov-item"><span className="cov-num">Local</span><span className="cov-label">Licensed Roofers</span></div>
           <div className="cov-item"><span className="cov-num">$0</span><span className="cov-label">Roof Inspection</span></div>
           <div className="cov-item"><span className="cov-num">1 Call</span><span className="cov-label">No Forms</span></div>
         </div>
@@ -635,11 +635,19 @@ export default function RoofingSanDiegoLanding() {
             We connect you with <span className="accent">BBB A+ accredited, licensed, insured</span> local San Diego roofers.
           </p>
           <p className="partner-sub">
-            Experienced local roofers who know San Diego roofs — tile, flat, shingle, and metal. They lead with a free, no-obligation inspection and give you a straight answer on whether a repair or a full replacement is the right call.
+            Experienced local roofers who know San Diego roofs — tile, flat, shingle, and metal — with roots in the area going back to 1979. They lead with a free, no-obligation inspection and give you a straight answer on whether a repair or a full replacement is the right call.
           </p>
+          {/* Real BBB A+ Accredited Business seal (verified for the exclusive
+              SD buyer). The seal is the standard national mark. */}
+          <div className="partner-logos" style={{ marginBottom: "26px" }}>
+            <div className="logo-chip">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/badge-bbb.avif" alt="BBB A+ Accredited Business" loading="lazy" />
+            </div>
+          </div>
           <div className="partner-badges">
             {[
-              "BBB A+ Accredited",
+              "45+ years of experience",
               "Licensed & insured",
               "Local San Diego roofers",
               "Free roof inspections",
@@ -779,7 +787,7 @@ export default function RoofingSanDiegoLanding() {
               <p className="section-label">Local Roofers, Not a Call Center</p>
               <h2 className="section-title">A Local San Diego Crew at Your Door</h2>
               <p>
-                Every call connects you with an experienced, licensed and insured local roofer who knows San Diego homes — tile, flat, and shingle. The same people who show up, do the work, and clean up when it&apos;s done. No out-of-town subcontractors, no runaround.
+                Every call connects you with an experienced, licensed and insured local roofer who knows San Diego homes — tile, flat, and shingle — with roots in the area going back to 1979. The same people who show up, do the work, and clean up when it&apos;s done. No out-of-town subcontractors, no runaround.
               </p>
               <a href={phoneHref} className="cta-main">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
