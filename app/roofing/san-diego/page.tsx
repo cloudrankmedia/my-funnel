@@ -592,10 +592,10 @@ export default function RoofingSanDiegoLanding() {
               No invented certifications, ratings, or review counts. */}
           <div className="hero-trust">
             {[
+              "BBB A+ accredited",
               "Free roof inspection",
               "Licensed & insured roofers",
               "Local to San Diego County",
-              "No obligation",
             ].map((t) => (
               <span key={t} className="hero-trust-item">
                 <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
@@ -632,13 +632,14 @@ export default function RoofingSanDiegoLanding() {
       <section className="partner-strip" id="trust">
         <div className="wrap">
           <p className="partner-lead">
-            We connect you with <span className="accent">licensed, insured</span> local San Diego roofers.
+            We connect you with <span className="accent">BBB A+ accredited, licensed, insured</span> local San Diego roofers.
           </p>
           <p className="partner-sub">
             Experienced local roofers who know San Diego roofs — tile, flat, shingle, and metal. They lead with a free, no-obligation inspection and give you a straight answer on whether a repair or a full replacement is the right call.
           </p>
           <div className="partner-badges">
             {[
+              "BBB A+ Accredited",
               "Licensed & insured",
               "Local San Diego roofers",
               "Free roof inspections",

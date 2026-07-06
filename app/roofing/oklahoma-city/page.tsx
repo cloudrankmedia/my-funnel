@@ -360,7 +360,15 @@ export default function RoofingOklahomaCityLanding() {
       font-size: 14.5px; font-weight: 600; color: var(--cream);
     }
     .hero-trust-item svg { color: var(--orange-light); flex-shrink: 0; }
-    @media (max-width: 640px) { .hero-trust { gap: 12px 18px; margin-top: 28px; padding-top: 22px; } .hero-trust-item { font-size: 13.5px; } }
+    @media (max-width: 640px) {
+      /* Stack the trust signals into a single centered column so they don't
+         wrap unevenly. Each check on its own line, block centered. */
+      .hero-trust {
+        display: grid; grid-template-columns: max-content; justify-content: center;
+        gap: 11px; margin-top: 26px; padding-top: 22px; max-width: none;
+      }
+      .hero-trust-item { font-size: 14px; }
+    }
 
     /* PARTNER / CREDENTIAL STRIP */
     .partner-strip {
