@@ -105,9 +105,18 @@ fbq('track', 'PageView');`,
         />
       </noscript>
 
-      {/* PENDING SAN DIEGO GHL NUMBER POOL — add the SD roofing pool's */}
-      {/* number_pool.js + user_session.js here once it's provisioned. */}
-      {/* Do NOT reuse the Oklahoma City pool — it routes to OKC tracking DIDs. */}
+      {/* GHL number pool scripts (San Diego roofing pool) — dynamic number */}
+      {/* insertion swaps the (760) 497-3888 number on the page for a tracked */}
+      {/* pool number. afterInteractive loads them after hydration so the */}
+      {/* rendered numbers are in the DOM to swap. Do NOT reuse the OKC pool. */}
+      <Script
+        src="https://backend.leadconnectorhq.com/appengine/loc/wukSwmGF6EMysJbqLylK/pool/BH8vSzKybvljj7PDXVnY/number_pool.js"
+        strategy="afterInteractive"
+      />
+      <Script
+        src="https://backend.leadconnectorhq.com/appengine/js/user_session.js"
+        strategy="afterInteractive"
+      />
 
       {children}
     </>
