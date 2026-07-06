@@ -673,10 +673,19 @@ export default function RoofingOklahomaCityLanding() {
           </h2>
           <div className="insurance-copy" style={{ maxWidth: "860px" }}>
             <p>
-              When a storm totals your roof, the replacement is your chance to come out ahead — not just get back the same roof that already failed. Put standard shingles back up and you&apos;re set up to do this again next hail season. Ask the local roofer we connect you with about impact-resistant (UL&nbsp;2218 Class&nbsp;4) shingles — designed to resist Oklahoma hail and high wind.
+              When a storm totals your roof, the replacement is your chance to come out ahead — not just get back the same roof that already failed.
             </p>
             <p>
-              Here&apos;s what most homeowners miss: many Oklahoma insurers <strong>may</strong>{" "}discount the wind-and-hail portion of your premium when you upgrade to impact-resistant materials, because a tougher roof means fewer claims. Your carrier sets the actual discount and which products qualify — so it&apos;s a question worth asking before you replace, not after.
+              Put standard shingles back up and you&apos;re set up to do this again next hail season.
+            </p>
+            <p>
+              Ask the local roofer we connect you with about impact-resistant (UL&nbsp;2218 Class&nbsp;4) shingles — designed to resist Oklahoma hail and high wind.
+            </p>
+            <p>
+              Here&apos;s what most homeowners miss: many Oklahoma insurers <strong>may</strong>{" "}discount the wind-and-hail portion of your premium when you upgrade to impact-resistant materials, because a tougher roof means fewer claims.
+            </p>
+            <p>
+              Your carrier sets the actual discount and which products qualify — so it&apos;s a question worth asking before you replace, not after.
             </p>
             <ul className="checklist" style={{ marginTop: "8px" }}>
               {[
