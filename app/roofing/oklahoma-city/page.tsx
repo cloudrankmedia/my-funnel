@@ -13,7 +13,7 @@ export default function RoofingOklahomaCityLanding() {
   const faqs = [
     {
       q: "Who will I be connected with?",
-      a: "An established local Oklahoma City roofing team with 30+ years serving the metro. They're licensed and fully insured, answer the phone 24/7, and handle every job directly — from inspection to the finished roof.",
+      a: "Established local Oklahoma City roofing crews with 30+ years serving the metro. They're licensed and fully insured, answer the phone 24/7, and handle every job directly — from inspection to the finished roof.",
     },
     {
       q: "What areas do you cover?",
@@ -25,7 +25,7 @@ export default function RoofingOklahomaCityLanding() {
     },
     {
       q: "Will someone look at my roof damage?",
-      a: "Yes. The roofer handles a precision, on-site inspection of storm, hail, or other damage and gives you a straight answer on whether a repair or a full replacement is the right call.",
+      a: "Yes. The local roofer you're connected with handles a precise, on-site inspection of storm, hail, or other damage and gives you a straight answer on whether a repair or a full replacement is the right call.",
     },
     {
       q: "Does it cost anything to call or get an inspection?",
@@ -33,11 +33,11 @@ export default function RoofingOklahomaCityLanding() {
     },
     {
       q: "Can a roofer help with my insurance claim?",
-      a: "Yes. The team works storm and hail claims every day — documenting the damage with detailed reports and photos, meeting your adjuster on site, and working directly with your carrier so nothing gets missed.",
+      a: "Yes. The local roofers we connect you with work storm and hail claims every day — documenting the damage with detailed reports and photos, meeting your adjuster on site, and working directly with your carrier so nothing gets missed.",
     },
     {
       q: "How fast can someone come out?",
-      a: "The phone is answered 24/7, and for emergency hail storm damage the team aims to be on site for an inspection within about 2 hours. Response times can vary by weather and demand after a major storm.",
+      a: "The phone is answered 24/7, and for emergency hail storm damage a local roofer aims to be on site for an inspection within about 2 hours. Response times can vary by weather and demand after a major storm.",
     },
   ];
 
@@ -779,7 +779,7 @@ export default function RoofingOklahomaCityLanding() {
               },
               {
                 title: "24/7 Answering · 2-Hour Storm Response",
-                desc: "The phone is answered around the clock, and for emergency hail storm damage the team aims to be on site for an inspection within about 2 hours.",
+                desc: "The phone is answered around the clock, and for emergency hail storm damage a local roofer aims to be on site for an inspection within about 2 hours.",
                 icon: (
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><circle cx="12" cy="12" r="9" /><polyline points="12 7 12 12 15.5 14" /></svg>
                 ),
@@ -847,9 +847,9 @@ export default function RoofingOklahomaCityLanding() {
             </div>
             <div className="crew-copy">
               <p className="section-label">Local Crews, Not a Call Center</p>
-              <h2 className="section-title">An Established Oklahoma City Crew at Your Door</h2>
+              <h2 className="section-title">Established Oklahoma City Crews at Your Door</h2>
               <p>
-                Every call routes to an experienced, licensed and insured local roofing team with 30+ years on OKC roofs — the same crews who show up, do the work, and clean up when it&apos;s done. No out-of-town subcontractors, no runaround.
+                Every call routes to experienced, licensed and insured local roofing crews with 30+ years on OKC roofs — the same teams who show up, do the work, and clean up when it&apos;s done. No out-of-town subcontractors, no runaround.
               </p>
               <a href={phoneHref} className="cta-main">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -895,7 +895,7 @@ export default function RoofingOklahomaCityLanding() {
       <section className="section alt" id="insurance">
         <div className="wrap">
           <p className="section-label">Storm & Hail Claims</p>
-          <h2 className="section-title" style={{ marginBottom: "28px" }}>A Local Roofing Team That Handles the Insurance Side</h2>
+          <h2 className="section-title" style={{ marginBottom: "28px" }}>Local Roofing Teams That Handle the Insurance Side</h2>
 
           {/* Before / after: storm-damaged roof restored (single pre-composed split). */}
           <figure className="beforeafter">
@@ -911,7 +911,7 @@ export default function RoofingOklahomaCityLanding() {
                 Central Oklahoma gets hit hard by hail, wind, and tornado-season storms, and roof damage is one of the most common homeowner insurance claims in the OKC metro. The catch: knowing what&apos;s covered and getting it documented right.
               </p>
               <p>
-                The local roofers we connect you with work storm and hail claims every day — and they work with the Oklahoma Insurance Department. When you call, you reach a local team that will:
+                The local roofers we connect you with work storm and hail claims every day — and they work with the Oklahoma Insurance Department. When you call, you reach local roofers who will:
               </p>
               <ul className="checklist">
                 {[
