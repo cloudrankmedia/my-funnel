@@ -8,6 +8,10 @@ import StickyCallBar from "./StickyCallBar";
 const phoneNumber = "(760) 497-3888";
 const phoneHref = "tel:+17604973888";
 
+// Off-site GHL service-request survey. The "Request a Free Quote" CTAs point here
+// so form-fill leads route to the San Diego buyer alongside tap-to-call leads.
+const quoteUrl = "https://forms.siteflownetwork.com/roofing/san-diego/service-request";
+
 export default function RoofingSanDiegoLanding() {
 
   const faqs = [
@@ -183,6 +187,41 @@ export default function RoofingSanDiegoLanding() {
     .cta-main svg { flex-shrink: 0; }
     .cta-helper { font-size: 14px; color: var(--muted-light); font-weight: 500; }
     .cta-helper.dark { color: var(--muted); }
+
+    /* Two-button row: tap-to-call (solid) + request-a-quote (outline). The
+       orange outline reads on both the dark hero/CTA bands and the light
+       sections, so one style works everywhere. */
+    .cta-row { display: flex; gap: 14px; flex-wrap: wrap; align-items: stretch; }
+    .cta-secondary {
+      display: inline-flex; align-items: center; justify-content: center; gap: 11px;
+      background: transparent; color: var(--orange);
+      padding: 18px 32px; border-radius: 8px;
+      border: 2px solid var(--orange);
+      text-decoration: none;
+      font-family: var(--font-barlow-condensed), sans-serif;
+      font-size: 23px; font-weight: 700; letter-spacing: 0.5px;
+      transition: background 0.2s, color 0.2s, transform 0.1s;
+      white-space: nowrap;
+    }
+    .cta-secondary:hover { background: var(--orange); color: #fff; }
+    .cta-secondary:active { transform: translateY(1px); }
+    .cta-secondary svg { flex-shrink: 0; }
+
+    /* NAV quote button (desktop only — mobile keeps the phone + sticky bar). */
+    .nav-right { display: flex; align-items: center; gap: 22px; }
+    .nav-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--orange); color: #fff;
+      padding: 10px 20px; border-radius: 6px;
+      font-family: var(--font-barlow-condensed), sans-serif;
+      font-size: 18px; font-weight: 700; letter-spacing: 0.5px;
+      text-decoration: none; white-space: nowrap;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--orange-dark); }
+    .nav-cta svg { flex-shrink: 0; }
+    @media (max-width: 640px) { .nav-cta { display: none; } .nav-right { gap: 0; } }
+
     .hero-photo-mobile { display: none; }
     @media (max-width: 640px) {
       .hero {
@@ -200,6 +239,8 @@ export default function RoofingSanDiegoLanding() {
         padding-left: 0; border-left: none;
       }
       .cta-main { font-size: 20px; padding: 17px 26px; width: 100%; }
+      .cta-row { flex-direction: column; }
+      .cta-secondary { font-size: 19px; padding: 15px 24px; width: 100%; }
       .cta-block { max-width: none; align-items: stretch; }
       .cta-helper { text-align: center; }
       .hero-trust { justify-content: center; }
@@ -345,7 +386,7 @@ export default function RoofingSanDiegoLanding() {
       color: var(--cream); margin-bottom: 16px; max-width: 720px; margin-left: auto; margin-right: auto;
     }
     .big-cta > .wrap > p { font-size: 18px; color: var(--muted-light); margin-bottom: 14px; max-width: 600px; margin-left: auto; margin-right: auto; }
-    .big-cta .cta-main { margin-top: 22px; }
+    .big-cta .cta-row { margin-top: 22px; justify-content: center; }
     .big-cta .cta-helper { margin-top: 16px; }
 
     /* HERO TRUST BAR */
@@ -490,7 +531,8 @@ export default function RoofingSanDiegoLanding() {
          wide by the card's nowrap CTA button. */
       .insurance-copy, .insurance-card { min-width: 0; }
     }
-    @media (max-width: 640px) { .insurance-card .cta-main { font-size: 18px; padding: 15px 16px; } }
+    .insurance-card .cta-secondary { width: 100%; margin-top: 12px; }
+    @media (max-width: 640px) { .insurance-card .cta-main, .insurance-card .cta-secondary { font-size: 18px; padding: 15px 16px; } }
     .insurance-copy p { font-size: 17px; color: var(--muted); margin-bottom: 18px; line-height: 1.65; }
     .insurance-copy .checklist { margin-top: 4px; }
     .insurance-card {
@@ -556,10 +598,18 @@ export default function RoofingSanDiegoLanding() {
       <nav>
         <div className="wrap">
           <div className="logo"><Image src="/siteflow-logo.png" alt="SiteFlow Network" width={235} height={50} priority quality={85} sizes="(max-width: 640px) 180px, 235px" style={{ height: "44px", width: "auto" }} /></div>
-          <a href={phoneHref} className="nav-phone">
-            <span className="nav-phone-label">San Diego Roofing Line</span>
-            <span className="nav-phone-number">{phoneNumber}</span>
-          </a>
+          <div className="nav-right">
+            <a href={phoneHref} className="nav-phone">
+              <span className="nav-phone-label">San Diego Roofing Line</span>
+              <span className="nav-phone-number">{phoneNumber}</span>
+            </a>
+            <a href={quoteUrl} className="nav-cta">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="9" y1="13" x2="15" y2="13" /><line x1="9" y1="17" x2="13" y2="17" />
+              </svg>
+              Request a Free Quote
+            </a>
+          </div>
         </div>
       </nav>
 
@@ -579,13 +629,21 @@ export default function RoofingSanDiegoLanding() {
             SiteFlow Network connects you with experienced, licensed and insured local San Diego roofers — handling tile, flat, shingle, and metal roofs across San Diego County. A free, no-obligation inspection and a straight answer on repair vs. replacement.
           </p>
           <div className="cta-block">
-            <a href={phoneHref} className="cta-main">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
-              </svg>
-              Tap to Call · {phoneNumber}
-            </a>
-            <span className="cta-helper">One call connects you with a local San Diego roofer — free, no-obligation inspection.</span>
+            <div className="cta-row">
+              <a href={phoneHref} className="cta-main">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
+                </svg>
+                Tap to Call · {phoneNumber}
+              </a>
+              <a href={quoteUrl} className="cta-secondary">
+                <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="9" y1="13" x2="15" y2="13" /><line x1="9" y1="17" x2="13" y2="17" />
+                </svg>
+                Request a Free Quote
+              </a>
+            </div>
+            <span className="cta-helper">Call now or request your free quote online — no-obligation roof inspection either way.</span>
           </div>
 
           {/* HERO TRUST BAR — honest, qualified connection-service signals.
@@ -621,7 +679,7 @@ export default function RoofingSanDiegoLanding() {
           <div className="cov-item"><span className="cov-num">Since 1979</span><span className="cov-label">Roofing Experience</span></div>
           <div className="cov-item"><span className="cov-num">County-Wide</span><span className="cov-label">San Diego Coverage</span></div>
           <div className="cov-item"><span className="cov-num">$0</span><span className="cov-label">Roof Inspection</span></div>
-          <div className="cov-item"><span className="cov-num">1 Call</span><span className="cov-label">No Forms</span></div>
+          <div className="cov-item"><span className="cov-num">Call or Click</span><span className="cov-label">To Get Started</span></div>
         </div>
       </div>
 
@@ -789,12 +847,20 @@ export default function RoofingSanDiegoLanding() {
               <p>
                 Every call connects you with an experienced, licensed and insured local roofer who knows San Diego homes — tile, flat, and shingle — with roots in the area going back to 1979. The same people who show up, do the work, and clean up when it&apos;s done. No out-of-town subcontractors, no runaround.
               </p>
-              <a href={phoneHref} className="cta-main">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
-                </svg>
-                Tap to Call · {phoneNumber}
-              </a>
+              <div className="cta-row">
+                <a href={phoneHref} className="cta-main">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
+                  </svg>
+                  Tap to Call · {phoneNumber}
+                </a>
+                <a href={quoteUrl} className="cta-secondary">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="9" y1="13" x2="15" y2="13" /><line x1="9" y1="17" x2="13" y2="17" />
+                  </svg>
+                  Request a Free Quote
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -880,6 +946,12 @@ export default function RoofingSanDiegoLanding() {
                 </svg>
                 Tap to Call · {phoneNumber}
               </a>
+              <a href={quoteUrl} className="cta-secondary">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="9" y1="13" x2="15" y2="13" /><line x1="9" y1="17" x2="13" y2="17" />
+                </svg>
+                Request a Free Quote
+              </a>
             </div>
           </div>
         </div>
@@ -898,14 +970,22 @@ export default function RoofingSanDiegoLanding() {
       <section className="big-cta" id="call-now">
         <div className="wrap">
           <h2>Get Connected With a Local Roofer</h2>
-          <p>One call connects you with a licensed local San Diego roofer — free, no-obligation inspection.</p>
-          <a href={phoneHref} className="cta-main">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
-            </svg>
-            Tap to Call · {phoneNumber}
-          </a>
-          <div className="cta-helper">One call connects you with a local San Diego roofer.</div>
+          <p>Call now or request your free quote online — a licensed local San Diego roofer and a free, no-obligation inspection either way.</p>
+          <div className="cta-row">
+            <a href={phoneHref} className="cta-main">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
+              </svg>
+              Tap to Call · {phoneNumber}
+            </a>
+            <a href={quoteUrl} className="cta-secondary">
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="9" y1="13" x2="15" y2="13" /><line x1="9" y1="17" x2="13" y2="17" />
+              </svg>
+              Request a Free Quote
+            </a>
+          </div>
+          <div className="cta-helper">One call — or one form — connects you with a local San Diego roofer.</div>
         </div>
       </section>
 
