@@ -690,43 +690,6 @@ export default function RoofingOklahomaCityLanding() {
         </div>
       </section>
 
-      {/* IMPACT-RESISTANT "DID YOU KNOW?" NOTE CARD — compact callout below the
-          trust strip. Hedged insurance wording preserved verbatim (may / your
-          carrier decides via "carrier sets the actual discount" / might qualify).
-          No OID logo here. */}
-      <section className="section alt" id="impact-resistant" aria-labelledby="stronger-roof-heading">
-        <div className="wrap">
-          <div className="note-card">
-            <span className="note-badge">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <path d="M9 18h6" /><path d="M10 21h4" />
-                <path d="M12 3a6 6 0 0 0-4 10.5c.6.6 1 1.4 1 2.5h6c0-1.1.4-1.9 1-2.5A6 6 0 0 0 12 3z" />
-              </svg>
-              Did You Know?
-            </span>
-            <h2 className="note-title" id="stronger-roof-heading">Your Replacement Is Your One Shot at a Stronger Roof</h2>
-            <p>
-              When a storm totals your roof, the replacement is your chance to come out ahead — ask the local roofer we connect you with about impact-resistant (UL&nbsp;2218 Class&nbsp;4) shingles, built to resist Oklahoma hail and high wind.
-            </p>
-            <p>
-              Here&apos;s what most homeowners miss: many Oklahoma insurers <strong>may</strong>{" "}discount the wind-and-hail portion of your premium when you upgrade — a tougher roof means fewer claims.
-            </p>
-            <p>
-              Your carrier sets the actual discount and which products qualify, so it&apos;s worth asking before you replace.
-            </p>
-            <p className="note-cta-line">
-              A free inspection covers your storm damage, your impact-resistant options, and any premium discounts you might qualify for.
-            </p>
-            <a href={phoneHref} className="cta-main">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
-              </svg>
-              Tap to Call · {phoneNumber}
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* COMMON REASONS */}
       <section className="section" id="reasons">
         <div className="wrap">
@@ -943,6 +906,43 @@ export default function RoofingOklahomaCityLanding() {
                 Tap to Call · {phoneNumber}
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* IMPACT-RESISTANT "DID YOU KNOW?" NOTE CARD — sits with the insurance
+          content as a follow-on tip. Hedged insurance wording preserved verbatim
+          (may / your carrier decides via "carrier sets the actual discount" /
+          might qualify). No OID logo here. */}
+      <section className="section" id="impact-resistant" aria-labelledby="stronger-roof-heading">
+        <div className="wrap">
+          <div className="note-card">
+            <span className="note-badge">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M9 18h6" /><path d="M10 21h4" />
+                <path d="M12 3a6 6 0 0 0-4 10.5c.6.6 1 1.4 1 2.5h6c0-1.1.4-1.9 1-2.5A6 6 0 0 0 12 3z" />
+              </svg>
+              Did You Know?
+            </span>
+            <h2 className="note-title" id="stronger-roof-heading">Your Replacement Is Your One Shot at a Stronger Roof</h2>
+            <p>
+              When a storm totals your roof, the replacement is your chance to come out ahead — ask the local roofer we connect you with about impact-resistant (UL&nbsp;2218 Class&nbsp;4) shingles, built to resist Oklahoma hail and high wind.
+            </p>
+            <p>
+              Here&apos;s what most homeowners miss: many Oklahoma insurers <strong>may</strong>{" "}discount the wind-and-hail portion of your premium when you upgrade — a tougher roof means fewer claims.
+            </p>
+            <p>
+              Your carrier sets the actual discount and which products qualify, so it&apos;s worth asking before you replace.
+            </p>
+            <p className="note-cta-line">
+              A free inspection covers your storm damage, your impact-resistant options, and any premium discounts you might qualify for.
+            </p>
+            <a href={phoneHref} className="cta-main">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
+              </svg>
+              Tap to Call · {phoneNumber}
+            </a>
           </div>
         </div>
       </section>
