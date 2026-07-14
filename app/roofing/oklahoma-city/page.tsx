@@ -205,6 +205,16 @@ export default function RoofingOklahomaCityLanding() {
       .hero-trust { justify-content: center; }
     }
 
+    /* Wrapper for coverage + credential strips. display:contents makes it a
+       no-op on desktop (children render in source order). On mobile it becomes
+       a flex column so CSS order can lift the credential strip above coverage. */
+    .hero-followers { display: contents; }
+    @media (max-width: 640px) {
+      .hero-followers { display: flex; flex-direction: column; }
+      .hero-followers .partner-strip { order: 1; }
+      .hero-followers .coverage { order: 2; }
+    }
+
     /* COVERAGE STRIP */
     .coverage {
       background: var(--bg-alt);
@@ -642,6 +652,10 @@ export default function RoofingOklahomaCityLanding() {
         </div>
       </section>
 
+      {/* Coverage strip + credential strip. On mobile the credential strip moves
+          directly under the hero (above the coverage strip) via flex `order`
+          below; `display:contents` leaves the desktop order untouched. */}
+      <div className="hero-followers">
       {/* COVERAGE STRIP */}
       <div className="coverage" role="region" aria-label="Service coverage">
         <div className="wrap">
@@ -685,6 +699,7 @@ export default function RoofingOklahomaCityLanding() {
           </div>
         </div>
       </section>
+      </div>
 
       {/* COMMON REASONS */}
       <section className="section" id="reasons">
