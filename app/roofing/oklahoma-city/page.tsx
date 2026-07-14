@@ -389,13 +389,9 @@ export default function RoofingOklahomaCityLanding() {
     }
     .hero-trust-item svg { color: var(--orange-light); flex-shrink: 0; }
     @media (max-width: 640px) {
-      /* Stack the trust signals into a single centered column so they don't
-         wrap unevenly. Each check on its own line, block centered. */
-      .hero-trust {
-        display: grid; grid-template-columns: max-content; justify-content: center;
-        gap: 11px; margin-top: 26px; padding-top: 22px; max-width: none;
-      }
-      .hero-trust-item { font-size: 14px; }
+      /* Hide the hero trust bar on mobile to keep the hero uncluttered — the
+         same credentials show in the partner/credential strip just below. */
+      .hero-trust { display: none; }
     }
 
     /* PARTNER / CREDENTIAL STRIP */
