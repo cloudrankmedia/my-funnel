@@ -108,9 +108,9 @@ fbq('track', 'PageView');`,
       {/* GHL number pool scripts (roofing pool) — dynamic number insertion swaps */}
       {/* the (405) 832-0080 number on the page for a tracked pool number. */}
       {/* afterInteractive loads them after hydration so the rendered numbers */}
-      {/* are in the DOM to swap. Do NOT reuse the water-damage pool. */}
+      {/* are in the DOM to swap. */}
       <Script
-        src="https://backend.leadconnectorhq.com/appengine/loc/TbsW9ufsJSZDP9o0u5wM/pool/Agm5fbDTuJxMY7oXiV5C/number_pool.js"
+        src="https://backend.leadconnectorhq.com/appengine/loc/8yVaGIElOnPyCAjDk5Mr/pool/At8xJtYeGcR5cJ7LNZ7H/number_pool.js"
         strategy="afterInteractive"
       />
       <Script
