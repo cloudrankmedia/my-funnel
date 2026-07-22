@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Roof Damage Oklahoma City | Get Connected With a Local Roofer",
@@ -54,25 +53,14 @@ export default function RoofingOklahomaCityLayout({
       <link rel="dns-prefetch" href="https://www.google-analytics.com" />
       <link rel="dns-prefetch" href="https://connect.facebook.net" />
 
-      {/* Google Tag Manager — head script (mirrors water-damage layout). */}
-      {/* The Google Ads click-to-call conversion (AW-17034161603) is configured */}
-      {/* inside this GTM container as a tel: click trigger — not in page code. */}
-      {/* lazyOnload: GTM (and the GA4 + Google Ads tags it injects) is the single */}
-      {/* biggest main-thread/script-evaluation cost on this page. Deferring it to */}
-      {/* browser idle keeps it out of the initial load window (big TBT win). The */}
-      {/* click-to-call conversion still fires: GTM initializes within ~1-2s of load, */}
-      {/* well before a visitor reads the page and taps to call. */}
-      <Script
-        id="gtm-head"
-        strategy="lazyOnload"
-        dangerouslySetInnerHTML={{
-          __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-54RJ95RD');`,
-        }}
-      />
+      {/* GTM (→ GA4 + Google Ads) and the Meta Pixel are injected by the
+          <TrackingScripts> client component, rendered per-page so each route can
+          pick its load trigger:
+            - landing page  → mode="idle"        (ready before click-to-call)
+            - /quote survey → mode="interaction" (held until first interaction
+                              to keep third-party JS out of the load window)
+          Only the JS-based tags moved; the <noscript> fallbacks stay here so
+          no-JS visitors still fire GTM + Pixel regardless of route. */}
 
       {/* Google Tag Manager — noscript fallback */}
       <noscript>
@@ -83,25 +71,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           style={{ display: "none", visibility: "hidden" }}
         />
       </noscript>
-
-      {/* Meta Pixel — base code (Pixel ID 1165749681766347). */}
-      {/* lazyOnload: defer to browser idle for fastest page load; still fires PageView. */}
-      <Script
-        id="meta-pixel"
-        strategy="lazyOnload"
-        dangerouslySetInnerHTML={{
-          __html: `!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1165749681766347');
-fbq('track', 'PageView');`,
-        }}
-      />
 
       {/* Meta Pixel — noscript fallback */}
       <noscript>
@@ -119,8 +88,7 @@ fbq('track', 'PageView');`,
           (app/roofing/oklahoma-city/page.tsx), NOT in this shared layout. This
           layout also wraps the /quote survey page, which has no phone number to
           swap — keeping DNI off that route removes dead third-party JS from the
-          survey. GTM + Meta Pixel stay here because both routes need conversion
-          tracking. */}
+          survey. */}
 
       {children}
     </>

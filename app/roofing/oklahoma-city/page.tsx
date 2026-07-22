@@ -2,6 +2,7 @@ import Image from "next/image";
 import Script from "next/script";
 import FaqAccordion from "./FaqAccordion";
 import StickyCallBar from "./StickyCallBar";
+import TrackingScripts from "./TrackingScripts";
 
 // Single source of truth for the roofing call number. Swap these two values to
 // re-point the page. Every call button/link references them.
@@ -65,6 +66,11 @@ export default function RoofingOklahomaCityLanding() {
         src="https://backend.leadconnectorhq.com/appengine/js/user_session.js"
         strategy="afterInteractive"
       />
+
+      {/* GTM + Meta Pixel — idle load so GTM is initialized before the
+          click-to-call tap (the Google Ads tel: conversion trigger needs it
+          ready when the click fires). */}
+      <TrackingScripts mode="idle" />
 
       <style suppressHydrationWarning>{`
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }

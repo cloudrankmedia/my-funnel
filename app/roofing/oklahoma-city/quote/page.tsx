@@ -1,5 +1,6 @@
 import Image from "next/image";
 import SurveyEmbed from "./SurveyEmbed";
+import TrackingScripts from "../TrackingScripts";
 
 // Minimal, fast shell that hosts the GHL roofing survey via a lazy-loaded
 // iframe. Header / footer / main mirror the GHL-hosted survey page so the
@@ -7,6 +8,13 @@ import SurveyEmbed from "./SurveyEmbed";
 export default function RoofingOklahomaCityQuotePage() {
   return (
     <main className="quote-page">
+      {/* GTM + Meta Pixel — held until first user interaction (with a fallback
+          timer) so the tags' execution stays out of the initial load window.
+          This is the survey page's biggest Total-Blocking-Time lever; the survey
+          requires interaction to complete, so the tags load well before any
+          submission. */}
+      <TrackingScripts mode="interaction" />
+
       <style suppressHydrationWarning>{`
         :root {
           --q-navy: #222E51;
