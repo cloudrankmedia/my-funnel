@@ -13,6 +13,9 @@ export default function RoofingOklahomaCityQuotePage() {
           --q-footer-bg: #FBF6F6;
           --q-link: #F88D3D;
         }
+        /* Root layout ships no global reset — zero the UA body margin so the
+           navy header sits flush to the viewport edges (no white frame). */
+        html, body { margin: 0; padding: 0; }
         .quote-page {
           min-height: 100vh;
           display: flex;
