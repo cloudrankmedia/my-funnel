@@ -42,7 +42,9 @@ export default function RoofingOklahomaCityQuotePage() {
           width: 100%;
           max-width: 600px;
           margin: 0 auto;
-          padding: 0 0 40px;
+          /* Side gutter keeps the survey (incl. full-width radio bubbles)
+             off the screen edges on mobile. Header stays full-bleed. */
+          padding: 0 16px 40px;
         }
         .survey-embed {
           background: transparent;
