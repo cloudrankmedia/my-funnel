@@ -50,12 +50,25 @@ export default function RoofingOklahomaCityLayout({
       <link rel="preconnect" href="https://backend.leadconnectorhq.com" />
       <link rel="preconnect" href="https://services.leadconnectorhq.com" />
 
+      {/* DNS-prefetch for the deferred (lazyOnload) tag origins so that when GTM,
+          GA/Google Ads, and the Meta Pixel fire at browser idle their DNS/TLS is
+          already warm — keeps them off the critical path without paying an early
+          preconnect for scripts that don't run until idle. */}
+      <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+      <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+      <link rel="dns-prefetch" href="https://connect.facebook.net" />
+
       {/* Google Tag Manager — head script (mirrors water-damage layout). */}
       {/* The Google Ads click-to-call conversion (AW-17034161603) is configured */}
       {/* inside this GTM container as a tel: click trigger — not in page code. */}
+      {/* lazyOnload: GTM (and the GA4 + Google Ads tags it injects) is the single */}
+      {/* biggest main-thread/script-evaluation cost on this page. Deferring it to */}
+      {/* browser idle keeps it out of the initial load window (big TBT win). The */}
+      {/* click-to-call conversion still fires: GTM initializes within ~1-2s of load, */}
+      {/* well before a visitor reads the page and taps to call. */}
       <Script
         id="gtm-head"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
