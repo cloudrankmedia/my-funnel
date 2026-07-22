@@ -56,10 +56,10 @@ export default function RoofingOklahomaCityQuotePage() {
              during load doesn't shove the footer around (fixes CLS). The
              survey grows within this space; it only exceeds it after the user
              advances slides, which doesn't count toward CLS. */
-          min-height: 640px;
+          min-height: 800px;
         }
         .survey-skeleton {
-          min-height: 640px;
+          min-height: 800px;
           display: flex;
           align-items: center;
           justify-content: center;

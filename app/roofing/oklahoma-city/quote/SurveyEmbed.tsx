@@ -38,7 +38,10 @@ export default function SurveyEmbed() {
             title="Roofing survey"
             scrolling="no"
             loading="lazy"
-            style={{ border: "none", width: "100%", minHeight: 600 }}
+            // minHeight matches the container's reserved space so form_embed.js
+            // can't shrink the iframe below it — the height stays fixed through
+            // load, so nothing below it moves (CLS).
+            style={{ border: "none", width: "100%", minHeight: 800 }}
           />
           {/* form_embed.js listens for the iframe's postMessage and resizes it
               to fit its content (matched by the iframe id above). */}
