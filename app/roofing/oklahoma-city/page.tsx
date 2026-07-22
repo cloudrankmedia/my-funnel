@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Script from "next/script";
 import FaqAccordion from "./FaqAccordion";
 import StickyCallBar from "./StickyCallBar";
 
@@ -43,6 +44,28 @@ export default function RoofingOklahomaCityLanding() {
 
   return (
     <main>
+      {/* GHL preconnects — backend serves the number-pool + user_session Script
+          tags below; services receives their runtime calls. Kept here on the
+          calls-only landing page (not the shared layout) so the /quote survey
+          page never preconnects to hosts it no longer uses. */}
+      <link rel="preconnect" href="https://backend.leadconnectorhq.com" />
+      <link rel="preconnect" href="https://services.leadconnectorhq.com" />
+
+      {/* GHL number pool scripts (roofing pool) — dynamic number insertion swaps
+          the (405) 832-0080 number on the page for a tracked pool number.
+          afterInteractive loads them after hydration so the rendered numbers are
+          in the DOM to swap. These live on the landing page rather than the
+          shared layout so they never load on the /quote survey page, which has
+          no phone number to swap. */}
+      <Script
+        src="https://backend.leadconnectorhq.com/appengine/loc/8yVaGIElOnPyCAjDk5Mr/pool/At8xJtYeGcR5cJ7LNZ7H/number_pool.js"
+        strategy="afterInteractive"
+      />
+      <Script
+        src="https://backend.leadconnectorhq.com/appengine/js/user_session.js"
+        strategy="afterInteractive"
+      />
+
       <style suppressHydrationWarning>{`
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 

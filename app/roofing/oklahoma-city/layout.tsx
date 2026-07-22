@@ -46,10 +46,6 @@ export default function RoofingOklahomaCityLayout({
 }) {
   return (
     <>
-      {/* GHL preconnects — backend serves the Script tags, services receives runtime calls */}
-      <link rel="preconnect" href="https://backend.leadconnectorhq.com" />
-      <link rel="preconnect" href="https://services.leadconnectorhq.com" />
-
       {/* DNS-prefetch for the deferred (lazyOnload) tag origins so that when GTM,
           GA/Google Ads, and the Meta Pixel fire at browser idle their DNS/TLS is
           already warm — keeps them off the critical path without paying an early
@@ -118,18 +114,13 @@ fbq('track', 'PageView');`,
         />
       </noscript>
 
-      {/* GHL number pool scripts (roofing pool) — dynamic number insertion swaps */}
-      {/* the (405) 832-0080 number on the page for a tracked pool number. */}
-      {/* afterInteractive loads them after hydration so the rendered numbers */}
-      {/* are in the DOM to swap. */}
-      <Script
-        src="https://backend.leadconnectorhq.com/appengine/loc/8yVaGIElOnPyCAjDk5Mr/pool/At8xJtYeGcR5cJ7LNZ7H/number_pool.js"
-        strategy="afterInteractive"
-      />
-      <Script
-        src="https://backend.leadconnectorhq.com/appengine/js/user_session.js"
-        strategy="afterInteractive"
-      />
+      {/* NOTE: the GHL number-pool + user_session scripts (dynamic number
+          insertion) intentionally live on the calls-only landing page
+          (app/roofing/oklahoma-city/page.tsx), NOT in this shared layout. This
+          layout also wraps the /quote survey page, which has no phone number to
+          swap — keeping DNI off that route removes dead third-party JS from the
+          survey. GTM + Meta Pixel stay here because both routes need conversion
+          tracking. */}
 
       {children}
     </>
