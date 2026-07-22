@@ -39,13 +39,10 @@ export default function RoofingOklahomaCityQuotePage() {
           width: 100%;
           max-width: 600px;
           margin: 0 auto;
-          padding: 20px 12px 48px;
+          padding: 0 0 40px;
         }
         .survey-embed {
-          background: #ffffff;
-          border-radius: 12px;
-          overflow: hidden;
-          box-shadow: 0 1px 3px rgba(16, 24, 40, 0.08);
+          background: transparent;
         }
         .survey-skeleton {
           min-height: 600px;
