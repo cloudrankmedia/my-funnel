@@ -14,8 +14,11 @@ export default function RoofingOklahomaCityQuotePage() {
           --q-link: #F88D3D;
         }
         /* Root layout ships no global reset — zero the UA body margin so the
-           navy header sits flush to the viewport edges (no white frame). */
+           navy header sits flush to the viewport edges (no white frame), and
+           use border-box so container padding doesn't add to width (which was
+           overflowing the viewport and shifting content right). */
         html, body { margin: 0; padding: 0; }
+        .quote-page *, .quote-page *::before, .quote-page *::after { box-sizing: border-box; }
         .quote-page {
           min-height: 100vh;
           display: flex;
