@@ -45,9 +45,10 @@ export default function RoofingOklahomaCityQuotePage() {
           width: 100%;
           max-width: 600px;
           margin: 0 auto;
-          /* Side gutter keeps the survey (incl. full-width radio bubbles)
-             off the screen edges on mobile. Header stays full-bleed. */
-          padding: 0 16px 40px;
+          /* Full-width to match the GHL page — the survey form's own 16px
+             padding provides the inset, so content isn't edge-to-edge and the
+             radio labels get the same width they have on GHL. */
+          padding: 0 0 40px;
         }
         .survey-embed {
           background: transparent;
